@@ -1,0 +1,38 @@
+body {
+  font-family: sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  background: #222;
+  color: white;
+  padding: 2rem 1rem;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+}
