@@ -6,62 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tirth Patel - Portfolio</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
 </head>
 
 <body>
-    <header>
-        <img src="https://avatars.githubusercontent.com/u/142855385?v=4" alt="Profile Photo"
-            style="width:120px;height:120px;border-radius:50%;margin-bottom:1rem;box-shadow:0 2px 8px #0002;">
+    <header class="glass">
+        <img src="assets/profile.jpg" alt="Profile Photo" class="profile-img">
         <h1>Tirth Patel</h1>
         <p>Computer Science Student • Web Developer • AI Enthusiast</p>
         <nav>
-            <a href="#projects">Projects</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <a href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a>
+            <a href="#about"><i class="fa-solid fa-user"></i> About</a>
+            <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
         </nav>
     </header>
 
     <section id="projects" class="fade-in">
-        <h2>Projects</h2>
+        <h2><i class="fa-solid fa-diagram-project"></i> Projects</h2>
         <div class="project-list">
-            <div class="project-card">
-                <h3>Portfolio Website</h3>
+            <div class="project-card glass">
+                <h3><i class="fa-solid fa-globe"></i> Portfolio Website</h3>
                 <p>A personal website to showcase my projects and journey.</p>
-                <a href="#">View Project</a>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
             </div>
-            <div class="project-card">
-                <h3>Task Manager App</h3>
+            <div class="project-card glass">
+                <h3><i class="fa-solid fa-list-check"></i> Task Manager App</h3>
                 <p>Simple web app to manage daily tasks using JavaScript.</p>
-                <a href="#">View Project</a>
+                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
             </div>
         </div>
     </section>
 
     <section id="about" class="fade-in">
-        <h2>About Me</h2>
+        <h2><i class="fa-solid fa-user"></i> About Me</h2>
         <p>I'm a passionate Computer Science student at Toronto Metropolitan University, interested in web development,
             AI, and building tools that make life easier.</p>
-        <ul>
-            <li>🌐 HTML, CSS, JavaScript</li>
-            <li>⚙️ Python, Java</li>
-            <li>🧠 AI & Automation Enthusiast</li>
+        <ul class="skills-list">
+            <li><i class="fa-brands fa-html5"></i> HTML</li>
+            <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+            <li><i class="fa-brands fa-js"></i> JavaScript</li>
+            <li><i class="fa-brands fa-python"></i> Python</li>
+            <li><i class="fa-brands fa-java"></i> Java</li>
+            <li><i class="fa-solid fa-brain"></i> AI & Automation</li>
         </ul>
     </section>
 
     <section id="contact" class="fade-in">
-        <h2>Contact</h2>
-        <p>
-            <a href="mailto:tirth@example.com">📧 rushiofficial1205@gmail.com</a>
-        </p>
-        <p>
-            <a href="https://github.com/rushhiii" target="_blank">🐙 GitHub</a>
-            &nbsp;|&nbsp;
-            <a href="https://linkedin.com/in/tirth-patel-52a123343" target="_blank">💼 LinkedIn</a>
-        </p>
+        <h2><i class="fa-solid fa-envelope"></i> Contact</h2>
+        <div class="contact-links">
+            <a href="mailto:rushiofficial1205@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+            <a href="https://github.com/rushhiii" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://linkedin.com/in/tirth-patel-52a123343" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        </div>
     </section>
 
-
-    <section id="journey">
+    <section id="journey" class="fade-in">
         <details>
             <summary style="font-size:large;font-weight: bold;">My Coding Journey</summary>
             <p>
@@ -87,8 +86,7 @@
         </details>
     </section>
 
-
-    <footer>
+    <footer class="glass">
         <p>© Tirth Patel – 2025</p>
     </footer>
 </body>
