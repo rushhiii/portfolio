@@ -2294,6 +2294,7 @@ p.project-description {
     align-items: center;
     justify-content: center;
     animation: notificationIconPulse 0.6s ease-out;
+    z-index: 999999;
 }
 
 .notification span {

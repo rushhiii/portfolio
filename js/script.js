@@ -619,7 +619,7 @@ class PortfolioApp {
         })
         .then(response => {
             if (response.ok) {
-                this.showNotification('✨ Message sent successfully! I\'ll get back to you soon.', 'success');
+                this.showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
                 e.target.reset();
             } else {
                 throw new Error('Network response was not ok');
