@@ -2253,6 +2253,7 @@ p.project-description {
     z-index: 10000;
     display: flex;
     align-items: center;
+    text-align: center;
     gap: var(--space-md);
     padding: var(--space-lg) var(--space-xl);
     border-radius: var(--radius-2xl);
@@ -2317,6 +2318,8 @@ p.project-description {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     animation: successBounce 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 9999999;
+
 }
 
 .notification.error {
@@ -2334,6 +2337,7 @@ p.project-description {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     animation: errorShake 0.5s ease-in-out;
+    z-index: 9999999;
 }
 
 .notification.info {
@@ -2351,6 +2355,7 @@ p.project-description {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     animation: infoPulse 0.6s ease-out;
+    z-index: 9999999;
 }
 
 @keyframes slideInRight {
