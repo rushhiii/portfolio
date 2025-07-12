@@ -1,0 +1,133 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Scriptable iOS Widgets",
+      "description": "A collection of Scriptable app widgets for iOS that provide useful information and functionality right on your home screen.",
+      "technologies": [
+        "JavaScript",
+        "iOS",
+        "Scriptable"
+      ],
+      "category": "automation",
+      "image": "./assets/projects/scriptable.png",
+      "githubUrl": "https://github.com/rushhiii/Scriptable-IOSWidgets",
+      "liveUrl": "https://rushhiii.github.io/Scriptable-IOSWidgets/",
+      "liveLabel": "Docs",
+      "liveIcon": "fas fa-book",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Rushi Bashfolio",
+      "description": "A unique terminal-style portfolio website that showcases skills and projects through an interactive command-line interface.",
+      "technologies": [
+        "JavaScript",
+        "CSS",
+        "Terminal UI"
+      ],
+      "category": "web",
+      "image": "./assets/projects/bashfolio.png",
+      "githubUrl": "https://github.com/rushhiii/Rushi-Bashfolio",
+      "liveUrl": "https://rushi-bashfolio.netlify.app",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "title": "GitHub Widget",
+      "description": "Track your GitHub stats — commits, contributions, Heatmap, streaks, PRs, issues, and repo insights — all beautifully displayed on your iOS home screen using Scriptable with dynamic layouts and theme support.",
+      "technologies": [
+        "JavaScript",
+        "Scriptable",
+        "iOS Widgets",
+        "GitHub API"
+      ],
+      "category": "automation",
+      "image": "./assets/projects/githubstats.png",
+      "githubUrl": "https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/GitHubStats%20Widget/MyGitStats-v2.0.js",
+      "fallbackliveUrl": "https://github.com/rushhiii/Scriptable-IOSWidgets/tree/main/GitHubStats%20Widget",
+      "liveUrl": "https://rushhiii.github.io/Scriptable-IOSWidgets/widgets/github-stats-widget.html",
+      "liveLabel": "Docs",
+      "liveIcon": "fas fa-book",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "title": "Portfolio Website",
+      "description": "A modern, responsive portfolio website built with HTML, CSS, and JavaScript featuring glassmorphism design and smooth animations.",
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "category": "web",
+      "image": "assets/portfolio-preview.png",
+      "githubUrl": "https://github.com/rushhiii/portfolio",
+      "liveUrl": "#",
+      "secondButton": false,
+      "featured": false,
+      "displayCard": false
+    },
+    {
+      "id": 5,
+      "title": "Python Projects Collection",
+      "description": "A variety of Python projects demonstrating different programming concepts and practical applications.",
+      "technologies": [
+        "Python",
+        "Programming"
+      ],
+      "category": "education",
+      "image": "assets/python-projects-preview.png",
+      "githubUrl": "https://github.com/rushhiii/Python-Projects",
+      "liveUrl": "#",
+      "secondButton": false,
+      "featured": false,
+      "displayCard": false
+    },
+    {
+      "id": 6,
+      "title": "Automatic PDF Organizer",
+      "description": "A Python script that automatically organizes PDF files into categorized folders based on content analysis.",
+      "technologies": [
+        "Python",
+        "PDF Processing",
+        "Automation"
+      ],
+      "category": "automation",
+      "image": "assets/pdf-organizer-preview.png",
+      "githubUrl": "https://github.com/rushhiii/Automatic-PDF-Organizer",
+      "liveUrl": null,
+      "fallbackLabel": "Docs",
+      "fallbackIcon": "fas fa-book",
+      "featured": false,
+      "displayCard": false
+    }
+  ],
+  "categories": [
+    {
+      "id": "all",
+      "name": "All Projects",
+      "icon": "fa-solid fa-diagram-project"
+    },
+    {
+      "id": "web",
+      "name": "Web Development",
+      "icon": "fa-solid fa-globe"
+    },
+    {
+      "id": "mobile",
+      "name": "Mobile Apps",
+      "icon": "fa-solid fa-mobile-screen"
+    },
+    {
+      "id": "education",
+      "name": "Educational",
+      "icon": "fa-solid fa-graduation-cap"
+    },
+    {
+      "id": "automation",
+      "name": "Automation",
+      "icon": "fa-solid fa-robot"
+    }
+  ]
+}

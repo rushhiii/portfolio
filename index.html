@@ -2,93 +2,490 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tirth Patel - Portfolio</title>
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./assets/ele/logo_variations/fav_icon.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/ele/logo_variations/fav_icon.png" />
+    <link rel="shortcut icon" href="./assets/ele/logo_variations/fav_icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/ele/logo_variations/web_icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Rushi's Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <header class="glass">
-        <img src="assets/profile.jpg" alt="Profile Photo" class="profile-img">
-        <h1>Tirth Patel</h1>
-        <p>Computer Science Student • Web Developer • AI Enthusiast</p>
-        <nav>
-            <a href="#projects"><i class="fa-solid fa-diagram-project"></i> Projects</a>
-            <a href="#about"><i class="fa-solid fa-user"></i> About</a>
-            <a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
-        </nav>
-    </header>
-
-    <section id="projects" class="fade-in">
-        <h2><i class="fa-solid fa-diagram-project"></i> Projects</h2>
-        <div class="project-list">
-            <div class="project-card glass">
-                <h3><i class="fa-solid fa-globe"></i> Portfolio Website</h3>
-                <p>A personal website to showcase my projects and journey.</p>
-                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="./assets/ele/letter_logo_gl.png" alt="Logo" class="logo-img">
             </div>
-            <div class="project-card glass">
-                <h3><i class="fa-solid fa-list-check"></i> Task Manager App</h3>
-                <p>Simple web app to manage daily tasks using JavaScript.</p>
-                <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-grid"></div>
+            <div class="floating-elements">
+                <div class="floating-card" data-speed="2">
+                    <i class="fab fa-python"></i>
+                </div>
+                <div class="floating-card" data-speed="3">
+                    <i class="fab fa-java"></i>
+                </div>
+                <div class="floating-card" data-speed="2.5">
+                    <i class="fas fa-terminal"></i>
+                </div>
+                <div class="floating-card" data-speed="1.5">
+                    <i class="fab fa-js-square"></i>
+                </div>
+                <div class="floating-card" data-speed="1">
+                    <i class="fab fa-react"></i>
+                </div>
+                <!-- <div class="floating-card" data-speed="1.8">
+                    <i class="fab fa-css3-alt"></i>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="text-gradient">Tirth Patel</span>
+                </h1>
+                <p class="hero-subtitle">
+                    <span class="typing-text"></span>
+                    <span class="cursor">|</span>
+                </p>
+                <p class="hero-description">
+                    Computer Science student passionate about creating innovative solutions
+                    and exploring the frontiers of artificial intelligence.
+                </p>
+                <div class="hero-actions">
+                    <a href="https://github.com/rushhiii" class="btn btn-primary" target="_blank">
+                        <span>GitHub Profile</span>
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="./assets/rushi_tech_resume.pdf" class="btn btn-secondary" download="tirth_tech_resume.pdf">
+                        <span>Resume</span>
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-container">
+                    <img src="./assets/ele/profile_pic.png" alt="Tirth Patel - Developer Illustration"
+                        class="profile-image">
+                    <div class="image-glow"></div>
+                </div>
+                <div class="status-badge">
+                    <div class="status-indicator"></div>
+                    <span>Available for work</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Crafting Digital Experiences</h2>
+            </div>
+
+            <div class="bento-grid">
+                <div class="bento-card large">
+                    <div class="card-content">
+                        <h3>My Journey</h3>
+                        <p>Started coding in Grade 11 with curiosity, now pursuing Computer Science at Toronto
+                            Metropolitan University. What began as simple console apps has evolved into a passion for
+                            creating meaningful digital experiences.</p>
+                        <!-- <h3>My Coding Journey</h3> -->
+                        <!-- <p>I still remember the first time I touched a computer with intention — it was in Grade 11. What started as curiosity about solving logic problems became my obsession. From barely knowing how to type to building automation tools and exploring C, C++, and UNIX, I'm now a 2nd Year Computer Science Student at Toronto Metropolitan University.</p> -->
+                        <div class="journey-stats">
+                            <div class="stat">
+                                <span class="stat-number">2+</span>
+                                <span class="stat-label">Years Coding</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">15+</span>
+                                <span class="stat-label">Projects Built</span>
+                            </div>
+                            <!-- <div class="stat">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-label">Repositories</span>
+                            </div> -->
+                            <!-- <div class="stat">
+                                <span class="stat-number">3.8</span>
+                                <span class="stat-label">GPA</span>
+                            </div> -->
+                            <div class="stat">
+                                <span class="stat-number">TMU</span>
+                                <span class="stat-label">University</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Education</h3>
+                        <p>2nd Year Computer Science<br>Toronto Metropolitan University</p>
+                        <!-- <p>2nd Year Computer Science Student<br>Toronto Metropolitan University</p> -->
+                        <span class="card-meta">2023 - Present</span>
+                    </div>
+                </div>
+
+                <div class="bento-card">
+                    <div class="card-content">
+                        <div class="card-icon">
+                            <i class="fas fa-code"></i>
+                            <!-- <i class="fas fa-code"></i> -->
+                        </div>
+                        <h3>Passion</h3>
+                        <!-- <h3>Focus Areas</h3> -->
+                        <div class="focus-tags">
+                            <span class="tag">Full-Stack Development</span>
+                            <span class="tag">AI & ML</span>
+                            <span class="tag">Automation</span>
+                            <!-- <span class="tag">UNIX</span> -->
+                        </div>
+                        <!-- <p style="font-style:italic;margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">Perfection isn't the goal. Precision is.</p> -->
+                    </div>
+                </div>
+
+                <div class="bento-card wide">
+                    <div class="card-content">
+                        <h3>Tech Stack</h3>
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-js-square"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-java"></i>
+                                <span>Java</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-code"></i>
+                                <span>C/C++</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-node-js"></i>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-bootstrap"></i>
+                                <span>Bootstrap</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-database"></i>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fab fa-figma"></i>
+                                <span>Figma</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="fade-in">
-        <h2><i class="fa-solid fa-user"></i> About Me</h2>
-        <p>I'm a passionate Computer Science student at Toronto Metropolitan University, interested in web development,
-            AI, and building tools that make life easier.</p>
-        <ul class="skills-list">
-            <li><i class="fa-brands fa-html5"></i> HTML</li>
-            <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
-            <li><i class="fa-brands fa-js"></i> JavaScript</li>
-            <li><i class="fa-brands fa-python"></i> Python</li>
-            <li><i class="fa-brands fa-java"></i> Java</li>
-            <li><i class="fa-solid fa-brain"></i> AI & Automation</li>
-        </ul>
-    </section>
+    <!-- GitHub Stats Section -->
+    <!-- <section id="github-stats" class="github-stats">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">GitHub</span>
+                <h2 class="section-title">📊 Developer Statistics</h2>
+            </div>
 
-    <section id="contact" class="fade-in">
-        <h2><i class="fa-solid fa-envelope"></i> Contact</h2>
-        <div class="contact-links">
-            <a href="mailto:rushiofficial1205@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
-            <a href="https://github.com/rushhiii" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-            <a href="https://linkedin.com/in/tirth-patel-52a123343" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <div class="stats-grid">
+                <div class="stats-card">
+                    <div class="card-content">
+                        <h3>🔥 GitHub Activity</h3>
+                        <div class="github-stats-images">
+                            <img src="https://github-readme-stats-rushis-projects-a131b45c.vercel.app/api?username=rushhiii&count_private=true&show_icons=true&theme=nord&bg_color=1a1a2e&title_color=ffd700&icon_color=00bfff&text_color=ffffff&ring_color=00bfff&rank_icon=github&include_all_commits=true&hide_border=true&border_radius=10&cache_seconds=86400" 
+                                 alt="Rushi's GitHub Stats" loading="lazy">
+                            <img src="https://github-readme-streak-stats-rushis-projects-a131b45c.vercel.app?user=rushhiii&theme=merko&hide_border=true&background=1a1a2e&ring=00bfff&fire=ffd700&currStreakLabel=ffd700&currStreakNum=ffffff&sideNums=ffffff&dates=ffffff&cache_seconds=86400" 
+                                 alt="Rushi's GitHub Streak" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-card">
+                    <div class="card-content">
+                        <h3>💻 Most Used Languages</h3>
+                        <div class="github-stats-images">
+                            <img src="https://github-readme-stats-rushis-projects-a131b45c.vercel.app/api/top-langs/?username=rushhiii&layout=compact&theme=merko&hide_border=true&bg_color=1a1a2e&title_color=ffd700&text_color=ffffff&cache_seconds=86400&card_width=350" 
+                                 alt="Top Languages" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-card wide">
+                    <div class="card-content">
+                        <h3>⭐ Featured Repositories</h3>
+                        <div class="featured-repos">
+                            <div class="repo-card">
+                                <h4>🔧 Scriptable-IOSWidgets</h4>
+                                <p>An evolving library of iOS widgets & scripts to supercharge your Apple experience, all built in Scriptable.</p>
+                                <div class="repo-stats">
+                                    <span class="stat"><i class="fas fa-star"></i> 3</span>
+                                    <span class="stat"><i class="fas fa-code-branch"></i> 1</span>
+                                    <span class="stat">JavaScript</span>
+                                </div>
+                                <a href="https://github.com/rushhiii/Scriptable-IOSWidgets" target="_blank" class="repo-link">
+                                    <i class="fab fa-github"></i> View Repository
+                                </a>
+                            </div>
+                            <div class="repo-card">
+                                <h4>💻 Rushi-Bashfolio</h4>
+                                <p>A terminal-style interactive portfolio powered by HTML, CSS, and JavaScript — deployed via Netlify.</p>
+                                <div class="repo-stats">
+                                    <span class="stat"><i class="fas fa-star"></i> 0</span>
+                                    <span class="stat"><i class="fas fa-code-branch"></i> 0</span>
+                                    <span class="stat">JavaScript</span>
+                                </div>
+                                <a href="https://github.com/rushhiii/Rushi-Bashfolio" target="_blank" class="repo-link">
+                                    <i class="fab fa-github"></i> View Repository
+                                </a>
+                            </div>
+                            <div class="repo-card">
+                                <h4>🎓 C-Cpp-Project-Ladder</h4>
+                                <p>Build real C/C++ projects from beginner to advanced — learn core concepts by coding useful, hands-on programs.</p>
+                                <div class="repo-stats">
+                                    <span class="stat"><i class="fas fa-star"></i> 0</span>
+                                    <span class="stat"><i class="fas fa-code-branch"></i> 0</span>
+                                    <span class="stat">C</span>
+                                </div>
+                                <a href="https://github.com/rushhiii/C-Cpp-Project-Ladder" target="_blank" class="repo-link">
+                                    <i class="fab fa-github"></i> View Repository
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stats-card">
+                    <div class="card-content">
+                        <h3>🤝 Let's Connect</h3>
+                        <div class="social-links-github">
+                            <a href="mailto:rushiofficial1205@gmail.com" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/tirth-patel-52a123343" target="_blank" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/rushhiii" target="_blank" class="social-link">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://rushi-bashfolio.netlify.app" target="_blank" class="social-link">
+                                <i class="fas fa-terminal"></i>
+                                <span>Terminal Portfolio</span>
+                            </a>
+                            <a href="https://www.instagram.com/the.tirth12" target="_blank" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                        <div class="profile-views">
+                            <img src="https://komarev.com/ghpvc/?username=rushhiii&label=Profile%20Views&color=800080&labelColor=800080&style=flat" 
+                                 alt="Profile Views" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Dev</button>
+                <button class="filter-btn" data-filter="ai">AI & ML</button>
+                <button class="filter-btn" data-filter="automation">Automation</button>
+            </div>
+
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be loaded dynamically -->
+            </div>
+
+            <div class="projects-cta">
+                <p>Interested in seeing more?</p>
+                <a href="https://github.com/rushhiii" class="btn btn-outline" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <span>View All on GitHub</span>
+                </a>
+            </div>
         </div>
     </section>
 
-    <section id="journey" class="fade-in">
-        <details>
-            <summary style="font-size:large;font-weight: bold;">My Coding Journey</summary>
-            <p>
-                I still remember the first time I touched a computer with intention — it was in Grade 11. I signed up
-                for a Computer Science course mostly out of curiosity, not knowing it would completely shift my future.
-            </p>
-            <p>
-                Back then, I didn’t even know how to type properly. I had never written a line of code, barely used a
-                laptop, and had no idea what programming really meant. But something about solving logic problems,
-                getting code to work, and seeing instant results on screen hooked me.
-            </p>
-            <p>
-                That high school course turned into a passion. I started exploring Java, building tiny console apps, and
-                experimenting with whatever I could. Over time, I moved into web development, learned JavaScript and
-                Python, and started automating tasks just for fun. What started as a curiosity became my obsession — and
-                now my career path.
-            </p>
-            <p>
-                Today, I'm a second-year Computer Science student at Toronto Metropolitan University, working on
-                personal projects, learning new technologies, and building tools that make life easier or more
-                meaningful. I’m still learning, still growing — and still loving every moment of it.
-            </p>
-        </details>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's Build Something Amazing Together</h2>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>rushiofficial1205@gmail.com</p>
+                        <a href="mailto:rushiofficial1205@gmail.com" class="contact-link">Send Message</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <p>Let's connect professionally</p>
+                        <a href="https://linkedin.com/in/tirth-patel-52a123343" target="_blank"
+                            class="contact-link">Connect</a>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>GitHub</h3>
+                        <p>Check out my repositories</p>
+                        <a href="https://github.com/rushhiii" target="_blank" class="contact-link">Follow</a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm" netlify name="portfolio-contact" method="POST">
+                    <input type="hidden" name="form-name" value="portfolio-contact">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
     </section>
 
-    <footer class="glass">
-        <p>© Tirth Patel – 2025</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <img src="./assets/ele/letter_logo_gl.png" alt="Logo" class="logo-img">
+                    </div>
+                    <!-- <p>Building the future, one line of code at a time.</p> -->
+                    <p style="font-style:italic">Perfection isn't the goal. Precision is.</p>
+                </div>
+                <div class="footer-right">
+                    <div class="social-links">
+                        <a href="https://github.com/rushhiii" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/rushhiii" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:rushiofficial1205@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://www.instagram.com/the.tirth12" target="_blank" aria-label="instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://linktr.ee/its.rushi" target="_blank" aria-label="linktr">
+                            <!-- <img src="./assets/ele/linktree-logo-icon.webp"> -->
+                            <img src="./assets/ele/linktrsvg.svg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Tirth Patel. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
