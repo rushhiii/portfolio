@@ -589,43 +589,56 @@ class PortfolioApp {
 
     handleContactForm(e) {
         e.preventDefault();
-
+        
         const submitBtn = e.target.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
-
+        
         // Show loading state
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitBtn.disabled = true;
-
-        // For Netlify forms, we'll submit the form data directly
+        
+        // Prepare form data for Netlify
         const formData = new FormData(e.target);
-
+        const data = new URLSearchParams();
+        
+        // Add form-name for Netlify
+        data.append('form-name', 'portfolio-contact');
+        
+        // Add all form fields
+        for (const [key, value] of formData.entries()) {
+            data.append(key, value);
+        }
+        
+        // Submit to Netlify
         fetch('/', {
             method: 'POST',
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: new URLSearchParams(formData).toString()
+            headers: { 
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: data.toString()
         })
-            .then(() => {
-                this.showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+        .then(response => {
+            if (response.ok) {
+                this.showNotification('✨ Message sent successfully! I\'ll get back to you soon.', 'success');
                 e.target.reset();
-            })
-            .catch((error) => {
-                console.error('Form submission failed:', error);
-                this.showNotification('Failed to send message. Please try emailing me directly.', 'error');
-            })
-            .finally(() => {
-                // Restore button state
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            });
+            } else {
+                throw new Error('Network response was not ok');
+            }
+        })
+        .catch((error) => {
+            console.error('Form submission failed:', error);
+            this.showNotification('❌ Failed to send message. Please try emailing me directly at rushiofficial1205@gmail.com', 'error');
+        })
+        .finally(() => {
+            // Restore button state
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+        });
     }
 
-    // Remove EmailJS initialization / Netlify forms
+    // Remove EmailJS initialization since we're using Netlify forms
     initializeEmailJS() {
         // No longer needed with Netlify forms
-        // emailjs.init('JmusGtvRlEX6gFapx');
-        // emailjs.send('service_3y3vfya', 'template_0r0hy44', templateParams)
-
         console.log('Using Netlify forms for contact form submission');
     }
 

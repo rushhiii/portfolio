@@ -423,8 +423,12 @@
                     </div>
                 </div>
 
-                <form class="contact-form" id="contactForm" netlify name="portfolio-contact" method="POST">
+                <form class="contact-form" id="contactForm" name="portfolio-contact" method="POST" data-netlify="true" action="/thank-you" netlify-honeypot="bot-field">
                     <input type="hidden" name="form-name" value="portfolio-contact">
+                    <!-- Honeypot field for spam protection -->
+                    <div style="display: none;">
+                        <input name="bot-field">
+                    </div>
                     <div class="form-group">
                         <input type="text" name="name" placeholder="Your Name" required>
                     </div>

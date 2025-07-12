@@ -2253,55 +2253,202 @@ p.project-description {
     z-index: 10000;
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
-    padding: var(--space-md) var(--space-xl);
-    border-radius: var(--radius-lg);
+    gap: var(--space-md);
+    padding: var(--space-lg) var(--space-xl);
+    border-radius: var(--radius-2xl);
     color: white;
     font-weight: 500;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(20px);
+    font-size: 0.95rem;
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        0 8px 16px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
     border: 1px solid transparent;
-    animation: slideInRight 0.4s ease-out;
-    max-width: 400px;
+    animation: slideInRight 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* max-width: 420px; */
+    min-width: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.notification::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(20px);
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.notification i {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: notificationIconPulse 0.6s ease-out;
+}
+
+.notification span {
+    flex: 1;
+    line-height: 1.4;
 }
 
 .notification.success {
-    background: linear-gradient(135deg, var(--accent), #059669);
-    border-color: rgba(6, 214, 160, 0.3);
+    background: linear-gradient(135deg, 
+        rgba(6, 214, 160, 0.95) 0%, 
+        rgba(5, 150, 105, 0.95) 100%);
+    border-color: rgba(6, 214, 160, 0.4);
+    box-shadow: 
+        0 20px 40px rgba(6, 214, 160, 0.25),
+        0 8px 16px rgba(6, 214, 160, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.notification.success i {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: successBounce 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .notification.error {
-    background: linear-gradient(135deg, var(--danger), #dc2626);
-    border-color: rgba(239, 68, 68, 0.3);
+    background: linear-gradient(135deg, 
+        rgba(239, 68, 68, 0.95) 0%, 
+        rgba(220, 38, 38, 0.95) 100%);
+    border-color: rgba(239, 68, 68, 0.4);
+    box-shadow: 
+        0 20px 40px rgba(239, 68, 68, 0.25),
+        0 8px 16px rgba(239, 68, 68, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.notification.error i {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: errorShake 0.5s ease-in-out;
 }
 
 .notification.info {
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    border-color: rgba(99, 102, 241, 0.3);
+    background: linear-gradient(135deg, 
+        rgba(99, 102, 241, 0.95) 0%, 
+        rgba(79, 70, 229, 0.95) 100%);
+    border-color: rgba(99, 102, 241, 0.4);
+    box-shadow: 
+        0 20px 40px rgba(99, 102, 241, 0.25),
+        0 8px 16px rgba(99, 102, 241, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.notification.info i {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: infoPulse 0.6s ease-out;
 }
 
 @keyframes slideInRight {
     0% {
-        transform: translateX(100%);
+        transform: translateX(100%) scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(-10px) scale(1.02);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes successBounce {
+    0% {
+        transform: scale(0.3) rotate(-180deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.2) rotate(-90deg);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes errorShake {
+    0%, 100% {
+        transform: translateX(0) scale(1);
+    }
+    20%, 60% {
+        transform: translateX(-3px) scale(1.05);
+    }
+    40%, 80% {
+        transform: translateX(3px) scale(1.05);
+    }
+}
+
+@keyframes infoPulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes notificationIconPulse {
+    0% {
+        transform: scale(0.5);
         opacity: 0;
     }
     100% {
-        transform: translateX(0);
+        transform: scale(1);
         opacity: 1;
     }
 }
 
 .notification.fade-out {
-    animation: fadeOut 0.4s ease-out forwards;
+    animation: fadeOut 0.4s ease-in forwards;
 }
 
 @keyframes fadeOut {
     0% {
-        transform: translateX(0);
+        transform: translateX(0) scale(1);
         opacity: 1;
     }
     100% {
-        transform: translateX(100%);
+        transform: translateX(100%) scale(0.8);
         opacity: 0;
+    }
+}
+
+/* Mobile notification adjustments */
+@media (max-width: 768px) {
+    .notification {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+        padding: var(--space-md) var(--space-lg);
+        font-size: 0.9rem;
+    }
+    
+    .notification i {
+        font-size: 1.1rem;
+        width: 20px;
+        height: 20px;
     }
 }
