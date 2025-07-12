@@ -1241,11 +1241,11 @@ body {
     height: 200px;
     object-fit: cover;
     border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
-    transition: transform 0.4s ease, filter 0.4s ease;
+    transition: transform 0.4s ease, filter 0.4s ease, all 0.4s ease-in-out;
     filter: grayscale(100%);
     /* filter: brightness(0.7) contrast(1.1) hue-rotate(270deg) saturate(1.3); */
     transform: scale(1);
-    object-fit:fill;
+    object-fit:cover;
 }
 
 .project-card:hover .project-image {
@@ -1445,7 +1445,7 @@ body {
 .project-content,
 .project-image {
     transform: translateZ(20px);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, all 0.3s ease-in-out;
 }
 
 .project-card:hover .project-content {
