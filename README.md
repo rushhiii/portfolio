@@ -49,17 +49,17 @@ This project uses modern web technologies including HTML5 for semantic markup, C
 <br>
 <br>
 <br>
->[!IMPORTANT]
->## 🎨 Portfolio Sections & Components
->**Modern Portfolio Showcase** — a comprehensive collection of responsive sections and interactive components. This repository demonstrates real-world applications of modern web development, combining the power of HTML5, CSS3, and vanilla JavaScript for professional web presence.
 
-### 🔥 Features
+<h3>⚙️ Types of Portfolio Sections</h3>
 
-- 🏠 **Hero Section with Dynamic Effects**
-  - Animated typing effects and background elements
-  - Professional status indicators and call-to-action buttons
-  - Responsive design with smooth scroll navigation
-    #### 🎯 Portfolio Section Demos
+1] <b>Hero Section:</b> <br>
+Dynamic landing area with animated typing effects, professional introductions, and call-to-action buttons.<br>
+2] <b>About Section:</b><br>
+Personal journey showcase with education, skills, and professional background in modern layout.<br>
+3] <b>Projects Gallery:</b><br>
+Filterable portfolio showcase with live demos, source code links, and technology stacks.<br>
+4] <b>Contact Section:</b><br>
+Professional contact form with social media integration and downloadable resume.<br>
 
 <a href="https://rushii-portfolio.netlify.app/#home" target="_blank">
   <img src="https://img.shields.io/badge/GitHub-Hero%20Section-1E90FF?style=for-the-badge&logo=github&logoColor=ECEFF4&labelColor=3B4252" alt="Hero Section Demo"></a>
@@ -82,67 +82,6 @@ This project uses modern web technologies including HTML5 for semantic markup, C
 <a href="https://github.com/rushhiii/Rushi-Bashfolio" target="_blank">
   <img src="https://img.shields.io/badge/GitHub-Terminal%20Portfolio-CD5C5C?style=for-the-badge&logo=github&logoColor=ECEFF4&labelColor=3B4252" alt="Terminal Portfolio"></a>
 
-<div>
-  <p>
-    <h1></h1>
-  </p>
-</div>
-
-- 📱 **Responsive Design & Animations**
-  - Mobile-first approach with CSS Grid and Flexbox
-  - Smooth animations and transitions throughout the site
-  - Dark/light theme toggle with persistent preferences
-    #### 🎨 Design & Animation Features
-    
-<a href="https://github.com/rushhiii/Website-Portfolio/blob/main/css/style.css" target="_blank">
-  <img src="https://img.shields.io/badge/GitHub-CSS%20Animations-4169E1?style=for-the-badge&logo=github&logoColor=white&labelColor=2E3440" alt="CSS Animations"></a>
-
-<a href="https://github.com/rushhiii/Website-Portfolio/blob/main/css/style.css" target="_blank">
-  <img src="https://img.shields.io/badge/GitHub-Theme%20Toggle-F0E68C?style=for-the-badge&logo=github&logoColor=white&labelColor=2E3440" alt="Theme Toggle"></a>
-
-<a href="https://github.com/rushhiii/Website-Portfolio/blob/main/css/style.css" target="_blank">
-  <img src="https://img.shields.io/badge/GitHub-Responsive%20Design-FFC72C?style=for-the-badge&logo=github&logoColor=white&labelColor=2E3440" alt="Responsive Design"></a>
-
-<a href="https://github.com/rushhiii/Website-Portfolio/blob/main/js/script.js" target="_blank">
-  <img src="https://img.shields.io/badge/GitHub-Interactive%20JS-3B4252?style=for-the-badge&logo=github&logoColor=white&labelColor=2E3440" alt="Interactive JavaScript"></a>
-    
-<div>
-  <p>
-    <h1></h1>
-  </p>
-</div>
-
-- 🌐 **Modern Web Technologies**
-  - HTML5 semantic markup for accessibility
-  - CSS3 advanced features and custom properties
-  - Vanilla JavaScript for performance optimization
-  - Font Awesome icons and Google Fonts integration
-
-
-<img width="100%" src="./assets/ele/preview.png">
-<p>
- This portfolio project is a modern web showcase built with HTML5, CSS3, and vanilla JavaScript. The website features responsive design, smooth animations, and interactive components that demonstrate professional web development skills. Perfect for developers, students, and professionals looking to create an impressive online presence.<br>
-  ⚠️ <b>Note:</b> The contact form requires Netlify hosting for full functionality, or you can configure it with other form handling services.
-</p>
-
-<a href="https://rushii-portfolio.netlify.app/" target="_blank">
-  <img src="https://img.shields.io/badge/Netlify-Live%20Portfolio-5E81AC?style=for-the-badge&logo=netlify&logoColor=white&labelColor=2E3440" alt="Live Portfolio Badge">
-</a>
-
----
-
-<br>
-
-<h3>⚙️ Types of Portfolio Sections</h3>
-
-1] <b>Hero Section:</b> <br>
-Dynamic landing area with animated typing effects, professional introductions, and call-to-action buttons.<br>
-2] <b>About Section:</b><br>
-Personal journey showcase with education, skills, and professional background in modern layout.<br>
-3] <b>Projects Gallery:</b><br>
-Filterable portfolio showcase with live demos, source code links, and technology stacks.<br>
-4] <b>Contact Section:</b><br>
-Professional contact form with social media integration and downloadable resume.<br>
 
 <div>
   <p>
