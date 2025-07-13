@@ -1,10 +1,12 @@
 <img src="./assets/ele/preview.png" alt="Portfolio Preview" width="100%">
 
-# ★ Portfolio Website
+# ★ Modern Portfolio Website
 
 <h4>
 
-A modern, responsive portfolio website showcasing my journey as a Computer Science student and developer. Built with clean HTML, CSS, and JavaScript, featuring smooth animations, dark/light theme toggle, and a working contact form with Netlify integration.
+<!-- A modern, responsive portfolio website showcasing my journey as a Computer Science student and developer. Built with clean HTML, CSS, and JavaScript, featuring smooth animations, dark/light theme toggle, and a working contact form with Netlify integration. -->
+The Modern Portfolio Website is a responsive and interactive showcase built with clean HTML5, CSS3, and vanilla JavaScript. Designed for developers, students, and professionals who demand a clean, modern web presence with smooth animations, dark/light theme toggle, and fully functional contact form integration. This portfolio demonstrates modern web development practices with semantic markup, CSS Grid/Flexbox layouts, and performance optimization.
+
 
 </h4>
 
@@ -27,58 +29,35 @@ A modern, responsive portfolio website showcasing my journey as a Computer Scien
 ### Technologies Used
 This project uses modern web technologies including HTML5 for semantic markup, CSS3 with Grid and Flexbox for responsive layouts, and JavaScript ES6+ for interactive functionality. It integrates with Netlify for hosting and form handling, Font Awesome for professional icons, and Google Fonts for clean typography. The development workflow includes VS Code, Git version control, and follows modern web development best practices.
 
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="50" height="50" alt="HTML5">
-</a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="50" height="50" alt="CSS3">
-</a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="50" height="50" alt="JavaScript">
-</a>
-<a href="https://fontawesome.com/" target="_blank">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fontawesome/fontawesome-original.svg" width="50" height="50" alt="Font Awesome">
-</a>
-<a href="https://fonts.google.com/" target="_blank">
-  <img src="https://developers.google.com/fonts/images/fonts-icon.svg" width="50" height="50" alt="Google Fonts">
-</a>
-<a href="https://www.netlify.com/" target="_blank">
-  <img src="https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg" width="50" height="50" alt="Netlify">
-</a>
 
-<a href="https://git-scm.com/" target="_blank">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="50" height="50" alt="Git">
-</a>
-<a href="https://code.visualstudio.com/" target="_blank">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="50" height="50" alt="VS Code">
-</a>
-<a href="https://github.com/" target="_blank">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" width="50" height="50" alt="GitHub">
-</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+  <img src="https://img.shields.io/badge/HTML5-Semantic_Markup-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Documentation"></a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+  <img src="https://img.shields.io/badge/CSS3-Modern_Styling-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 Documentation"></a>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+  <img src="https://img.shields.io/badge/JavaScript-ES6%2B_Features-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript Documentation"></a><br>
+
+
+<a href="https://fontawesome.com/docs" target="_blank">
+  <img src="https://img.shields.io/badge/Font_Awesome-Icon_Library-528DD7?style=for-the-badge&logo=fontawesome&logoColor=white" alt="Font Awesome Documentation"></a>
+<a href="https://fonts.google.com/" target="_blank">
+  <img src="https://img.shields.io/badge/Google_Fonts-Typography-4285F4?style=for-the-badge&logo=googlefonts&logoColor=white" alt="Google Fonts"></a>
+<a href="https://web.dev/responsive-web-design-basics/" target="_blank">
+  <img src="https://img.shields.io/badge/Responsive_Design-Mobile_First-00C7B7?style=for-the-badge&logo=responsive&logoColor=white" alt="Responsive Design Guide"></a><br>
+
+<a href="https://web.dev/performance-budgets-101/" target="_blank">
+  <img src="https://img.shields.io/badge/Web_Performance-Optimization-FF6B35?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Web Performance Guide"></a>
+<a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">
+  <img src="https://img.shields.io/badge/Accessibility-WCAG_Guidelines-663399?style=for-the-badge&logo=accessibility&logoColor=white" alt="Accessibility Guidelines"></a>
+
 
 <br>
-
-
-
-
 
 ### 🚀 Deployment & Hosting
 Modern deployment solutions are revolutionizing how we host and manage web applications. With platforms like Netlify and Vercel, developers can deploy static sites with automatic CI/CD, form handling, and global CDN distribution for optimal performance.
 
 <a href="https://www.netlify.com/">
-  <img src="https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg" width="50" height="50" alt="Netlify" />
-</a>
-
-<a href="https://vercel.com/">
-  <img src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_light_background.png" width="50" height="50" alt="Vercel" />
-</a>
-
-<a href="https://pages.github.com/">
-  <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="50" height="50" alt="GitHub Pages" />
-</a>
-
-<a href="https://firebase.google.com/products/hosting">
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" width="50" height="50" alt="Firebase Hosting" />
+  <img src="https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg" width="50" height="50" alt="Netlify" /></a><a href="https://vercel.com/"><img src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_light_background.png" width="50" height="50" alt="Vercel" /></a><a href="https://pages.github.com/"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="50" height="50" alt="GitHub Pages" /></a><a href="https://firebase.google.com/products/hosting"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" width="50" height="50" alt="Firebase Hosting" />
 </a>
 
 ### Features
