@@ -11,7 +11,6 @@ A modern, responsive portfolio website showcasing my journey as a Computer Scien
 <a href="https://rushii-portfolio.netlify.app" target="_blank"><img src="https://img.shields.io/badge/Live_Demo-Portfolio_Website-4285F4?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Portfolio"></a>
 <a href="https://github.com/rushhiii/Website-Portfolio" target="_blank"><img src="https://img.shields.io/badge/Terminal_Portfolio-Bash_Style-2E3440?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository"></a>
 
-
 <div>
   <p>
     <br>
@@ -172,7 +171,7 @@ This repository features responsive web design with mobile-first approach, inter
   - Vanilla JavaScript for performance optimization
   - Font Awesome icons and Google Fonts integration
 
-[![Preview](./assets/ele/preview.png)](https://rushii-portfolionetlify.app)
+[![Preview](./assets/ele/preview.png)](https://rushii-portfolio.netlify.app)
 <p>
  This portfolio project is a modern web showcase built with HTML5, CSS3, and vanilla JavaScript. The website features responsive design, smooth animations, and interactive components that demonstrate professional web development skills. Perfect for developers, students, and professionals looking to create an impressive online presence.
  <br>
