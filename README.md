@@ -29,28 +29,28 @@ A modern, responsive portfolio website showcasing my journey as a Computer Scien
 This project uses HTML5 for semantic markup and accessibility, CSS3 for modern styling with Grid and Flexbox layouts, and vanilla JavaScript for interactive functionality. It integrates Font Awesome for professional icons, Google Fonts for typography, and Netlify for hosting with form handling. The portfolio demonstrates responsive design principles and web performance optimization.
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
-  <img src="https://cdn3.iconfinder.com/data/icons/logos-and-brands-adobe/512/123_Html_Html5_Markup_Language_Web_Development-512.png" width="50" height="50" alt="HTML5"></a>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="50" height="50" alt="HTML5"></a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" width="50" height="50" alt="CSS3"></a>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="50" height="50" alt="CSS3"></a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width="50" height="50" alt="JavaScript"></a>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="50" height="50" alt="JavaScript"></a>
 <a href="https://fontawesome.com/" target="_blank">
-  <img width="50px" src="https://seeklogo.com/images/F/font-awesome-logo-3010FE2434-seeklogo.com.png" alt="Font Awesome"></a>
+  <img width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fontawesome/fontawesome-original.svg" alt="Font Awesome"></a>
 <a href="https://fonts.google.com/" target="_blank">
-  <img width="50px" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Fonts"></a>
+  <img width="50px" src="https://www.vectorlogo.zone/logos/google_fonts/google_fonts-icon.svg" alt="Google Fonts"></a>
 <a href="https://www.netlify.com/" target="_blank">
-  <img width="50px" src="https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png" alt="Netlify"></a>
+  <img width="50px" src="https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg" alt="Netlify"></a>
 
 <a href="https://code.visualstudio.com/" target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" width="50" height="50" alt="VS Code"></a>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" width="50" height="50" alt="VS Code"></a>
 <a href="https://git-scm.com/" target="_blank">
-  <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" width="50" height="50" alt="Git"></a>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="50" height="50" alt="Git"></a>
 <a href="https://github.com/" target="_blank">
-  <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="50" height="50" alt="GitHub"></a>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" width="50" height="50" alt="GitHub"></a>
 <a href="https://vercel.com/" target="_blank">
-  <img src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_light_background.png" width="50" height="50" alt="Vercel"></a>
+  <img src="https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg" width="50" height="50" alt="Vercel"></a>
 <a href="https://firebase.google.com/" target="_blank">
-  <img src="https://firebase.google.com/downloads/brand/PNG/logo-logomark.png" width="50" height="50" alt="Firebase"></a>
+  <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" width="50" height="50" alt="Firebase"></a>
 
 <br>
 
@@ -58,34 +58,34 @@ This project uses HTML5 for semantic markup and accessibility, CSS3 for modern s
 Modern hosting platforms provide seamless deployment with powerful features like automatic CI/CD, form handling, global CDN distribution, and performance optimization. These platforms enable developers to deploy portfolio websites with professional features and reliability.
 
 <a href="https://www.netlify.com/">
-  <img src="https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png" width="50" height="50" alt="Netlify" /></a>
+  <img src="https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg" width="50" height="50" alt="Netlify" /></a>
 
 <a href="https://vercel.com/">
-  <img src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_light_background.png" width="50" height="50" alt="Vercel" /></a>
+  <img src="https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg" width="50" height="50" alt="Vercel" /></a>
 
 <a href="https://pages.github.com/">
-  <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="50" height="50" alt="GitHub Pages"></a>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" width="50" height="50" alt="GitHub Pages"></a>
 
 <a href="https://firebase.google.com/products/hosting">
-  <img src="https://firebase.google.com/downloads/brand/PNG/logo-logomark.png" width="50" height="50" alt="Firebase Hosting"></a>
+  <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" width="50" height="50" alt="Firebase Hosting"></a>
 
 ### Features
 This repository features responsive web design with mobile-first approach, interactive components with smooth animations, and modern CSS techniques including Grid and Flexbox. It includes dark/light theme switching, project filtering and categorization, contact form integration with Netlify, and optimized performance with clean, semantic code structure.
 
 <a href="https://web.dev/responsive-web-design-basics/">
-  <img src="https://web.dev/images/hero/responsive.svg" width="50" height="50" alt="Responsive Design" /></a>
+  <img src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg" width="50" height="50" alt="Responsive Design" /></a>
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" width="50" height="50" alt="CSS Grid" /></a>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="50" height="50" alt="CSS Grid" /></a>
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">
-  <img src="https://seeklogo.com/images/F/flexbox-logo-AD9174FF2C-seeklogo.com.png" width="50" height="50" alt="Flexbox" /></a>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="50" height="50" alt="Flexbox" /></a>
 
 <a href="https://web.dev/animations/">
-  <img src="https://developers.google.com/web/tools/chrome-devtools/inspect-styles/imgs/animations-pane.png" width="50" height="50" alt="CSS Animations" /></a>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="50" height="50" alt="CSS Animations" /></a>
 
 <a href="https://docs.netlify.com/forms/setup/">
-  <img src="https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png" width="50" height="50" alt="Netlify Forms" /></a>
+  <img src="https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg" width="50" height="50" alt="Netlify Forms" /></a>
 
 <br>
 <br>
@@ -381,7 +381,7 @@ Professional contact form with social media integration and downloadable resume.
   <img src="https://img.shields.io/badge/Version%20Control-Git%20%26%20GitHub-5E81AC?style=for-the-badge&logo=github" alt="Version Control"></a> 
 
 
-## ❃ Project Structure
+## 📁 Project Structure
 
 <details>
 <summary>Click to expand file structure</summary>
@@ -406,7 +406,7 @@ Website-Portfolio/
 
 </details>
 
-## ❃ Getting Started
+## 🚀 Getting Started
 
 <img src="https://img.shields.io/badge/Setup-Local_Development-28A745?style=for-the-badge&logo=github&logoColor=white" alt="Setup">
 
@@ -440,7 +440,7 @@ Website-Portfolio/
 3. **View the website**
    - Open `http://localhost:8000` in your browser
 
-## ❃ Deployment
+## 🌐 Deployment
 
 <img src="https://img.shields.io/badge/Netlify-One_Click_Deploy-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify">
 
@@ -459,7 +459,7 @@ Website-Portfolio/
 - **GitHub Pages**: Enable in repository settings  
 - **Firebase Hosting**: Use Firebase CLI for deployment
 
-## ❃ Contact Form Configuration
+## 📧 Contact Form Configuration
 
 The contact form is configured to work seamlessly with Netlify Forms:
 
@@ -472,7 +472,7 @@ The contact form is configured to work seamlessly with Netlify Forms:
 - **Success Page**: Redirects to custom thank-you page  
 - **Email Notifications**: Configure in Netlify dashboard
 
-## ❃ Customization Guide
+## 🎨 Customization Guide
 
 <details>
 <summary>Theme Customization</summary>
@@ -508,7 +508,7 @@ Update `projects.json` with your project data:
 
 </details>
 
-## ❃ Contributing
+## 🤝 Contributing
 
 <img src="https://img.shields.io/badge/Contributions-Welcome-28A745?style=for-the-badge&logo=github&logoColor=white" alt="Contributions">
 
@@ -518,13 +518,13 @@ Update `projects.json` with your project data:
 4. **Push** to the branch (`git push origin feature/amazing-feature`)
 5. **Open** a Pull Request
 
-## ❃ License
+## 📄 License
 
 <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="MIT License">
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
-## ❃ Contact
+## 📞 Contact
 
 <img src="https://img.shields.io/badge/Contact-Reach_Out-E74C3C?style=for-the-badge&logo=mail&logoColor=white" alt="Contact">
 
