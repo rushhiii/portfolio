@@ -1,13 +1,30 @@
 [![Portfolio Preview](./assets/ele/preview.png)](https://rushii-portfolio.netlify.app)
 
-# 🌟 Tirth Patel - Portfolio Website
+# ★ Portfolio Website
+
+**A modern, responsive portfolio website showcasing my journey as a Computer Science student and developer. Built with clean HTML, CSS, and JavaScript, featuring smooth animations and dark/light theme toggle.**
+
+<h4>
 
 A modern, responsive portfolio website showcasing my journey as a Computer Science student and developer. Built with clean HTML, CSS, and JavaScript, featuring smooth animations and dark/light theme toggle.
 
-🔗 **[View Live Portfolio](https://rushii-portfolio.netlify.app)**  
-🔗 **[Terminal Portfolio](https://github.com/rushhiii/Rushi-Bashfolio)** - Alternative bash-style portfolio
+</h4>
 
-## Tech Stack used in this project?
+<!-- 🔗 **[View Live Portfolio](https://rushii-portfolio.netlify.app)**  
+🔗 **[Terminal Portfolio](https://github.com/rushhiii/Rushi-Bashfolio)** - Alternative bash-style portfolio -->
+
+
+
+  [![My Portfolio Badge](https://img.shields.io/badge/Netlify-rushii%20portfolio-6366f1?style=for-the-badge&logo=netlify&logoColor=white&labelColor=2E3440)](https://rushii-portfolio.netlify.app)
+
+
+<div>
+  <p>
+    <br>
+  </p>
+</div>
+
+## Technologies Used
 
 ### Frontend
 - **HTML5** - Semantic markup
