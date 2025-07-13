@@ -32,6 +32,11 @@ class PortfolioApp {
                 e.preventDefault();
                 const targetId = e.target.getAttribute('href').substring(1);
 
+                // Close mobile menu if it's open when a nav link is clicked
+                if (this.isMenuOpen) {
+                    this.toggleMobileMenu();
+                }
+
                 // Special handling for home link - scroll to top
                 if (targetId === 'home') {
                     this.scrollToTop();
