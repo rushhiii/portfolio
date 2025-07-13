@@ -626,7 +626,7 @@ body {
     gap: var(--space-3xl);
     align-items: center;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 6% auto;
     padding: 0 var(--space-lg);
 }
 
@@ -2458,11 +2458,28 @@ p.project-description {
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(25px);
     border: 1px solid transparent;
-    animation: slideInRight 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: slideDown 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     /* max-width: 420px; */
     min-width: 300px;
     position: relative;
     overflow: hidden;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateX(100vw) scale(0.8);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(50vw) scale(1.02);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
 }
 
 .notification::before {
@@ -2507,10 +2524,11 @@ p.project-description {
 }
 
 .notification.success i {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgb(255 255 255);
     border-radius: 50%;
     animation: successBounce 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     z-index: 9999999;
+    display: block;
 
 }
 
@@ -2552,12 +2570,12 @@ p.project-description {
 
 @keyframes slideInRight {
     0% {
-        transform: translateX(100%) scale(0.8);
+        transform: translateX(100vw) scale(0.8);
         opacity: 0;
     }
 
     50% {
-        transform: translateX(-10px) scale(1.02);
+        transform: translateX(50vw) scale(1.02);
         opacity: 0.8;
     }
 

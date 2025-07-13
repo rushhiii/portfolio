@@ -648,8 +648,14 @@ class PortfolioApp {
     }
 
     showNotification(message, type = 'info') {
+        // Handle multiple notifications by adjusting position
+        const existingNotifications = document.querySelectorAll('.notification');
+        const notificationHeight = 80; // Approximate height including margin
+        const topOffset = 20 + (existingNotifications.length * notificationHeight);
+
         const notification = document.createElement('div');
         notification.className = `notification ${type}`;
+        notification.style.top = `${topOffset}px`;
 
         let icon = 'info-circle';
         if (type === 'success') icon = 'check-circle';
@@ -662,18 +668,57 @@ class PortfolioApp {
 
         document.body.appendChild(notification);
 
-        // Animate in
+        // Animate in with enhanced easing
         setTimeout(() => {
             notification.style.transform = 'translateX(-50%) translateY(0)';
             notification.style.opacity = '1';
-        }, 100);
+        }, 150);
 
-        // Remove after delay
+        // Remove after longer delay (8 seconds instead of 4)
+        const dismissTimer = setTimeout(() => {
+            this.dismissNotification(notification);
+        }, 8000);
+
+        // Add click to dismiss functionality
+        notification.addEventListener('click', () => {
+            clearTimeout(dismissTimer);
+            this.dismissNotification(notification);
+        });
+
+        // Add hover effect to pause auto-dismiss
+        notification.addEventListener('mouseenter', () => {
+            clearTimeout(dismissTimer);
+        });
+
+        notification.addEventListener('mouseleave', () => {
+            setTimeout(() => {
+                this.dismissNotification(notification);
+            }, 8000);
+        });
+    }
+
+    dismissNotification(notification) {
+        if (!notification || !notification.parentNode) return;
+        
+        notification.style.transform = 'translateX(-50%) translateY(-120px)';
+        notification.style.opacity = '0';
+        
         setTimeout(() => {
-            notification.style.transform = 'translateX(-50%) translateY(-100px)';
-            notification.style.opacity = '0';
-            setTimeout(() => notification.remove(), 300);
-        }, 4000);
+            if (notification.parentNode) {
+                notification.remove();
+                // Reposition remaining notifications
+                this.repositionNotifications();
+            }
+        }, 400);
+    }
+
+    repositionNotifications() {
+        const notifications = document.querySelectorAll('.notification');
+        notifications.forEach((notification, index) => {
+            const notificationHeight = 80;
+            const newTop = 20 + (index * notificationHeight);
+            notification.style.top = `${newTop}px`;
+        });
     }
 
     setCurrentYear() {
@@ -698,27 +743,191 @@ const notificationStyles = `
         top: 20px;
         left: 50%;
         transform: translateX(-50%) translateY(-100px);
-        background: var(--glass-bg);
-        backdrop-filter: blur(20px);
-        border: 1px solid var(--glass-border);
-        border-radius: var(--radius-lg);
-        padding: var(--space-md) var(--space-lg);
+        background: linear-gradient(
+            135deg,
+            var(--bg-primary) 0%,
+            var(--bg-secondary) 50%,
+            var(--bg-primary) 100%
+        );
+        /* Retro slant stripes background */
+        background-image: repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 8px,
+            rgba(99, 102, 241, 0.1) 8px,
+            rgba(99, 102, 241, 0.1) 16px
+        );
+        backdrop-filter: blur(25px);
+        border: 2px solid transparent;
+        background-clip: padding-box;
+        border-radius: 16px;
+        padding: 18px 24px;
         color: var(--text-primary);
         display: flex;
         align-items: center;
-        gap: var(--space-sm);
-        z-index: 1000;
+        gap: 16px;
+        z-index: 10000;
         opacity: 0;
-        transition: all 0.3s ease;
-        box-shadow: var(--shadow-lg);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 
+            0 20px 40px rgba(0, 0, 0, 0.3),
+            0 8px 16px rgba(0, 0, 0, 0.2),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        min-width: 350px;
+        max-width: 500px;
+        font-weight: 500;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .notification::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.1),
+            transparent
+        );
+        transition: left 0.6s ease;
+    }
+
+    .notification:hover::before {
+        left: 100%;
     }
     
     .notification.success {
-        border-color: var(--accent);
+        border-color: rgba(34, 197, 94, 0.5);
+        background-image: repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 8px,
+            rgba(34, 197, 94, 0.15) 8px,
+            rgba(34, 197, 94, 0.15) 16px
+        );
+        box-shadow: 
+            0 20px 40px rgba(34, 197, 94, 0.2),
+            0 8px 16px rgba(34, 197, 94, 0.1),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .notification.error {
+        border-color: rgba(239, 68, 68, 0.5);
+        background-image: repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 8px,
+            rgba(239, 68, 68, 0.15) 8px,
+            rgba(239, 68, 68, 0.15) 16px
+        );
+        box-shadow: 
+            0 20px 40px rgba(239, 68, 68, 0.2),
+            0 8px 16px rgba(239, 68, 68, 0.1),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+
+    .notification.info {
+        border-color: rgba(99, 102, 241, 0.5);
+        background-image: repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 8px,
+            rgba(99, 102, 241, 0.15) 8px,
+            rgba(99, 102, 241, 0.15) 16px
+        );
+        box-shadow: 
+            0 20px 40px rgba(99, 102, 241, 0.2),
+            0 8px 16px rgba(99, 102, 241, 0.1),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
     
+    .notification i {
+        font-size: 24px;
+        flex-shrink: 0;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        animation: notificationIconPulse 0.6s ease-out;
+    }
+
     .notification.success i {
-        color: var(--accent);
+        color: #22c55e;
+        background: rgba(34, 197, 94, 0.2);
+        animation: successBounce 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .notification.error i {
+        color: #ef4444;
+        background: rgba(239, 68, 68, 0.2);
+        animation: errorShake 0.5s ease-in-out;
+    }
+
+    .notification.info i {
+        color: #6366f1;
+        background: rgba(99, 102, 241, 0.2);
+        animation: infoPulse 0.6s ease-out;
+    }
+
+    .notification span {
+        flex: 1;
+        font-size: 16px;
+        line-height: 1.4;
+        font-weight: 500;
+    }
+
+    @keyframes notificationIconPulse {
+        0% { transform: scale(0.8); opacity: 0.5; }
+        50% { transform: scale(1.1); opacity: 1; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes successBounce {
+        0% { transform: scale(0.3) rotate(-10deg); }
+        50% { transform: scale(1.2) rotate(5deg); }
+        100% { transform: scale(1) rotate(0deg); }
+    }
+
+    @keyframes errorShake {
+        0%, 100% { transform: translateX(0); }
+        25% { transform: translateX(-4px) rotate(-2deg); }
+        75% { transform: translateX(4px) rotate(2deg); }
+    }
+
+    @keyframes infoPulse {
+        0% { transform: scale(0.8); opacity: 0.6; }
+        50% { transform: scale(1.1); opacity: 1; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+        .notification {
+            left: 16px;
+            right: 16px;
+            transform: translateY(-100px);
+            min-width: auto;
+            max-width: none;
+            padding: 16px 20px;
+        }
+
+        .notification span {
+            font-size: 14px;
+        }
+
+        .notification i {
+            width: 28px;
+            height: 28px;
+            font-size: 20px;
+        }
     }
 `;
 
