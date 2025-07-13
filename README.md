@@ -34,22 +34,24 @@ This project uses HTML5 for semantic markup and accessibility, CSS3 for modern s
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="50" height="50" alt="CSS3"></a>
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="50" height="50" alt="JavaScript"></a>
+<!-- <a href="https://fontawesome.com/" target="_blank">
+  <img width="50px" src="https://avatars.githubusercontent.com/u/1505683?s=48&v=4" alt="Font Awesome"></a> -->
 <a href="https://fontawesome.com/" target="_blank">
-  <img width="50px" src="https://avatars.githubusercontent.com/u/1505683?s=48&v=4" alt="Font Awesome"></a>
+  <img width="50px" src="https://www.vectorlogo.zone/logos/font-awesome/font-awesome-icon.svg" alt="Font Awesome"></a>
 <a href="https://fonts.google.com/" target="_blank">
   <img width="50px" src="https://www.vectorlogo.zone/logos/google_fonts/google_fonts-icon.svg" alt="Google Fonts"></a>
-<a href="https://www.netlify.com/" target="_blank">
-  <!-- <img width="50px" src="https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg" alt="Netlify"></a> -->
+<!-- <a href="https://www.netlify.com/" target="_blank">
+  <img width="50px" src="https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg" alt="Netlify"></a> -->
 <a href="https://code.visualstudio.com/" target="_blank">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg" width="50" height="50" alt="VS Code"></a>
 <a href="https://git-scm.com/" target="_blank">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg" width="50" height="50" alt="Git"></a>
-<a href="https://github.com/" target="_blank">
-  <!-- <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" width="50" height="50" alt="GitHub"></a> -->
-<a href="https://vercel.com/" target="_blank">
-  <!-- <img src="https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg" width="50" height="50" alt="Vercel"></a> -->
-<a href="https://firebase.google.com/" target="_blank">
-  <!-- <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" width="50" height="50" alt="Firebase"></a> -->
+<!-- <a href="https://github.com/" target="_blank">
+   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" width="50" height="50" alt="GitHub"></a> -->
+<!-- <a href="https://vercel.com/" target="_blank">
+  <img src="https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg" width="50" height="50" alt="Vercel"></a> -->
+<!-- <a href="https://firebase.google.com/" target="_blank">
+  <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" width="50" height="50" alt="Firebase"></a> -->
 
 <br>
 
@@ -59,28 +61,21 @@ Modern hosting platforms provide seamless deployment with powerful features like
 <a href="https://www.netlify.com/">
   <img src="https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg" width="50" height="50" alt="Netlify" /></a>
   <a href="https://vercel.com/">
-  <img src="https://www.vectorlogo.zone/logos/vercel/vercel-icon.svg" width="50" height="50" alt="Vercel" /></a>
-  <a href="https://pages.github.com/">
-  <img style="filter:invert(1);" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" width="50" height="50" alt="GitHub Pages"></a>
+  <img src="https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/vercel.png" width="50" height="50" alt="Vercel" /></a>
   <a href="https://firebase.google.com/products/hosting">
-  <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" width="50" height="50" alt="Firebase Hosting">
+  <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" width="50" height="50" alt="Firebase Hosting"></a>
+  <a href="https://pages.github.com/">
+  <img style="filter:invert(1);" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" width="50" height="50" alt="GitHub Pages">
 </a>
+
 
 ### Features
 This repository features responsive web design with mobile-first approach, interactive components with smooth animations, and modern CSS techniques including Grid and Flexbox. It includes dark/light theme switching, project filtering and categorization, contact form integration with Netlify, and optimized performance with clean, semantic code structure.
 
 <a href="https://web.dev/responsive-web-design-basics/">
   <img src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg" width="50" height="50" alt="Responsive Design" /></a>
-
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="50" height="50" alt="CSS Grid" /></a>
-
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="50" height="50" alt="Flexbox" /></a>
-
-<a href="https://web.dev/animations/">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="50" height="50" alt="CSS Animations" /></a>
-
 <a href="https://docs.netlify.com/forms/setup/">
   <img src="https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg" width="50" height="50" alt="Netlify Forms" /></a>
 
