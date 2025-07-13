@@ -9,8 +9,11 @@ The Modern Portfolio Website is a responsive and interactive showcase built with
 
 </h4>
 
-<a href="https://rushii-portfolio.netlify.app" target="_blank"><img src="https://img.shields.io/badge/Live_Demo-Portfolio_Website-4285F4?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Portfolio"></a><a href="https://github.com/rushhiii/Website-Portfolio" target="_blank"><img src="https://img.shields.io/badge/Terminal_Portfolio-Bash_Style-2E3440?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository">
+<a href="https://rushii-portfolio.netlify.app" target="_blank">
+    <img src="https://img.shields.io/badge/Live_Demo-Portfolio_Website-4285F4?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Portfolio"></a><a href="https://github.com/rushhiii/Website-Portfolio" target="_blank"><img src="https://img.shields.io/badge/Terminal_Portfolio-Bash_Style-2E3440?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository">
 </a>
+
+
 
 <div>
   <p>
