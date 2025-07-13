@@ -65,7 +65,7 @@ Modern hosting platforms provide seamless deployment with powerful features like
   <a href="https://firebase.google.com/products/hosting">
   <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" width="50" height="50" alt="Firebase Hosting"></a>
   <a href="https://pages.github.com/">
-  <img style="filter:invert(1);" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" width="50" height="50" alt="GitHub Pages">
+  <img src="https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/github.png" width="50" height="50" alt="GitHub Pages">
 </a>
 
 
