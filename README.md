@@ -1,4 +1,7 @@
-<img src="./assets/ele/preview.png" alt="Portfolio Banner" width="100%">
+<!-- <img src="./assets/ele/preview.png" alt="Portfolio Banner" width="100%"> -->
+<img src="./assets/ele/repo_banner.png" alt="Portfolio Banner" width="100%">
+
+[![Banner](./assets/ele/repo_banner.png)](https://github.com/rushhiii/portfolio)
 
 <h1>★ Modern Portfolio Website</h1>
 
