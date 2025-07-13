@@ -21,7 +21,7 @@ A modern, responsive portfolio website showcasing my journey as a Computer Scien
   </p>
 </div>
 
->[!IMPORTANT]
+>[!Note]
 >## ⚙️ Modern Portfolio Features
 >This portfolio website features a responsive design with dark/light theme toggle, smooth animations, and interactive elements. It includes a working contact form with Netlify integration, project filtering system, and optimized performance. The site showcases modern web development practices with semantic HTML, CSS Grid/Flexbox, and vanilla JavaScript for enhanced user experience.
 
