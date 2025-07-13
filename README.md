@@ -54,7 +54,7 @@ This project uses modern web technologies including HTML5 for semantic markup, C
 >## 🎨 Portfolio Sections & Components
 >**Modern Portfolio Structure** — a comprehensive showcase featuring hero section with dynamic typing effects, about me with bento grid layout, tech stack visualization, filterable project gallery, and contact form. This repository demonstrates modern web development practices combining responsive design, smooth animations, and interactive user experience elements.
 
-### 🔥 Sections Highlights
+<!-- ### 🔥 Sections Highlights
 
 - **Hero Section with Dynamic Elements**
   - Animated typing effect with multiple role descriptions
@@ -131,13 +131,7 @@ This project uses modern web technologies including HTML5 for semantic markup, C
   ⚠️ <b>Note:</b> The contact form requires Netlify deployment to function properly.
 </p>
 
-<a href="https://rushii-portfolio.netlify.app/" target="_blank">
-  <img src="https://img.shields.io/badge/Netlify-Live_Portfolio-5E81AC?style=for-the-badge&logo=netlify&logoColor=white&labelColor=2E3440" alt="Live Portfolio">
-</a>
-
----
-
-<br>
+<br> -->
 
 <h2>❃ Web Development Resources</h2>
 
