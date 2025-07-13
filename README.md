@@ -39,24 +39,24 @@
 🔗<b>Font Awesome:</b> Professional icon library for enhanced visual elements.<br>
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
-  <img src="https://img.shields.io/badge/HTML5-Semantic_Markup-4D5054?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Documentation"></a>
+  <img src="https://img.shields.io/badge/HTML5-Semantic_Markup-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Documentation"></a>
   <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
-  <img src="https://img.shields.io/badge/CSS3-Modern_Styling-4D5054?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 Documentation"></a>
+  <img src="https://img.shields.io/badge/CSS3-Modern_Styling-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 Documentation"></a>
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-  <img src="https://img.shields.io/badge/JavaScript-ES6%2B_Features-4D5054?style=for-the-badge&logo=javascript&logoColor=white" alt="JavaScript Documentation"></a><br>
+  <img src="https://img.shields.io/badge/JavaScript-ES6%2B_Features-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript Documentation"></a><br>
 
 
 <a href="https://fontawesome.com/docs" target="_blank">
-  <img src="https://img.shields.io/badge/Font_Awesome-Icon_Library-4D5054?style=for-the-badge&logo=fontawesome&logoColor=white" alt="Font Awesome Documentation"></a>
+  <img src="https://img.shields.io/badge/Font_Awesome-Icon_Library-528DD7?style=for-the-badge&logo=fontawesome&logoColor=white" alt="Font Awesome Documentation"></a>
 <a href="https://fonts.google.com/" target="_blank">
-  <img src="https://img.shields.io/badge/Google_Fonts-Typography-4D5054?style=for-the-badge&logo=googlefonts&logoColor=white" alt="Google Fonts"></a>
+  <img src="https://img.shields.io/badge/Google_Fonts-Typography-4285F4?style=for-the-badge&logo=googlefonts&logoColor=white" alt="Google Fonts"></a>
 <a href="https://web.dev/responsive-web-design-basics/" target="_blank">
-  <img src="https://img.shields.io/badge/Responsive_Design-Mobile_First-4D5054?style=for-the-badge&logo=responsive&logoColor=white" alt="Responsive Design Guide"></a><br>
+  <img src="https://img.shields.io/badge/Responsive_Design-Mobile_First-00C7B7?style=for-the-badge&logo=responsive&logoColor=white" alt="Responsive Design Guide"></a><br>
 
 <a href="https://web.dev/performance-budgets-101/" target="_blank">
-  <img src="https://img.shields.io/badge/Web_Performance-Optimization-4D5054?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Web Performance Guide"></a>
+  <img src="https://img.shields.io/badge/Web_Performance-Optimization-FF6B35?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Web Performance Guide"></a>
 <a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">
-  <img src="https://img.shields.io/badge/Accessibility-WCAG_Guidelines-4D5054?style=for-the-badge&logo=accessibility&logoColor=white" alt="Accessibility Guidelines"></a>
+  <img src="https://img.shields.io/badge/Accessibility-WCAG_Guidelines-663399?style=for-the-badge&logo=accessibility&logoColor=white" alt="Accessibility Guidelines"></a>
 
 <h3>✫ Deployment & Hosting Platforms</h3>
 
@@ -66,14 +66,14 @@
 🔗<b>Firebase Hosting:</b> Google's hosting solution with fast global CDN and easy deployment.<br>
 
 <a href="https://docs.netlify.com/" target="_blank">
-  <img src="https://img.shields.io/badge/Netlify-Documentation-4D5054?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify Documentation"></a>
+  <img src="https://img.shields.io/badge/Netlify-Documentation-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify Documentation"></a>
 <a href="https://vercel.com/docs" target="_blank">
-  <img src="https://img.shields.io/badge/Vercel-Documentation-4D5054?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel Documentation"></a>
+  <img src="https://img.shields.io/badge/Vercel-Documentation-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel Documentation"></a>
 <a href="https://docs.github.com/en/pages" target="_blank">
-  <img src="https://img.shields.io/badge/GitHub_Pages-Documentation-4D5054?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pages Documentation"></a><br>
+  <img src="https://img.shields.io/badge/GitHub_Pages-Documentation-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pages Documentation"></a><br>
 
 <a href="https://firebase.google.com/docs/hosting" target="_blank">
-  <img src="https://img.shields.io/badge/Firebase_Hosting-Documentation-4D5054?style=for-the-badge&logo=firebase&logoColor=white" alt="Firebase Hosting Documentation"></a>
+  <img src="https://img.shields.io/badge/Firebase_Hosting-Documentation-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase Hosting Documentation"></a>
 
 <h3>✬ Development Tools & Workflow</h3>
 
@@ -82,11 +82,11 @@
 🔗<b>Live Server:</b> Local development server with auto-reload functionality.<br>
 
 <a href="https://code.visualstudio.com/docs" target="_blank">
-  <img src="https://img.shields.io/badge/VS_Code-Documentation-4D5054?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="VS Code Documentation"></a>
+  <img src="https://img.shields.io/badge/VS_Code-Documentation-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="VS Code Documentation"></a>
   <a href="https://git-scm.com/doc" target="_blank">
-  <img src="https://img.shields.io/badge/Git-Documentation-4D5054?style=for-the-badge&logo=git&logoColor=white" alt="Git Documentation"></a>
+  <img src="https://img.shields.io/badge/Git-Documentation-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git Documentation"></a>
 <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">
-  <img src="https://img.shields.io/badge/Live_Server-Extension-4D5054?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Live Server Extension"></a>
+  <img src="https://img.shields.io/badge/Live_Server-Extension-FF6C37?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Live Server Extension"></a>
 
 <h3>✮ Portfolio Features & Components</h3>
 
@@ -96,16 +96,16 @@
 🔗<b>Contact Form:</b> Netlify-integrated form with spam protection and email notifications.<br>
 
 <a href="https://rushii-portfolio.netlify.app/#home" target="_blank">
-  <img src="https://img.shields.io/badge/Hero_Section-Dynamic_Effects-4D5054?style=for-the-badge&logo=adobe&logoColor=white" alt="Hero Section Demo"></a>
+  <img src="https://img.shields.io/badge/Hero_Section-Dynamic_Effects-6C5CE7?style=for-the-badge&logo=adobe&logoColor=white" alt="Hero Section Demo"></a>
 
 <a href="https://rushii-portfolio.netlify.app/#about" target="_blank">
-  <img src="https://img.shields.io/badge/About_Section-Bento_Grid-4D5054?style=for-the-badge&logo=grid&logoColor=white" alt="About Section Demo"></a>
+  <img src="https://img.shields.io/badge/About_Section-Bento_Grid-00B894?style=for-the-badge&logo=grid&logoColor=white" alt="About Section Demo"></a>
 
 <a href="https://rushii-portfolio.netlify.app/#projects" target="_blank">
-  <img src="https://img.shields.io/badge/Projects_Gallery-Filterable-4D5054?style=for-the-badge&logo=github&logoColor=white" alt="Projects Gallery Demo"></a>
+  <img src="https://img.shields.io/badge/Projects_Gallery-Filterable-E17055?style=for-the-badge&logo=github&logoColor=white" alt="Projects Gallery Demo"></a>
 
 <a href="https://rushii-portfolio.netlify.app/#contact" target="_blank">
-  <img src="https://img.shields.io/badge/Contact_Form-Netlify_Integration-4D5054?style=for-the-badge&logo=netlify&logoColor=white" alt="Contact Form Demo"></a>
+  <img src="https://img.shields.io/badge/Contact_Form-Netlify_Integration-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Contact Form Demo"></a>
 
 <h3>❂ Customization & Theming</h3>
 
@@ -115,12 +115,12 @@
 🔗<b>Animation System:</b> Custom CSS animations for enhanced user experience and visual appeal.<br>
 
 <a href="https://github.com/rushhiii/Website-Portfolio/blob/main/css/style.css" target="_blank"> 
-  <img src="https://img.shields.io/badge/CSS_Variables-Theme_System-4D5054?style=for-the-badge&logo=css3&logoColor=white" alt="CSS Variables Documentation"></a>
+  <img src="https://img.shields.io/badge/CSS_Variables-Theme_System-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS Variables Documentation"></a>
 
 <a href="https://web.dev/prefers-color-scheme/" target="_blank"> 
-  <img src="https://img.shields.io/badge/Dark_Mode-Implementation-4D5054?style=for-the-badge&logo=moon&logoColor=white" alt="Dark Mode Guide"></a> 
+  <img src="https://img.shields.io/badge/Dark_Mode-Implementation-2D3748?style=for-the-badge&logo=moon&logoColor=white" alt="Dark Mode Guide"></a> 
 <a href="https://web.dev/responsive-web-design-basics/" target="_blank"> 
-  <img src="https://img.shields.io/badge/Responsive_Design-Mobile_First-4D5054?style=for-the-badge&logo=responsive&logoColor=white" alt="Responsive Design Guide"></a> 
+  <img src="https://img.shields.io/badge/Responsive_Design-Mobile_First-00C7B7?style=for-the-badge&logo=responsive&logoColor=white" alt="Responsive Design Guide"></a> 
 
 </div>
 
