@@ -8,7 +8,7 @@ class PortfolioApp {
 
         this.init();
     }
-
+    
     async init() {
         this.setupEventListeners();
         this.initTheme();
@@ -807,18 +807,9 @@ class EnhancedFeatures {
         const skipLink = document.createElement('a');
         skipLink.href = '#main-content';
         skipLink.className = 'skip-link';
-        skipLink.textContent = 'Skip to main content';
+        skipLink.textContent = '';
         skipLink.style.cssText = `
-            position: absolute;
-            top: -40px;
-            left: 6px;
-            background: var(--primary);
-            color: white;
-            padding: 8px;
-            text-decoration: none;
-            border-radius: 4px;
-            z-index: 1000;
-            transition: top 0.3s;
+           
         `;
 
         skipLink.addEventListener('focus', () => {
