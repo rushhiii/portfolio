@@ -1,17 +1,18 @@
-[![Preview](./assets/ele/preview.png)](https://rushii-portfolio.netlify.app)
+<img src="./assets/ele/preview.png" alt="Portfolio Banner" width="100%">
 
-# ★ Modern Portfolio Website
+<h1>★ Modern Portfolio Website</h1>
 
 <h4>
-
-<!-- A modern, responsive portfolio website showcasing my journey as a Computer Science student and developer. Built with clean HTML, CSS, and JavaScript, featuring smooth animations, dark/light theme toggle, and a working contact form with Netlify integration. -->
-The Modern Portfolio Website is a responsive and interactive showcase built with clean HTML5, CSS3, and vanilla JavaScript. Designed for developers, students, and professionals who demand a clean, modern web presence with smooth animations, dark/light theme toggle, and fully functional contact form integration. This portfolio demonstrates modern web development practices with semantic markup, CSS Grid/Flexbox layouts, and performance optimization.
+  
+A modern, responsive portfolio website showcasing my journey as a Computer Science student and developer. Built with clean HTML5, CSS3, and vanilla JavaScript, featuring smooth animations, dark/light theme toggle, and a working contact form with Netlify integration. This portfolio demonstrates modern web development practices with semantic markup, CSS Grid/Flexbox layouts, and performance optimization for enhanced user experience.
 
 </h4>
 
-<a href="https://rushii-portfolio.netlify.app" target="_blank"><img src="https://img.shields.io/badge/Live_Demo-Portfolio_Website-4285F4?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Portfolio"></a>
-<a href="https://github.com/rushhiii/Website-Portfolio" target="_blank"><img src="https://img.shields.io/badge/Terminal_Portfolio-Bash_Style-2E3440?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository"></a>
-
+<a href="https://rushii-portfolio.netlify.app" target="_blank">
+  <img src="https://img.shields.io/badge/Live_Demo-Portfolio_Website-808080?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Portfolio"></a>
+<a href="https://github.com/rushhiii/Website-Portfolio" target="_blank">
+  <img src="https://img.shields.io/badge/GitHub-Source_Code-BF616A?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository">
+</a>
 
 
 <div>
@@ -20,10 +21,9 @@ The Modern Portfolio Website is a responsive and interactive showcase built with
   </p>
 </div>
 
->[!Note]
+>[!IMPORTANT]
 >## ⚙️ Modern Portfolio Features
->This portfolio website features a responsive design with dark/light theme toggle, smooth animations, and interactive elements. It includes a working contact form with Netlify integration, project filtering system, and optimized performance. The site showcases modern web development practices with semantic HTML, CSS Grid/Flexbox, and vanilla JavaScript for enhanced user experience.
-
+>The Modern Portfolio Website features responsive design with dark/light theme toggle, smooth animations, and interactive elements. It includes a working contact form with Netlify integration, project filtering system, and optimized performance. The site showcases modern web development practices with semantic HTML, CSS Grid/Flexbox, and vanilla JavaScript for enhanced user experience.
 
 ### Technologies Used
 This project uses HTML5 for semantic markup and accessibility, CSS3 for modern styling with Grid and Flexbox layouts, and vanilla JavaScript for interactive functionality. It integrates Font Awesome for professional icons, Google Fonts for typography, and Netlify for hosting with form handling. The portfolio demonstrates responsive design principles and web performance optimization.
@@ -147,6 +147,29 @@ This repository features responsive web design with mobile-first approach, inter
 
 <a href="https://github.com/rushhiii/Website-Portfolio/blob/main/js/script.js" target="_blank">
   <img src="https://img.shields.io/badge/GitHub-Interactive%20JS-3B4252?style=for-the-badge&logo=github&logoColor=white&labelColor=2E3440" alt="Interactive JavaScript"></a>
+<div>
+  <p>
+    <h1></h1>
+  </p>
+</div>
+
+- 📱 **Responsive Design & Animations**
+  - Mobile-first approach with CSS Grid and Flexbox
+  - Smooth animations and transitions throughout the site
+  - Dark/light theme toggle with persistent preferences
+    #### 🎨 Design & Animation Features
+    
+<a href="https://github.com/rushhiii/Website-Portfolio/blob/main/css/style.css" target="_blank">
+  <img src="https://img.shields.io/badge/GitHub-CSS%20Animations-4169E1?style=for-the-badge&logo=github&logoColor=white&labelColor=2E3440" alt="CSS Animations"></a>
+
+<a href="https://github.com/rushhiii/Website-Portfolio/blob/main/css/style.css" target="_blank">
+  <img src="https://img.shields.io/badge/GitHub-Theme%20Toggle-F0E68C?style=for-the-badge&logo=github&logoColor=white&labelColor=2E3440" alt="Theme Toggle"></a>
+
+<a href="https://github.com/rushhiii/Website-Portfolio/blob/main/css/style.css" target="_blank">
+  <img src="https://img.shields.io/badge/GitHub-Responsive%20Design-FFC72C?style=for-the-badge&logo=github&logoColor=white&labelColor=2E3440" alt="Responsive Design"></a>
+
+<a href="https://github.com/rushhiii/Website-Portfolio/blob/main/js/script.js" target="_blank">
+  <img src="https://img.shields.io/badge/GitHub-Interactive%20JS-3B4252?style=for-the-badge&logo=github&logoColor=white&labelColor=2E3440" alt="Interactive JavaScript"></a>
     
 <div>
   <p>
@@ -160,7 +183,7 @@ This repository features responsive web design with mobile-first approach, inter
   - Vanilla JavaScript for performance optimization
   - Font Awesome icons and Google Fonts integration
 
-
+<img width="100%" src="./assets/ele/preview.png">
 <p>
  This portfolio project is a modern web showcase built with HTML5, CSS3, and vanilla JavaScript. The website features responsive design, smooth animations, and interactive components that demonstrate professional web development skills. Perfect for developers, students, and professionals looking to create an impressive online presence.<br>
   ⚠️ <b>Note:</b> The contact form requires Netlify hosting for full functionality, or you can configure it with other form handling services.
@@ -170,9 +193,45 @@ This repository features responsive web design with mobile-first approach, inter
   <img src="https://img.shields.io/badge/Netlify-Live%20Portfolio-5E81AC?style=for-the-badge&logo=netlify&logoColor=white&labelColor=2E3440" alt="Live Portfolio Badge">
 </a>
 
-#
+---
 
-<h3>⚙️ Types of Portfolio Sections</h3>
+<br>
+
+<h2>❃ Portfolio Development Resources</h2>
+
+<h3>🧩 Core Web Technologies</h3>
+
+1] <b>HTML5</b> – Semantic markup with modern web standards and accessibility features<br>
+2] <b>CSS3</b> – Advanced styling with Grid, Flexbox, animations, and custom properties<br>
+3] <b>JavaScript ES6+</b> – Modern language features for interactive web applications<br>
+4] <b>Responsive Design</b> – Mobile-first approach with fluid layouts and breakpoints<br>
+5] <b>Web Accessibility</b> – WCAG guidelines for inclusive user experiences<br>
+6] <b>Performance Optimization</b> – Fast loading times and efficient resource management<br>
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+  <img src="https://img.shields.io/badge/HTML5-Semantic_Markup-A3BE8C?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"></a>
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+  <img src="https://img.shields.io/badge/CSS3-Modern_Styling-B48EAD?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"></a>
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+  <img src="https://img.shields.io/badge/JavaScript-ES6+_Features-D08770?style=for-the-badge&logo=javascript&logoColor=white" alt="JavaScript"></a>
+
+<a href="https://web.dev/responsive-web-design-basics/" target="_blank">
+  <img src="https://img.shields.io/badge/Responsive_Design-Mobile_First-5E81AC?style=for-the-badge&logo=responsive&logoColor=white" alt="Responsive Design"></a>
+
+<a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">
+  <img src="https://img.shields.io/badge/Web_Accessibility-WCAG_Guidelines-B48EAD?style=for-the-badge&logo=accessibility" alt="Web Accessibility"></a>
+
+<a href="https://web.dev/performance/" target="_blank">
+  <img src="https://img.shields.io/badge/Performance-Optimization-BF616A?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Performance"></a>
+<div>
+  <p>
+    <h1></h1>
+  </p>
+</div>
+
+<h3>⚙️ Portfolio Section Types</h3>
 
 1] <b>Hero Section:</b> <br>
 Dynamic landing area with animated typing effects, professional introductions, and call-to-action buttons.<br>
@@ -322,7 +381,7 @@ Professional contact form with social media integration and downloadable resume.
   <img src="https://img.shields.io/badge/Version%20Control-Git%20%26%20GitHub-5E81AC?style=for-the-badge&logo=github" alt="Version Control"></a> 
 
 
-## 📁 Project Structure
+## ❃ Project Structure
 
 <details>
 <summary>Click to expand file structure</summary>
@@ -347,22 +406,24 @@ Website-Portfolio/
 
 </details>
 
-## 🚀 Getting Started
+## ❃ Getting Started
 
-### 📋 Prerequisites
+<img src="https://img.shields.io/badge/Setup-Local_Development-28A745?style=for-the-badge&logo=github&logoColor=white" alt="Setup">
+
+### Prerequisites
 - Web browser (Chrome, Firefox, Safari, Edge)
 - Code editor (VS Code recommended)
 - Git (for version control)
 
-### 🔧 Local Development
+### Local Development
 
-1. **📥 Clone the repository**
+1. **Clone the repository**
    ```bash
    git clone https://github.com/rushhiii/Website-Portfolio.git
    cd Website-Portfolio
    ```
 
-2. **🌐 Open in your browser**
+2. **Open in your browser**
    - Simply open `index.html` in your web browser
    - Or use a local server for better development experience:
    ```bash
@@ -376,27 +437,29 @@ Website-Portfolio/
    # Right-click on index.html → "Open with Live Server"
    ```
 
-3. **👀 View the website**
+3. **View the website**
    - Open `http://localhost:8000` in your browser
 
-## 🚀 Deployment
+## ❃ Deployment
 
-### 🌐 Netlify (Recommended)
+<img src="https://img.shields.io/badge/Netlify-One_Click_Deploy-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify">
+
+### Netlify (Recommended)
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/rushhiii/Website-Portfolio)
 
 **Step-by-step deployment:**
 
-1. **🍴 Fork this repository** to your GitHub account
-2. **🔗 Connect to Netlify** - Go to [Netlify](https://netlify.com) and deploy from Git
-3. **📧 Configure Forms** - Forms work automatically with Netlify
+1. Fork this repository to your GitHub account
+2. Connect to Netlify - Go to [Netlify](https://netlify.com) and deploy from Git
+3. Configure Forms - Forms work automatically with Netlify
 
-### 🌍 Alternative Deployment Options
+### Alternative Deployment Options
 - **Vercel**: Connect GitHub repo for automatic deployment
 - **GitHub Pages**: Enable in repository settings  
 - **Firebase Hosting**: Use Firebase CLI for deployment
 
-## 📧 Contact Form Configuration
+## ❃ Contact Form Configuration
 
 The contact form is configured to work seamlessly with Netlify Forms:
 
@@ -404,15 +467,15 @@ The contact form is configured to work seamlessly with Netlify Forms:
 <form name="portfolio-contact" method="POST" data-netlify="true" action="/thank-you" netlify-honeypot="bot-field">
 ```
 
-### 🛡️ Security Features
-- **🍯 Spam Protection**: Includes honeypot field for bot detection
-- **✅ Success Page**: Redirects to custom thank-you page  
-- **📬 Email Notifications**: Configure in Netlify dashboard
+### Security Features
+- **Spam Protection**: Includes honeypot field for bot detection
+- **Success Page**: Redirects to custom thank-you page  
+- **Email Notifications**: Configure in Netlify dashboard
 
-## 🎨 Customization Guide
+## ❃ Customization Guide
 
 <details>
-<summary>🎯 Theme Customization</summary>
+<summary>Theme Customization</summary>
 
 ### Theme Colors
 Update CSS variables in `style.css`:
@@ -428,7 +491,7 @@ Update CSS variables in `style.css`:
 </details>
 
 <details>
-<summary>📁 Adding New Projects</summary>
+<summary>Adding New Projects</summary>
 
 Update `projects.json` with your project data:
 ```json
@@ -445,19 +508,25 @@ Update `projects.json` with your project data:
 
 </details>
 
-## 🤝 Contributing
+## ❃ Contributing
 
-1. **🍴 Fork** the repository
-2. **🌿 Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **💾 Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **📤 Push** to the branch (`git push origin feature/amazing-feature`)
-5. **🔄 Open** a Pull Request
+<img src="https://img.shields.io/badge/Contributions-Welcome-28A745?style=for-the-badge&logo=github&logoColor=white" alt="Contributions">
 
-## 📄 License
+1. **Fork** the repository
+2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
+3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
+4. **Push** to the branch (`git push origin feature/amazing-feature`)
+5. **Open** a Pull Request
+
+## ❃ License
+
+<img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="MIT License">
 
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
-## Contact
+## ❃ Contact
+
+<img src="https://img.shields.io/badge/Contact-Reach_Out-E74C3C?style=for-the-badge&logo=mail&logoColor=white" alt="Contact">
 
 **Tirth Patel**  
 📧 Email: rushiofficial1205@gmail.com  
@@ -465,6 +534,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 🐙 GitHub: [@rushhiii](https://github.com/rushhiii)  
 🌐 Portfolio: [rushii-portfolio.netlify.app](https://rushii-portfolio.netlify.app/)
 
-
+---
 
 ⚠️ This repository is uniquely designed by <strong>@rushhiii</strong>
