@@ -33,21 +33,18 @@ This project uses modern web technologies including HTML5 for semantic markup, C
   <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
   <img src="https://img.shields.io/badge/CSS3-Modern_Styling-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 Documentation"></a>
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-  <img src="https://img.shields.io/badge/JavaScript-ES6%2B_Features-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript Documentation"></a><br>
-
-
-<a href="https://fontawesome.com/docs" target="_blank">
+  <img src="https://img.shields.io/badge/JavaScript-ES6%2B_Features-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white" alt="JavaScript Documentation"></a>
+  <a href="https://fontawesome.com/docs" target="_blank">
   <img src="https://img.shields.io/badge/Font_Awesome-Icon_Library-528DD7?style=for-the-badge&logo=fontawesome&logoColor=white" alt="Font Awesome Documentation"></a>
-<a href="https://fonts.google.com/" target="_blank">
+  <a href="https://fonts.google.com/" target="_blank">
   <img src="https://img.shields.io/badge/Google_Fonts-Typography-4285F4?style=for-the-badge&logo=googlefonts&logoColor=white" alt="Google Fonts"></a>
-<a href="https://web.dev/responsive-web-design-basics/" target="_blank">
-  <img src="https://img.shields.io/badge/Responsive_Design-Mobile_First-00C7B7?style=for-the-badge&logo=responsive&logoColor=white" alt="Responsive Design Guide"></a><br>
-
-<a href="https://web.dev/performance-budgets-101/" target="_blank">
+  <a href="https://web.dev/responsive-web-design-basics/" target="_blank">
+  <img src="https://img.shields.io/badge/Responsive_Design-Mobile_First-00C7B7?style=for-the-badge&logo=responsive&logoColor=white" alt="Responsive Design Guide"></a>
+  <a href="https://web.dev/performance-budgets-101/" target="_blank">
   <img src="https://img.shields.io/badge/Web_Performance-Optimization-FF6B35?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Web Performance Guide"></a>
-<a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">
-  <img src="https://img.shields.io/badge/Accessibility-WCAG_Guidelines-663399?style=for-the-badge&logo=accessibility&logoColor=white" alt="Accessibility Guidelines"></a>
-
+  <a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">
+  <img src="https://img.shields.io/badge/Accessibility-WCAG_Guidelines-663399?style=for-the-badge&logo=accessibility&logoColor=white" alt="Accessibility Guidelines">
+</a>
 
 <br>
 
