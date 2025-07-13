@@ -8,8 +8,10 @@ A modern, responsive portfolio website showcasing my journey as a Computer Scien
 
 </h4>
 
-<a href="https://rushii-portfolio.netlify.app" target="_blank"><img src="https://img.shields.io/badge/Live_Demo-Portfolio_Website-4285F4?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Demo">
-</a><a href="https://github.com/rushhiii/Rushi-Bashfolio" target="_blank"><img src="https://img.shields.io/badge/Terminal_Portfolio-Bash_Style-2E3440?style=for-the-badge&logo=github&logoColor=white" alt="Terminal Portfolio">
+<a href="https://rushii-portfolio.netlify.app" target="_blank">
+  <img src="https://img.shields.io/badge/Live_Demo-Portfolio_Website-4285F4?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Portfolio"></a>
+  <a href="https://github.com/rushhiii/Website-Portfolio" target="_blank">
+  <img src="https://img.shields.io/badge/Terminal_Portfolio-Bash_Style-2E3440?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository">
 </a>
 
 <div>
