@@ -47,42 +47,6 @@ This project uses modern web technologies including HTML5 for semantic markup, C
 </a>
 
 <br>
-
-### 🚀 Deployment & Hosting
-Modern deployment solutions are revolutionizing how we host and manage web applications. With platforms like Netlify and Vercel, developers can deploy static sites with automatic CI/CD, form handling, and global CDN distribution for optimal performance.
-
-<a href="https://www.netlify.com/">
-  <img src="https://www.vectorlogo.zone/logos/netlify/netlify-icon.svg" width="50" height="50" alt="Netlify" /></a><a href="https://vercel.com/"><img src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_light_background.png" width="50" height="50" alt="Vercel" /></a><a href="https://pages.github.com/"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" width="50" height="50" alt="GitHub Pages" /></a><a href="https://firebase.google.com/products/hosting"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" width="50" height="50" alt="Firebase Hosting" />
-</a>
-
-### Features
-This portfolio features a responsive design that works seamlessly across all devices, with a sophisticated dark/light theme toggle and smooth CSS animations. It includes an interactive project filtering system, working contact form with Netlify integration and spam protection, dynamic typing effects, and floating background elements. The site is optimized for performance with semantic HTML, modern CSS techniques, and vanilla JavaScript for enhanced user experience.
-
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">
-  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" width="50" height="50" alt="CSS Grid" />
-</a>
-
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">
-  <img src="https://www.vectorlogo.zone/logos/w3_css/w3_css-icon.svg" width="50" height="50" alt="Flexbox" />
-</a>
-
-<a href="https://web.dev/responsive-web-design-basics/">
-  <img src="https://img.icons8.com/color/48/000000/responsive.png" width="50" height="50" alt="Responsive Design" />
-</a>
-
-<a href="https://web.dev/performance-budgets-101/">
-  <img src="https://img.icons8.com/color/48/000000/speed.png" width="50" height="50" alt="Performance" />
-</a>
-
-<a href="https://www.netlify.com/products/forms/">
-  <img src="https://img.icons8.com/color/48/000000/email.png" width="50" height="50" alt="Contact Forms" />
-</a>
-
-<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility">
-  <img src="https://img.icons8.com/color/48/000000/accessibility.png" width="50" height="50" alt="Accessibility" />
-</a>
-
-<br>
 <br>
 <br>
 
@@ -90,15 +54,15 @@ This portfolio features a responsive design that works seamlessly across all dev
 >## 🎨 Portfolio Sections & Components
 >**Modern Portfolio Structure** — a comprehensive showcase featuring hero section with dynamic typing effects, about me with bento grid layout, tech stack visualization, filterable project gallery, and contact form. This repository demonstrates modern web development practices combining responsive design, smooth animations, and interactive user experience elements.
 
-### 🔥 Key Sections
+### 🔥 Sections Highlights
 
-- 🏠 **Hero Section with Dynamic Elements**
+- **Hero Section with Dynamic Elements**
   - Animated typing effect with multiple role descriptions
   - Floating background tech icons with parallax movement
   - Status indicator showing current availability
   - Call-to-action buttons for GitHub and resume download
   
-  #### 🎯 Hero Section Components
+  #### Hero Section Components
 
 <a href="https://rushii-portfolio.netlify.app/#home" target="_blank">
   <img src="https://img.shields.io/badge/GitHub-Hero_Section-1E90FF?style=for-the-badge&logo=github&logoColor=ECEFF4&labelColor=3B4252" alt="Hero Section">
@@ -122,13 +86,13 @@ This portfolio features a responsive design that works seamlessly across all dev
   </p>
 </div>
 
-- 📊 **About Me with Bento Grid Layout**
+- **About Me with Bento Grid Layout**
   - Personal journey and education timeline
   - Interactive tech stack with hover effects
   - Achievement statistics and milestones
   - Responsive card-based design system
   
-  #### 🎨 Design Components
+  #### Design Components
 
 <a href="https://github.com/rushhiii/Website-Portfolio/blob/main/css/style.css" target="_blank">
   <img src="https://img.shields.io/badge/GitHub-Bento_Grid-4169E1?style=for-the-badge&logo=github&logoColor=white&labelColor=2E3440" alt="Bento Grid Design">
