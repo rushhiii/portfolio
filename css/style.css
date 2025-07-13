@@ -2440,7 +2440,7 @@ p.project-description {
 /* Notification Styles */
 .notification {
     position: fixed;
-    top: 20px;
+    top: 20;
     right: 20px;
     z-index: 10000;
     display: flex;
@@ -2458,29 +2458,23 @@ p.project-description {
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(25px);
     border: 1px solid transparent;
-    animation: slideDown 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    /* max-width: 420px; */
+    animation: slideInRight 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    max-width: 420px;
     min-width: 300px;
     position: relative;
     overflow: hidden;
 }
 
-@keyframes slideDown {
-    0% {
-        transform: translateX(100vw) scale(0.8);
-        opacity: 0;
-    }
-
-    50% {
-        transform: translateX(2px) scale(1.02);
-        opacity: 0.8;
-    }
-
+/* @keyframes slideDown {
     100% {
-        transform: translateX(0) scale(1);
+        transform: translateY(100%) scale(1);
         opacity: 1;
     }
-}
+    0% {
+        transform: translateY(0) scale(0.8);
+        opacity: 0;
+    }
+} */
 
 .notification::before {
     content: '';
@@ -2575,12 +2569,12 @@ p.project-description {
     }
 
     50% {
-        transform: translateX(50vw) scale(1.02);
+        transform: translateX(-10vw) scale(1.02);
         opacity: 0.8;
     }
 
     100% {
-        transform: translateX(0) scale(1);
+        transform: translateX(-20vw) scale(1);
         opacity: 1;
     }
 }
