@@ -35,7 +35,7 @@ This project uses HTML5 for semantic markup and accessibility, CSS3 for modern s
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="50" height="50" alt="JavaScript"></a>
 <a href="https://fontawesome.com/" target="_blank">
-  <img width="50px" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fontawesome/fontawesome-original.svg" alt="Font Awesome"></a>
+  <img width="50px" src="https://images.seeklogo.com/logo-png/33/1/font-awesome-logo-png_seeklogo-336114.png" alt="Font Awesome"></a>
 <a href="https://fonts.google.com/" target="_blank">
   <img width="50px" src="https://www.vectorlogo.zone/logos/google_fonts/google_fonts-icon.svg" alt="Google Fonts"></a>
 <a href="https://www.netlify.com/" target="_blank">
