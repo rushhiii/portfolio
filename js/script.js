@@ -2,6 +2,7 @@
 class PortfolioApp {
     constructor() {
         this.projects = [];
+        this.categories = [];
         this.currentFilter = 'all';
         this.isMenuOpen = false;
         this.isDarkTheme = true;
@@ -19,6 +20,7 @@ class PortfolioApp {
         this.init3DCardEffects();
         this.setCurrentYear();
         await this.loadProjects();
+        this.renderFilterButtons();
         this.renderProjects();
 
         // Initialize EmailJS
@@ -430,9 +432,14 @@ class PortfolioApp {
             const response = await fetch('projects.json');
             const data = await response.json();
             this.projects = data.projects;
+            this.categories = data.categories || [
+                { id: "all", name: "All", icon: "fas fa-th-large", visible: true },
+                { id: "web", name: "Web Dev", icon: "fas fa-globe", visible: true },
+                { id: "automation", name: "Automation", icon: "fas fa-robot", visible: true }
+            ];
         } catch (error) {
             console.error('Error loading projects:', error);
-            // Fallback projects
+            // Fallback projects and categories
             this.projects = [
                 {
                     id: 1,
@@ -465,7 +472,44 @@ class PortfolioApp {
                     featured: true
                 }
             ];
+            this.categories = [
+                { id: "all", name: "All", icon: "fas fa-th-large", visible: true },
+                { id: "web", name: "Web Dev", icon: "fas fa-globe", visible: true },
+                { id: "automation", name: "Automation", icon: "fas fa-robot", visible: true }
+            ];
         }
+    }
+
+    renderFilterButtons() {
+        const filterContainer = document.querySelector('.project-filters');
+        if (!filterContainer) return;
+
+        filterContainer.innerHTML = '';
+
+        this.categories
+            .filter(category => category.visible !== false) // Only show visible categories
+            .forEach(category => {
+                const button = document.createElement('button');
+                button.className = `filter-btn ${category.id === 'all' ? 'active' : ''}`;
+                button.setAttribute('data-filter', category.id);
+                
+                if (category.icon) {
+                    button.innerHTML = `<i class="${category.icon}"></i> ${category.name}`;
+                } else {
+                    button.textContent = category.name;
+                }
+
+                button.addEventListener('click', (e) => {
+                    // Remove active class from all buttons
+                    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    e.target.classList.add('active');
+                    // Filter projects
+                    this.filterProjects(category.id);
+                });
+
+                filterContainer.appendChild(button);
+            });
     }
 
     renderProjects() {
@@ -589,6 +633,29 @@ class PortfolioApp {
 
     filterProjects(filter) {
         this.currentFilter = filter;
+        
+        // Count how many projects will be displayed with this filter
+        let filteredProjects = this.projects.filter(project => {
+            // First check if card should be displayed
+            if (project.displayCard === false) {
+                return false;
+            }
+            // Then check category filter
+            return filter === 'all' || project.category === filter;
+        });
+        
+        // Get the projects grid element
+        const projectsGrid = document.getElementById('projectsGrid');
+        
+        // Add or remove the 'few-cards' class based on project count and filter
+        if (projectsGrid) {
+            if (filter !== 'all' && filteredProjects.length < 3) {
+                projectsGrid.classList.add('few-cards');
+            } else {
+                projectsGrid.classList.remove('few-cards');
+            }
+        }
+        
         this.renderProjects();
     }
 

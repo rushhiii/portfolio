@@ -1322,6 +1322,12 @@ body {
     backdrop-filter: blur(20px);
 }
 
+/* Show filter icons */
+.filter-btn i {
+    /* display: inline-block; */
+    display: none;
+}
+
 .filter-btn:hover,
 .filter-btn.active {
     background: var(--primary);
@@ -1334,7 +1340,9 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: var(--space-xl);
     margin-bottom: var(--space-2xl);
-    align-items: stretch;
+    /* align-items: stretch; */
+    align-items:stretch;
+    justify-items: center;
 }
 
 .project-card {
@@ -1356,6 +1364,12 @@ body {
     --rotateX: 0deg;
     --rotateY: 0deg;
     --scale: 1;
+}
+
+/* Limit card width when showing few cards */
+.projects-grid.few-cards .project-card {
+    /* max-width: 320px; */
+    max-width: 400px;
 }
 
 /* Project Card Image */
