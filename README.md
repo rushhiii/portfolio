@@ -49,36 +49,38 @@ This project uses modern web technologies including HTML5 for semantic markup, C
 <br>
 <br>
 <br>
-
 >[!IMPORTANT]
 >## 🎨 Portfolio Sections & Components
->**Modern Portfolio Structure** — a comprehensive showcase featuring hero section with dynamic typing effects, about me with bento grid layout, tech stack visualization, filterable project gallery, and contact form. This repository demonstrates modern web development practices combining responsive design, smooth animations, and interactive user experience elements.
+>**Modern Portfolio Showcase** — a comprehensive collection of responsive sections and interactive components. This repository demonstrates real-world applications of modern web development, combining the power of HTML5, CSS3, and vanilla JavaScript for professional web presence.
 
-<!-- ### 🔥 Sections Highlights
+### 🔥 Features
 
-- **Hero Section with Dynamic Elements**
-  - Animated typing effect with multiple role descriptions
-  - Floating background tech icons with parallax movement
-  - Status indicator showing current availability
-  - Call-to-action buttons for GitHub and resume download
-  
-  #### Hero Section Components
+- 🏠 **Hero Section with Dynamic Effects**
+  - Animated typing effects and background elements
+  - Professional status indicators and call-to-action buttons
+  - Responsive design with smooth scroll navigation
+    #### 🎯 Portfolio Section Demos
 
 <a href="https://rushii-portfolio.netlify.app/#home" target="_blank">
-  <img src="https://img.shields.io/badge/GitHub-Hero_Section-1E90FF?style=for-the-badge&logo=github&logoColor=ECEFF4&labelColor=3B4252" alt="Hero Section">
-</a>
+  <img src="https://img.shields.io/badge/GitHub-Hero%20Section-1E90FF?style=for-the-badge&logo=github&logoColor=ECEFF4&labelColor=3B4252" alt="Hero Section Demo"></a>
 
 <a href="https://rushii-portfolio.netlify.app/#about" target="_blank">
-  <img src="https://img.shields.io/badge/GitHub-About_Section-3B4252?style=for-the-badge&logo=github&logoColor=ECEFF4&labelColor=3B4252" alt="About Section">
-</a>
+  <img src="https://img.shields.io/badge/GitHub-About%20Section-3B4252?style=for-the-badge&logo=github&logoColor=ECEFF4&labelColor=3B4252" alt="About Section Demo"></a>
 
 <a href="https://rushii-portfolio.netlify.app/#projects" target="_blank">
-  <img src="https://img.shields.io/badge/GitHub-Projects_Gallery-7B68EE?style=for-the-badge&logo=github&logoColor=ECEFF4&labelColor=3B4252" alt="Projects Section">
-</a>
+  <img src="https://img.shields.io/badge/Github-Projects%20Gallery-7B68EE?style=for-the-badge&logo=github&logoColor=ECEFF4&labelColor=3B4252" alt="Projects Gallery Demo"></a>
 
 <a href="https://rushii-portfolio.netlify.app/#contact" target="_blank">
-  <img src="https://img.shields.io/badge/GitHub-Contact_Form-FA8072?style=for-the-badge&logo=github&logoColor=ECEFF4&labelColor=3B4252" alt="Contact Section">
-</a>
+  <img src="https://img.shields.io/badge/GitHub-Contact%20Form-FA8072?style=for-the-badge&logo=github&logoColor=ECEFF4&labelColor=3B4252" alt="Contact Form Demo"></a>
+
+<a href="./assets/rushi_tech_resume.pdf" target="_blank">
+  <img src="https://img.shields.io/badge/GitHub-Resume%20Download-ECEFF4?style=for-the-badge&logo=github&logoColor=ECEFF4&labelColor=3B4252" alt="Resume Download"></a>
+
+<a href="https://app.netlify.com/start/deploy?repository=https://github.com/rushhiii/Website-Portfolio" target="_blank">
+  <img src="https://img.shields.io/badge/GitHub-One%20Click%20Deploy-DDA0DD?style=for-the-badge&logo=github&logoColor=ECEFF4&labelColor=3B4252" alt="One Click Deploy"></a>
+
+<a href="https://github.com/rushhiii/Rushi-Bashfolio" target="_blank">
+  <img src="https://img.shields.io/badge/GitHub-Terminal%20Portfolio-CD5C5C?style=for-the-badge&logo=github&logoColor=ECEFF4&labelColor=3B4252" alt="Terminal Portfolio"></a>
 
 <div>
   <p>
@@ -86,29 +88,61 @@ This project uses modern web technologies including HTML5 for semantic markup, C
   </p>
 </div>
 
-- **About Me with Bento Grid Layout**
-  - Personal journey and education timeline
-  - Interactive tech stack with hover effects
-  - Achievement statistics and milestones
-  - Responsive card-based design system
-  
-  #### Design Components
+- 📱 **Responsive Design & Animations**
+  - Mobile-first approach with CSS Grid and Flexbox
+  - Smooth animations and transitions throughout the site
+  - Dark/light theme toggle with persistent preferences
+    #### 🎨 Design & Animation Features
+    
+<a href="https://github.com/rushhiii/Website-Portfolio/blob/main/css/style.css" target="_blank">
+  <img src="https://img.shields.io/badge/GitHub-CSS%20Animations-4169E1?style=for-the-badge&logo=github&logoColor=white&labelColor=2E3440" alt="CSS Animations"></a>
 
 <a href="https://github.com/rushhiii/Website-Portfolio/blob/main/css/style.css" target="_blank">
-  <img src="https://img.shields.io/badge/GitHub-Bento_Grid-4169E1?style=for-the-badge&logo=github&logoColor=white&labelColor=2E3440" alt="Bento Grid Design">
-</a>
+  <img src="https://img.shields.io/badge/GitHub-Theme%20Toggle-F0E68C?style=for-the-badge&logo=github&logoColor=white&labelColor=2E3440" alt="Theme Toggle"></a>
+
+<a href="https://github.com/rushhiii/Website-Portfolio/blob/main/css/style.css" target="_blank">
+  <img src="https://img.shields.io/badge/GitHub-Responsive%20Design-FFC72C?style=for-the-badge&logo=github&logoColor=white&labelColor=2E3440" alt="Responsive Design"></a>
 
 <a href="https://github.com/rushhiii/Website-Portfolio/blob/main/js/script.js" target="_blank">
-  <img src="https://img.shields.io/badge/GitHub-Interactive_Elements-F0E68C?style=for-the-badge&logo=github&logoColor=white&labelColor=2E3440" alt="Interactive JS">
+  <img src="https://img.shields.io/badge/GitHub-Interactive%20JS-3B4252?style=for-the-badge&logo=github&logoColor=white&labelColor=2E3440" alt="Interactive JavaScript"></a>
+    
+<div>
+  <p>
+    <h1></h1>
+  </p>
+</div>
+
+- 🌐 **Modern Web Technologies**
+  - HTML5 semantic markup for accessibility
+  - CSS3 advanced features and custom properties
+  - Vanilla JavaScript for performance optimization
+  - Font Awesome icons and Google Fonts integration
+
+
+<img width="100%" src="./assets/ele/preview.png">
+<p>
+ This portfolio project is a modern web showcase built with HTML5, CSS3, and vanilla JavaScript. The website features responsive design, smooth animations, and interactive components that demonstrate professional web development skills. Perfect for developers, students, and professionals looking to create an impressive online presence.<br>
+  ⚠️ <b>Note:</b> The contact form requires Netlify hosting for full functionality, or you can configure it with other form handling services.
+</p>
+
+<a href="https://rushii-portfolio.netlify.app/" target="_blank">
+  <img src="https://img.shields.io/badge/Netlify-Live%20Portfolio-5E81AC?style=for-the-badge&logo=netlify&logoColor=white&labelColor=2E3440" alt="Live Portfolio Badge">
 </a>
 
-<a href="https://github.com/rushhiii/Website-Portfolio/blob/main/index.html" target="_blank">
-  <img src="https://img.shields.io/badge/GitHub-Semantic_HTML-FFC72C?style=for-the-badge&logo=github&logoColor=white&labelColor=2E3440" alt="Semantic HTML">
-</a>
+---
 
-<a href="https://github.com/rushhiii/Website-Portfolio/blob/main/projects.json" target="_blank">
-  <img src="https://img.shields.io/badge/GitHub-Dynamic_Content-3B4252?style=for-the-badge&logo=github&logoColor=white&labelColor=2E3440" alt="Dynamic Content">
-</a>
+<br>
+
+<h3>⚙️ Types of Portfolio Sections</h3>
+
+1] <b>Hero Section:</b> <br>
+Dynamic landing area with animated typing effects, professional introductions, and call-to-action buttons.<br>
+2] <b>About Section:</b><br>
+Personal journey showcase with education, skills, and professional background in modern layout.<br>
+3] <b>Projects Gallery:</b><br>
+Filterable portfolio showcase with live demos, source code links, and technology stacks.<br>
+4] <b>Contact Section:</b><br>
+Professional contact form with social media integration and downloadable resume.<br>
 
 <div>
   <p>
@@ -116,58 +150,138 @@ This project uses modern web technologies including HTML5 for semantic markup, C
   </p>
 </div>
 
-- 🛠️ **Project Showcase & Filtering**
-  - Dynamic project loading from JSON data
-  - Category-based filtering (Web Dev, AI/ML, Automation)
-  - Live demo and GitHub repository links
-  - Responsive project cards with hover animations
+<h3>🧰 Essential Development Tools</h3>
 
-- 📧 **Contact Form Integration**
-  - Netlify Forms with spam protection
-  - Real-time form validation and feedback
-  - Custom thank-you page redirect
-  - Email notification system
+1] <b>VS Code</b> – Modern code editor with extensions – code.visualstudio.com <br>
+2] <b>Git</b> – Version control system for tracking changes – git-scm.com <br>
+3] <b>Chrome DevTools</b> – Browser development tools for debugging <br>
+4] <b>Figma</b> – Design tool for UI/UX prototyping – figma.com <br>
+5] <b>Netlify</b> – Modern hosting with CI/CD – netlify.com <br>
+6] <b>Live Server</b> – Local development server with auto-reload <br>
+7] <b>Prettier</b> – Code formatter for consistent styling <br>
+8] <b>ESLint</b> – JavaScript linting for code quality <br>
 
-  ⚠️ <b>Note:</b> The contact form requires Netlify deployment to function properly.
-</p>
+<a href="https://code.visualstudio.com/" target="_blank"> 
+  <img src="https://img.shields.io/badge/VS_Code-Modern_Editor-5E81AC?style=for-the-badge&logo=VisualStudioCode&logoColor=white" alt="VS Code"></a> 
 
-<br> -->
+<a href="https://git-scm.com/" target="_blank"> 
+  <img src="https://img.shields.io/badge/Git-Version_Control-B48EAD?style=for-the-badge&logo=Git&logoColor=white" alt="Git"></a> 
 
-<h2>❃ Web Development Resources</h2>
+<a href="https://developer.chrome.com/docs/devtools/" target="_blank"> 
+  <img src="https://img.shields.io/badge/Chrome_DevTools-Debugging-D08770?style=for-the-badge&logo=GoogleChrome&logoColor=white" alt="Chrome DevTools"></a> 
 
-<h3>🧩 Core Frontend Technologies</h3>
+<a href="https://www.figma.com/" target="_blank"> 
+  <img src="https://img.shields.io/badge/Figma-UI_UX_Design-D8DEE9?style=for-the-badge&logo=Figma&logoColor=white" alt="Figma"></a> 
 
-1] <b>HTML5</b> – Semantic markup and modern web standards<br>
-2] <b>CSS3</b> – Styling with Grid, Flexbox, and animations<br>
-3] <b>JavaScript ES6+</b> – Modern JavaScript features and DOM manipulation<br>
-4] <b>Responsive Design</b> – Mobile-first approach and media queries<br>
-5] <b>Web Performance</b> – Optimization techniques and best practices<br>
-6] <b>Accessibility</b> – WCAG guidelines and inclusive design<br>
-7] <b>Progressive Enhancement</b> – Building resilient web experiences<br>
+<a href="https://www.netlify.com/" target="_blank"> 
+  <img src="https://img.shields.io/badge/Netlify-Modern_Hosting-ECEFF4?style=for-the-badge&logo=Netlify&logoColor=white" alt="Netlify"></a>
+
+<a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank"> 
+  <img src="https://img.shields.io/badge/Live_Server-Development_Server-EBCB8B?style=for-the-badge&logo=VisualStudioCode&logoColor=white" alt="Live Server"></a>
+
+<a href="https://prettier.io/" target="_blank"> 
+  <img src="https://img.shields.io/badge/Prettier-Code_Formatter-A3BE8C?style=for-the-badge&logo=Prettier&logoColor=white" alt="Prettier"></a> 
+
+<a href="https://eslint.org/" target="_blank"> 
+  <img src="https://img.shields.io/badge/ESLint-Code_Quality-8FBCBB?style=for-the-badge&logo=ESLint&logoColor=white" alt="ESLint"></a>
+  
+<div>
+  <p>
+    <h1></h1>
+  </p>
+</div>
+
+<h3>🛠️ Frontend Technologies & Libraries</h3>
+
+1] <b>Languages:</b> HTML5, CSS3, JavaScript ES6+, TypeScript <br>
+2] <b>CSS Frameworks:</b> Bootstrap, Tailwind CSS, Bulma, Foundation <br>
+3] <b>JavaScript Libraries:</b> jQuery, GSAP, Three.js, Chart.js <br>
+4] <b>Icon Libraries:</b> Font Awesome, Feather Icons, Heroicons <br>
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"></a>
+  
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"></a>
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"></a>
+
+<a href="https://www.typescriptlang.org/" target="_blank">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"></a>
+  
+<a href="https://getbootstrap.com/" target="_blank">
+  <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"></a>
+  
+<a href="https://tailwindcss.com/" target="_blank">
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS"></a>
+  
+<a href="https://jquery.com/" target="_blank">
+  <img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white" alt="jQuery"></a>
+  
+<a href="https://greensock.com/gsap/" target="_blank">
+  <img src="https://img.shields.io/badge/GSAP-88CE02?style=for-the-badge&logo=greensock&logoColor=white" alt="GSAP"></a>
+  
+<a href="https://threejs.org/" target="_blank">
+  <img src="https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white" alt="Three.js"></a>
+  
+<a href="https://www.chartjs.org/" target="_blank">
+  <img src="https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=chart.js&logoColor=white" alt="Chart.js"></a>
+  
+<a href="https://fontawesome.com/" target="_blank">
+  <img src="https://img.shields.io/badge/Font_Awesome-528DD7?style=for-the-badge&logo=font-awesome&logoColor=white" alt="Font Awesome"></a>
+
+<div>
+  <p>
+    <h1></h1>
+  </p>
+</div>
+
+<h3>🧩 Core Web Technologies</h3>
+
+1] <b>HTML5</b> – Semantic markup with modern web standards and accessibility features<br>
+2] <b>CSS3</b> – Advanced styling with Grid, Flexbox, animations, and custom properties<br>
+3] <b>JavaScript ES6+</b> – Modern language features for interactive web applications<br>
+4] <b>Responsive Design</b> – Mobile-first approach with fluid layouts and breakpoints<br>
+5] <b>Web Accessibility</b> – WCAG guidelines for inclusive user experiences<br>
+6] <b>Performance Optimization</b> – Fast loading times and efficient resource management<br>
+7] <b>Progressive Web Apps</b> – Modern web capabilities with app-like experiences<br>
+8] <b>Web APIs</b> – Browser features for enhanced functionality<br>
+9] <b>CSS Frameworks</b> – Bootstrap, Tailwind CSS for rapid development<br>
+10] <b>Build Tools</b> – Webpack, Vite, Parcel for modern development workflows<br>
+11] <b>Version Control</b> – Git and GitHub for collaborative development<br>
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank"> 
-  <img src="https://img.shields.io/badge/HTML5-Semantic%20Markup-A3BE8C?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Badge">
-</a>
+  <img src="https://img.shields.io/badge/HTML5-Semantic%20Markup-A3BE8C?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"></a>
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"> 
-  <img src="https://img.shields.io/badge/CSS3-Modern%20Styling-B48EAD?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 Badge">
-</a> 
+  <img src="https://img.shields.io/badge/CSS3-Modern%20Styling-B48EAD?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"></a> 
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"> 
-  <img src="https://img.shields.io/badge/JavaScript-ES6%2B%20Features-D08770?style=for-the-badge&logo=javascript&logoColor=white" alt="JavaScript Badge">
-</a> 
+  <img src="https://img.shields.io/badge/JavaScript-ES6%2B%20Features-D08770?style=for-the-badge&logo=javascript&logoColor=white" alt="JavaScript"></a> 
 
 <a href="https://web.dev/responsive-web-design-basics/" target="_blank"> 
-  <img src="https://img.shields.io/badge/Responsive%20Design-Mobile%20First-5E81AC?style=for-the-badge&logo=responsive&logoColor=white" alt="Responsive Design Badge">
-</a>
+  <img src="https://img.shields.io/badge/Responsive%20Design-Mobile%20First-5E81AC?style=for-the-badge&logo=responsive&logoColor=white" alt="Responsive Design"></a> 
 
-<a href="https://web.dev/performance-budgets-101/" target="_blank">
-  <img src="https://img.shields.io/badge/Web%20Performance-Optimization-B48EAD?style=for-the-badge&logo=lighthouse" alt="Web Performance">
-</a> 
+<a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank">
+  <img src="https://img.shields.io/badge/Web%20Accessibility-WCAG%20Guidelines-B48EAD?style=for-the-badge&logo=accessibility" alt="Web Accessibility"></a> 
 
-<a href="https://www.w3.org/WAI/WCAG21/quickref/" target="_blank"> 
-  <img src="https://img.shields.io/badge/Accessibility-WCAG%20Guidelines-BF616A?style=for-the-badge&logo=accessibility&logoColor=white" alt="Accessibility Badge">
-</a>
+<a href="https://web.dev/performance/" target="_blank"> 
+  <img src="https://img.shields.io/badge/Performance-Optimization-BF616A?style=for-the-badge&logo=lighthouse&logoColor=white" alt="Performance"></a> 
+
+<a href="https://web.dev/progressive-web-apps/" target="_blank"> 
+  <img src="https://img.shields.io/badge/Progressive%20Web%20Apps-Modern%20Capabilities-8FBCBB?style=for-the-badge&logo=pwa&logoColor=white" alt="PWA"></a><a href="https://developer.mozilla.org/en-US/docs/Web/API" target="_blank">
+  <img src="https://img.shields.io/badge/Web%20APIs-Browser%20Features-4C566A?style=for-the-badge&logo=github" alt="Web APIs"></a> 
+
+<a href="https://getbootstrap.com/" target="_blank">
+  <img src="https://img.shields.io/badge/CSS%20Frameworks-Bootstrap%20%26%20Tailwind-A3BE8C?style=for-the-badge&logo=github" alt="CSS Frameworks"></a> 
+
+<a href="https://vitejs.dev/" target="_blank">
+  <img src="https://img.shields.io/badge/Build%20Tools-Vite%20%26%20Webpack-BF616A?style=for-the-badge&logo=github" alt="Build Tools"></a>
+
+<a href="https://git-scm.com/" target="_blank">
+  <img src="https://img.shields.io/badge/Version%20Control-Git%20%26%20GitHub-5E81AC?style=for-the-badge&logo=github" alt="Version Control"></a> 
+
 
 ## 📁 Project Structure
 
@@ -312,6 +426,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 🐙 GitHub: [@rushhiii](https://github.com/rushhiii)  
 🌐 Portfolio: [rushii-portfolio.netlify.app](https://rushii-portfolio.netlify.app/)
 
----
+
 
 ⚠️ This repository is uniquely designed by <strong>@rushhiii</strong>
