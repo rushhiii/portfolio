@@ -8,11 +8,8 @@ A modern, responsive portfolio website showcasing my journey as a Computer Scien
 
 </h4>
 
-<a href="https://rushii-portfolio.netlify.app" target="_blank">
-  <img src="https://img.shields.io/badge/Live_Demo-Portfolio_Website-808080?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Portfolio"></a>
-<a href="https://github.com/rushhiii/Website-Portfolio" target="_blank">
-  <img src="https://img.shields.io/badge/GitHub-Source_Code-BF616A?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository">
-</a>
+<a href="https://rushii-portfolio.netlify.app" target="_blank"><img src="https://img.shields.io/badge/Live_Demo-Portfolio_Website-4285F4?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Portfolio"></a>
+<a href="https://github.com/rushhiii/Website-Portfolio" target="_blank"><img src="https://img.shields.io/badge/Terminal_Portfolio-Bash_Style-2E3440?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository"></a>
 
 
 <div>
@@ -175,17 +172,17 @@ This repository features responsive web design with mobile-first approach, inter
   - Vanilla JavaScript for performance optimization
   - Font Awesome icons and Google Fonts integration
 
-<img width="100%" src="./assets/ele/preview.png">
+[![Preview](./assets/ele/preview.png)](https://rushii-portfolionetlify.app)
 <p>
- This portfolio project is a modern web showcase built with HTML5, CSS3, and vanilla JavaScript. The website features responsive design, smooth animations, and interactive components that demonstrate professional web development skills. Perfect for developers, students, and professionals looking to create an impressive online presence.<br>
-  ⚠️ <b>Note:</b> The contact form requires Netlify hosting for full functionality, or you can configure it with other form handling services.
+ This portfolio project is a modern web showcase built with HTML5, CSS3, and vanilla JavaScript. The website features responsive design, smooth animations, and interactive components that demonstrate professional web development skills. Perfect for developers, students, and professionals looking to create an impressive online presence.
+ <br>
+
+⚠️ <b>Note:</b> The contact form requires Netlify hosting for full functionality, or you can configure it with other form handling services.
 </p>
 
 <a href="https://rushii-portfolio.netlify.app/" target="_blank">
   <img src="https://img.shields.io/badge/Netlify-Live%20Portfolio-5E81AC?style=for-the-badge&logo=netlify&logoColor=white&labelColor=2E3440" alt="Live Portfolio Badge">
 </a>
-
----
 
 <br>
 
@@ -510,22 +507,13 @@ Update `projects.json` with your project data:
 4. **Push** to the branch (`git push origin feature/amazing-feature`)
 5. **Open** a Pull Request
 
-## 📄 License
+## Contact
 
-<img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="MIT License">
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Contact
-
-<img src="https://img.shields.io/badge/Contact-Reach_Out-E74C3C?style=for-the-badge&logo=mail&logoColor=white" alt="Contact">
-
-**Tirth Patel**  
 📧 Email: rushiofficial1205@gmail.com  
 💼 LinkedIn: [in/rushhiii](https://linkedin.com/in/rushhiii)  
 🐙 GitHub: [@rushhiii](https://github.com/rushhiii)  
 🌐 Portfolio: [rushii-portfolio.netlify.app](https://rushii-portfolio.netlify.app/)
 
----
+#
 
-⚠️ This repository is uniquely designed by <strong>@rushhiii</strong>
+<p align="center"> by <strong>@rushhiii</strong></p>
