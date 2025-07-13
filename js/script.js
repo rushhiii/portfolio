@@ -648,14 +648,34 @@ class PortfolioApp {
     }
 
     showNotification(message, type = 'info') {
-        // Handle multiple notifications by adjusting position
+        // Remove old notifications first to prevent stacking issues
         const existingNotifications = document.querySelectorAll('.notification');
-        const notificationHeight = 80; // Approximate height including margin
-        const topOffset = 20 + (existingNotifications.length * notificationHeight);
+        if (existingNotifications.length >= 3) {
+            // Remove oldest notifications if we have too many
+            existingNotifications[0].remove();
+        }
+
+        // Recalculate after cleanup
+        const currentNotifications = document.querySelectorAll('.notification');
+        const notificationHeight = 85; // Height + margin
+        const topOffset = 20 + (currentNotifications.length * notificationHeight);
 
         const notification = document.createElement('div');
         notification.className = `notification ${type}`;
-        notification.style.top = `${topOffset}px`;
+        
+        // Always start at a reasonable top position (max 3 notifications visible)
+        const maxTop = 20 + (2 * notificationHeight); // Max 3 notifications
+        const finalTop = Math.min(topOffset, maxTop);
+        notification.style.top = `${finalTop}px`;
+        
+        // Set initial transform for animation (start above screen)
+        if (window.innerWidth <= 768) {
+            // Mobile: full width, start above screen
+            notification.style.transform = 'translateY(-120px)';
+        } else {
+            // Desktop: centered, start above screen  
+            notification.style.transform = 'translateX(-50%) translateY(-120px)';
+        }
 
         let icon = 'info-circle';
         if (type === 'success') icon = 'check-circle';
@@ -670,7 +690,13 @@ class PortfolioApp {
 
         // Animate in with enhanced easing
         setTimeout(() => {
-            notification.style.transform = 'translateX(-50%) translateY(0)';
+            if (window.innerWidth <= 768) {
+                // Mobile: slide down from above
+                notification.style.transform = 'translateY(0)';
+            } else {
+                // Desktop: slide down from above
+                notification.style.transform = 'translateX(-50%) translateY(0)';
+            }
             notification.style.opacity = '1';
         }, 150);
 
@@ -700,7 +726,14 @@ class PortfolioApp {
     dismissNotification(notification) {
         if (!notification || !notification.parentNode) return;
         
-        notification.style.transform = 'translateX(-50%) translateY(-120px)';
+        // Animate out based on screen size
+        if (window.innerWidth <= 768) {
+            // Mobile: slide up
+            notification.style.transform = 'translateY(-120px)';
+        } else {
+            // Desktop: slide up
+            notification.style.transform = 'translateX(-50%) translateY(-120px)';
+        }
         notification.style.opacity = '0';
         
         setTimeout(() => {
@@ -708,16 +741,47 @@ class PortfolioApp {
                 notification.remove();
                 // Reposition remaining notifications
                 this.repositionNotifications();
+                // Clean up any orphaned notifications
+                this.cleanupNotifications();
             }
         }, 400);
+    }
+
+    cleanupNotifications() {
+        // Remove any notifications that might be stuck or invisible
+        const notifications = document.querySelectorAll('.notification');
+        notifications.forEach(notification => {
+            if (notification.style.opacity === '0' || 
+                getComputedStyle(notification).opacity === '0') {
+                notification.remove();
+            }
+        });
     }
 
     repositionNotifications() {
         const notifications = document.querySelectorAll('.notification');
         notifications.forEach((notification, index) => {
-            const notificationHeight = 80;
+            const notificationHeight = 85;
             const newTop = 20 + (index * notificationHeight);
-            notification.style.top = `${newTop}px`;
+            
+            // Ensure notifications stay in the top area (max 3 visible)
+            const maxTop = 20 + (2 * notificationHeight);
+            const finalTop = Math.min(newTop, maxTop);
+            
+            notification.style.top = `${finalTop}px`;
+            
+            // Ensure proper transform for current screen size
+            if (window.innerWidth <= 768) {
+                // Mobile: full width
+                if (notification.style.opacity === '1') {
+                    notification.style.transform = 'translateY(0)';
+                }
+            } else {
+                // Desktop: centered
+                if (notification.style.opacity === '1') {
+                    notification.style.transform = 'translateX(-50%) translateY(0)';
+                }
+            }
         });
     }
 
@@ -733,6 +797,9 @@ class PortfolioApp {
         if (window.innerWidth > 768 && this.isMenuOpen) {
             this.toggleMobileMenu();
         }
+        
+        // Reposition notifications on screen size change
+        this.repositionNotifications();
     }
 }
 
@@ -740,9 +807,8 @@ class PortfolioApp {
 const notificationStyles = `
     .notification {
         position: fixed;
-        top: 20px;
         left: 50%;
-        transform: translateX(-50%) translateY(-100px);
+        transform: translateX(-50%);
         background: linear-gradient(
             135deg,
             var(--bg-primary) 0%,
@@ -776,8 +842,9 @@ const notificationStyles = `
         min-width: 350px;
         max-width: 500px;
         font-weight: 500;
-        position: relative;
         overflow: hidden;
+        /* Start above screen and animate down */
+        transform: translateX(-50%) translateY(-120px);
     }
 
     .notification::before {
@@ -913,7 +980,7 @@ const notificationStyles = `
         .notification {
             left: 16px;
             right: 16px;
-            transform: translateY(-100px);
+            transform: translateY(-120px);
             min-width: auto;
             max-width: none;
             padding: 16px 20px;

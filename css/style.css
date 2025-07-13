@@ -2472,7 +2472,7 @@ p.project-description {
     }
 
     50% {
-        transform: translateX(50vw) scale(1.02);
+        transform: translateX(2px) scale(1.02);
         opacity: 0.8;
     }
 
