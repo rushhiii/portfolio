@@ -128,9 +128,6 @@ This project uses modern web technologies including HTML5 for semantic markup, C
   - Custom thank-you page redirect
   - Email notification system
 
-<img width="100%" src="./assets/ele/preview.png">
-<p>
- This portfolio project is a modern responsive website built with vanilla HTML, CSS, and JavaScript. The project features smooth animations, dark/light theme toggle, and a fully functional contact form integrated with Netlify. It showcases clean code practices and modern web development techniques.<br>
   ⚠️ <b>Note:</b> The contact form requires Netlify deployment to function properly.
 </p>
 
