@@ -2511,10 +2511,10 @@ p.project-description {
             rgba(6, 214, 160, 0.95) 0%,
             rgba(5, 150, 105, 0.95) 100%);
     border-color: rgba(6, 214, 160, 0.4);
-    box-shadow:
+    /* box-shadow:
         0 20px 40px rgba(6, 214, 160, 0.25),
         0 8px 16px rgba(6, 214, 160, 0.15),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        inset 0 1px 0 rgba(255, 255, 255, 0.2); */
 }
 
 .notification.success i {
