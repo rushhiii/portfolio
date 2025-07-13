@@ -1,44 +1,13 @@
+![Portfolio Preview](./assets/ele/preview.png)
+
 # 🌟 Tirth Patel - Portfolio Website
 
-A modern, responsive portfolio website showcasing my journey as a Computer Science student and developer. Built with clean HTML, CSS, and JavaScript, featuring smooth animations, dark/light theme toggle, and a working contact form.
+A modern, responsive portfolio website showcasing my journey as a Computer Science student and developer. Built with clean HTML, CSS, and JavaScript, featuring smooth animations and dark/light theme toggle.
 
-![Portfolio Preview](./assets/ele/profile_pic.png)
+🔗 **[View Live Portfolio](https://https://rushii-portfolio.netlify.app)**  
+🔗 **[Terminal Portfolio](https://rushi-bashfolio.netlify.app)** - Alternative bash-style portfolio
 
-## 🚀 Live Demo
-
-🔗 **[View Live Portfolio](https://your-portfolio-url.netlify.app)**  
-📱 **[Terminal Portfolio](https://rushi-bashfolio.netlify.app)** - Alternative bash-style portfolio
-
-## ✨ Features
-
-### 🎨 Modern Design
-- **Responsive Design** - Works seamlessly on all devices
-- **Dark/Light Theme** - Toggle between themes with smooth transitions
-- **Smooth Animations** - CSS animations and scroll effects
-- **Modern UI Components** - Bento grid layout, glassmorphism effects
-- **Mobile-First** - Optimized for mobile experience
-
-### 🛠 Interactive Elements
-- **Dynamic Typing Effect** - Animated text in hero section
-- **Floating Background Elements** - Interactive floating tech icons
-- **Project Filtering** - Filter projects by category (Web Dev, AI/ML, Automation)
-- **Smooth Scrolling** - Navigate between sections smoothly
-- **Status Indicator** - Real-time availability status
-
-### 📧 Contact Form
-- **Netlify Forms Integration** - Working contact form with spam protection
-- **Email Notifications** - Receive messages directly in your inbox
-- **Success/Error Handling** - Enhanced notifications with animations
-- **Honeypot Protection** - Built-in spam filtering
-
-### 📊 Portfolio Sections
-- **Hero Section** - Dynamic introduction with animated elements
-- **About Me** - Personal journey and education details
-- **Tech Stack** - Visual representation of skills and technologies
-- **Projects** - Filterable project showcase with live demos
-- **Contact** - Multiple ways to get in touch
-
-## 🛠 Tech Stack
+## Tech Stack used in this project?
 
 ### Frontend
 - **HTML5** - Semantic markup
@@ -52,7 +21,7 @@ A modern, responsive portfolio website showcasing my journey as a Computer Scien
 - **Git** - Version control
 - **VS Code** - Development environment
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Website-Portfolio/
@@ -72,7 +41,7 @@ Website-Portfolio/
 └── README.md             # Project documentation
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Web browser (Chrome, Firefox, Safari, Edge)
@@ -123,7 +92,7 @@ Website-Portfolio/
    - Form is pre-configured for Netlify
    - Update form action and notification emails as needed
 
-## 🚀 Deployment
+## Deployment
 
 ### Netlify (Recommended)
 
@@ -146,7 +115,7 @@ Website-Portfolio/
 - **GitHub Pages**: Enable in repository settings
 - **Firebase Hosting**: Use Firebase CLI for deployment
 
-## 📝 Contact Form Configuration
+## Contact Form Configuration
 
 The contact form is configured to work with Netlify Forms:
 
@@ -158,7 +127,7 @@ The contact form is configured to work with Netlify Forms:
 - **Success Page**: Redirects to custom thank-you page
 - **Email Notifications**: Configure in Netlify dashboard
 
-## 🎨 Customization Guide
+## Customization Guide
 
 ### Theme Colors
 Update CSS variables in `style.css`:
@@ -185,7 +154,7 @@ Update `projects.json`:
 }
 ```
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -193,29 +162,18 @@ Update `projects.json`:
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
-
-- **Design Inspiration**: Modern web design trends and glassmorphism
-- **Icons**: Font Awesome icon library
-- **Fonts**: Google Fonts (Inter, Space Grotesk)
-- **Hosting**: Netlify for reliable hosting and form handling
-
-## 📞 Contact
+## Contact
 
 **Tirth Patel**  
 📧 Email: rushiofficial1205@gmail.com  
-💼 LinkedIn: [tirth-patel-52a123343](https://linkedin.com/in/tirth-patel-52a123343)  
+💼 LinkedIn: [in/rushhiii](https://linkedin.com/in/rushhiii)  
 🐙 GitHub: [@rushhiii](https://github.com/rushhiii)  
-🌐 Portfolio: [Portfolio Website](https://your-portfolio-url.netlify.app)
+🌐 Portfolio: [rushii-portfolio.netlify.app](https://rushii-portfolio.netlify.app/)
 
----
+#
 
-⭐ **Star this repository** if you found it helpful!
-
----
-
-*Built with ❤️ by Tirth Patel*
+<p align="center">Built with 💜 by Tirth Patel </p>
