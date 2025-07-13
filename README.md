@@ -4,22 +4,22 @@
   <img width="190px" src="./assets/ele/profile_pic.png" alt="Portfolio">
 </div>
 
-<h1 align="center"><img width="40px" src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png"> Modern Portfolio Website</h1>
+<h1 align="center">Modern Portfolio Website</h1>
 
 <div align="center">
   <a href="https://rushii-portfolio.netlify.app" target="_blank">
-  <img src="https://img.shields.io/badge/Live_Demo-Portfolio_Website-4D5054?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Portfolio"></a>
+  <img src="https://img.shields.io/badge/Live_Demo-Portfolio_Website-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Portfolio"></a>
 <a href="https://github.com/rushhiii/Rushi-Bashfolio" target="_blank">
-  <img src="https://img.shields.io/badge/Terminal_Portfolio-Bash_Style-4D5054?style=for-the-badge&logo=github&logoColor=white" alt="Terminal Portfolio"></a>
+  <img src="https://img.shields.io/badge/Terminal_Portfolio-Bash_Style-181717?style=for-the-badge&logo=github&logoColor=white" alt="Terminal Portfolio"></a>
   <a href="https://github.com/rushhiii/Website-Portfolio" target="_blank">
-  <img src="https://img.shields.io/badge/GitHub-Repository-4D5054?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository"></a>
+  <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository"></a>
   <a href="https://rushii-portfolio.netlify.app/#contact" target="_blank">
-  <img src="https://img.shields.io/badge/Contact_Form-Get_In_Touch-4D5054?style=for-the-badge&logo=mail&logoColor=white" alt="Contact Form"></a>
+  <img src="https://img.shields.io/badge/Contact_Form-Get_In_Touch-E17055?style=for-the-badge&logo=mail&logoColor=white" alt="Contact Form"></a>
 
 <a href="./assets/rushi_tech_resume.pdf" target="_blank">
-  <img src="https://img.shields.io/badge/Resume-Download_PDF-4D5054?style=for-the-badge&logo=adobe&logoColor=white" alt="Download Resume"></a>
+  <img src="https://img.shields.io/badge/Resume-Download_PDF-DC143C?style=for-the-badge&logo=adobe&logoColor=white" alt="Download Resume"></a>
   <a href="https://app.netlify.com/start/deploy?repository=https://github.com/rushhiii/Website-Portfolio" target="_blank">
-  <img src="https://img.shields.io/badge/Deploy-One_Click-4D5054?style=for-the-badge&logo=netlify&logoColor=white" alt="Deploy to Netlify"></a>
+  <img src="https://img.shields.io/badge/Deploy-One_Click-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Deploy to Netlify"></a>
 
 </div>
 
