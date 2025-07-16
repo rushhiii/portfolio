@@ -181,7 +181,7 @@ class PortfolioApp {
 
         const roles = [
             'Full Stack Developer',
-            'Computer Science Student',
+            // 'Computer Science Student',
             'AI Enthusiast',
             'Problem Solver',
             'Creative Thinker',

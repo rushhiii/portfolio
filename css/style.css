@@ -653,7 +653,6 @@ body {
     margin-bottom: var(--space-lg);
     min-height: 2em;
     animation: slideUp .5s ease-out;
-
 }
 
 .cursor {
@@ -679,14 +678,15 @@ body {
     margin-bottom: var(--space-2xl);
     max-width: 500px;
     animation: slideUp .5s ease-out;
-
+    /* animation-delay: .5s; */
 }
 
 .hero-actions {
     display: flex;
     gap: var(--space-lg);
     flex-wrap: wrap;
-    animation: slideUp .6s ease-out;
+    animation: heroactionsfadeIn 1s ease-out;
+    /* animation-delay: 1s; */
     transition: all smooth;
 
 }
@@ -753,7 +753,7 @@ body {
     position: relative;
     width: 300px;
     height: 300px;
-    animation: FadeIn .6s ease-in;
+    animation: fpsacelfadeIn .6s ease-in;
     transition: all smooth;
 }
 
@@ -2502,12 +2502,53 @@ p.project-description {
 @keyframes slideUp {
     100% {
         opacity: 1;
+        display: block;
         transform: translateY(0%);
     }
 
     0% {
         /* transform: translateY(50%) scale(0.8); */
         opacity: 0;
+        display: none;
+        transform: translateY(80%);
+    }
+}
+
+@keyframes fpsacelfadeIn {
+    100% {
+        opacity: 1;
+        transform: scale3d(1);
+    }
+
+    50% {
+        opacity: 0;
+        display: none;
+        transform: scale3d(0.8);
+    }
+
+    0% {
+        opacity: 0;
+        display: hidden;
+        transform: scale3d(0.5);
+    }
+
+}
+
+@keyframes heroactionsfadeIn {
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+
+    0% {
+        /* transform: translateY(50%) scale(0.8); */
+        opacity: 0;
+        display: none;
         transform: translateY(100%);
     }
 }
@@ -2519,12 +2560,14 @@ p.project-description {
         /* transform: scale(1); */
         transform: translateY(0%);
     }
+
     50% {
         opacity: .6;
         /* transform:  translateY(0%) scale(1); */
         /* transform: scale(1); */
         transform: translateY(-10%);
     }
+
     0% {
         opacity: 0;
         /* transform: translateY(50%) scale(0.5); */
