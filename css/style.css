@@ -117,6 +117,313 @@ body {
     background-clip: text;
 }
 
+/* Scroll Animation Classes */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-reveal-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.scroll-reveal-left.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scroll-reveal-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.scroll-reveal-right.revealed {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scroll-reveal-scale {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.scroll-reveal-scale.revealed {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.scroll-reveal-rotate {
+    opacity: 0;
+    transform: rotate(-10deg) scale(0.9);
+    transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.scroll-reveal-rotate.revealed {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+/* Staggered Animation Delays */
+.scroll-stagger-1 { transition-delay: 0.1s; }
+.scroll-stagger-2 { transition-delay: 0.2s; }
+.scroll-stagger-3 { transition-delay: 0.3s; }
+.scroll-stagger-4 { transition-delay: 0.4s; }
+.scroll-stagger-5 { transition-delay: 0.5s; }
+.scroll-stagger-6 { transition-delay: 0.6s; }
+
+/* Floating Animation for Interactive Elements */
+.float-on-scroll {
+    animation: none;
+    transition: transform 0.3s ease;
+}
+
+.float-on-scroll.in-view {
+    animation: gentle-float 4s ease-in-out infinite;
+}
+
+@keyframes gentle-float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Parallax Scroll Effects */
+.parallax-slow {
+    transform: translateY(0);
+    transition: transform 0.1s ease-out;
+}
+
+.parallax-medium {
+    transform: translateY(0);
+    transition: transform 0.1s ease-out;
+}
+
+.parallax-fast {
+    transform: translateY(0);
+    transition: transform 0.1s ease-out;
+}
+
+/* Enhanced Card Hover Effects with Scroll Trigger */
+.enhanced-hover {
+    transition: all 0.3s ease;
+}
+
+.enhanced-hover.in-view:hover {
+    transform: translateY(-12px) rotateX(5deg);
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.25),
+        0 0 0 1px rgba(99, 102, 241, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Glowing Border Animation */
+.glow-border {
+    position: relative;
+    overflow: hidden;
+}
+
+.glow-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.4), transparent);
+    transition: left 0.8s ease;
+}
+
+.glow-border.in-view::before {
+    left: 100%;
+}
+
+/* Text Reveal Animation */
+.text-reveal {
+    overflow: hidden;
+}
+
+.text-reveal .text-content {
+    transform: translateY(100%);
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.text-reveal.revealed .text-content {
+    transform: translateY(0);
+}
+
+/* Advanced Card Interactions */
+.card-3d-container {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.card-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    will-change: transform;
+}
+
+/* Magnetic Effect for Interactive Elements */
+.magnetic-hover {
+    transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+}
+
+/* Scroll-triggered Counter Animations */
+@keyframes countUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.counter-animate .stat-number {
+    animation: countUp 0.8s ease-out forwards;
+}
+
+/* Progressive Image Loading Effect */
+.image-progressive {
+    background: linear-gradient(90deg, #f0f0f0 25%, transparent 37%, #f0f0f0 63%);
+    background-size: 400% 100%;
+    animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Scroll-based Color Transitions */
+.color-transition {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.color-transition.in-view {
+    background-color: var(--primary);
+    border-color: var(--primary-light);
+}
+
+/* Enhanced Tech Badge Animations */
+.tech-badge {
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-badge::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.tech-badge.revealed::after {
+    left: 100%;
+}
+
+/* Staggered Text Animation */
+.stagger-text {
+    overflow: hidden;
+}
+
+.stagger-text .char {
+    display: inline-block;
+    transform: translateY(100%);
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.stagger-text.revealed .char {
+    transform: translateY(0);
+}
+
+/* Dynamic Shadow Effects */
+.dynamic-shadow {
+    transition: box-shadow 0.3s ease;
+}
+
+.dynamic-shadow.in-view {
+    box-shadow: 
+        0 20px 40px rgba(99, 102, 241, 0.15),
+        0 8px 16px rgba(99, 102, 241, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Morphing Background Effects */
+.morph-bg {
+    background: linear-gradient(45deg, var(--bg-primary), var(--bg-secondary));
+    background-size: 400% 400%;
+    transition: background-position 0.8s ease;
+}
+
+.morph-bg.in-view {
+    background-position: 100% 100%;
+    animation: morphBg 4s ease-in-out infinite;
+}
+
+@keyframes morphBg {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Mobile-Optimized Animations */
+@media (max-width: 768px) {
+    .scroll-reveal,
+    .scroll-reveal-left,
+    .scroll-reveal-right,
+    .scroll-reveal-scale,
+    .scroll-reveal-rotate {
+        transform: translateY(30px);
+        transition-duration: 0.6s;
+    }
+    
+    .scroll-reveal.revealed,
+    .scroll-reveal-left.revealed,
+    .scroll-reveal-right.revealed {
+        transform: translateY(0);
+    }
+    
+    .scroll-reveal-scale.revealed {
+        transform: scale(1);
+    }
+    
+    .scroll-reveal-rotate.revealed {
+        transform: rotate(0deg) scale(1);
+    }
+    
+    /* Disable 3D effects on mobile for performance */
+    .card-3d,
+    .magnetic-hover {
+        transform: none !important;
+        transition: none !important;
+    }
+    
+    /* Reduce motion for accessibility */
+    @media (prefers-reduced-motion: reduce) {
+        .scroll-reveal,
+        .scroll-reveal-left,
+        .scroll-reveal-right,
+        .scroll-reveal-scale,
+        .scroll-reveal-rotate,
+        .float-on-scroll,
+        .card-3d,
+        .magnetic-hover {
+            transition: opacity 0.3s ease !important;
+            transform: none !important;
+            animation: none !important;
+        }
+    }
+}
+
 /* Navigation */
 .navbar {
     position: fixed;

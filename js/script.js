@@ -18,6 +18,7 @@ class PortfolioApp {
         this.initParallax();
         this.initActiveNavigation();
         this.init3DCardEffects();
+        this.initAdvancedFeatures();
         this.setCurrentYear();
         await this.loadProjects();
         this.renderFilterButtons();
@@ -230,39 +231,301 @@ class PortfolioApp {
     }
 
     initScrollAnimations() {
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+        // Enhanced Intersection Observer for scroll animations
+        const scrollObserverOptions = {
+            threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
+            rootMargin: '0px 0px -100px 0px'
         };
 
-        const observer = new IntersectionObserver((entries) => {
+        const scrollObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-
-                    // Add stagger effect for multiple elements
-                    const children = entry.target.querySelectorAll('.bento-card, .project-card, .contact-card');
-                    children.forEach((child, index) => {
-                        setTimeout(() => {
-                            child.style.opacity = '1';
-                            child.style.transform = 'translateY(0)';
-                        }, index * 100);
-                    });
+                const element = entry.target;
+                const intersectionRatio = entry.intersectionRatio;
+                
+                if (entry.isIntersecting && intersectionRatio > 0.1) {
+                    // Add revealed class with staggered timing
+                    setTimeout(() => {
+                        element.classList.add('revealed', 'in-view');
+                        
+                        // Trigger cascading animations for child elements
+                        this.animateChildElements(element);
+                        
+                        // Add floating animation to specific elements
+                        if (element.classList.contains('float-on-scroll')) {
+                            element.classList.add('in-view');
+                        }
+                        
+                        // Trigger glow border animation
+                        if (element.classList.contains('glow-border')) {
+                            element.classList.add('in-view');
+                        }
+                    }, this.getAnimationDelay(element));
+                } else if (!entry.isIntersecting) {
+                    // Optional: Remove animation class when element leaves viewport (for re-triggering)
+                    if (this.shouldResetAnimation(element)) {
+                        element.classList.remove('revealed', 'in-view');
+                    }
                 }
             });
-        }, observerOptions);
+        }, scrollObserverOptions);
 
-        // Observe sections
-        document.querySelectorAll('section').forEach((section) => {
-            observer.observe(section);
+        // Observe all scroll animation elements
+        const scrollElements = document.querySelectorAll(`
+            .scroll-reveal,
+            .scroll-reveal-left,
+            .scroll-reveal-right,
+            .scroll-reveal-scale,
+            .scroll-reveal-rotate,
+            .float-on-scroll,
+            .glow-border,
+            .enhanced-hover
+        `);
+
+        scrollElements.forEach(element => {
+            scrollObserver.observe(element);
         });
 
-        // Set initial state for animations
-        document.querySelectorAll('.bento-card, .project-card, .contact-card').forEach((element) => {
-            element.style.opacity = '0';
-            element.style.transform = 'translateY(30px)';
-            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        // Parallax effect observer
+        this.initParallaxScrollEffects();
+        
+        // Progressive project card animations
+        this.initProjectCardAnimations();
+    }
+
+    animateChildElements(parent) {
+        // Animate tech badges, stats, and other child elements with stagger
+        const children = parent.querySelectorAll('.tech-badge, .stat, .contact-card, .bento-card');
+        children.forEach((child, index) => {
+            setTimeout(() => {
+                child.classList.add('revealed', 'in-view');
+            }, index * 100);
+        });
+    }
+
+    getAnimationDelay(element) {
+        // Extract delay from stagger classes
+        const staggerClasses = ['scroll-stagger-1', 'scroll-stagger-2', 'scroll-stagger-3', 
+                               'scroll-stagger-4', 'scroll-stagger-5', 'scroll-stagger-6'];
+        
+        for (let i = 0; i < staggerClasses.length; i++) {
+            if (element.classList.contains(staggerClasses[i])) {
+                return (i + 1) * 150; // 150ms between each staggered element
+            }
+        }
+        return 0;
+    }
+
+    shouldResetAnimation(element) {
+        // Only reset animations for certain elements (like floating cards)
+        return element.classList.contains('float-on-scroll') || 
+               element.classList.contains('glow-border');
+    }
+
+    initParallaxScrollEffects() {
+        // Enhanced parallax effects
+        const parallaxElements = document.querySelectorAll('.parallax-slow, .parallax-medium, .parallax-fast');
+        
+        const parallaxObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    window.addEventListener('scroll', () => this.updateParallaxElement(entry.target));
+                }
+            });
+        }, { rootMargin: '0px 0px -100px 0px' });
+
+        parallaxElements.forEach(element => {
+            parallaxObserver.observe(element);
+        });
+    }
+
+    updateParallaxElement(element) {
+        const rect = element.getBoundingClientRect();
+        const speed = this.getParallaxSpeed(element);
+        const yPos = rect.top * speed;
+        
+        // Apply transform with GPU acceleration
+        element.style.transform = `translate3d(0, ${yPos}px, 0)`;
+    }
+
+    getParallaxSpeed(element) {
+        if (element.classList.contains('parallax-slow')) return -0.2;
+        if (element.classList.contains('parallax-medium')) return -0.4;
+        if (element.classList.contains('parallax-fast')) return -0.6;
+        return 0;
+    }
+
+    initProjectCardAnimations() {
+        // Enhanced project card animations that trigger when cards are rendered
+        const projectObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('revealed', 'enhanced-hover');
+                        
+                        // Add advanced hover effects
+                        this.addAdvancedCardEffects(entry.target);
+                    }, index * 100);
+                }
+            });
+        }, { 
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        // Re-observe project cards when they're dynamically added
+        this.observeProjectCards = () => {
+            setTimeout(() => {
+                const projectCards = document.querySelectorAll('.project-card');
+                projectCards.forEach(card => {
+                    if (!card.hasAttribute('data-observed')) {
+                        projectObserver.observe(card);
+                        card.setAttribute('data-observed', 'true');
+                    }
+                });
+            }, 100);
+        };
+    }
+
+    addAdvancedCardEffects(card) {
+        // Add magnetic hover effect
+        card.addEventListener('mousemove', (e) => {
+            if (window.innerWidth > 768) { // Only on desktop
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 10;
+                const rotateY = (centerX - x) / 10;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px) scale(1.02)`;
+            }
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0) scale(1)';
+        });
+
+        // Add shimmer effect on hover
+        card.addEventListener('mouseenter', () => {
+            this.addShimmerEffect(card);
+        });
+    }
+
+    addShimmerEffect(element) {
+        const shimmer = document.createElement('div');
+        shimmer.className = 'shimmer-effect';
+        shimmer.style.cssText = `
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.6s ease;
+            pointer-events: none;
+            z-index: 1;
+        `;
+        
+        element.style.position = 'relative';
+        element.style.overflow = 'hidden';
+        element.appendChild(shimmer);
+        
+        // Animate shimmer
+        setTimeout(() => {
+            shimmer.style.left = '100%';
+        }, 50);
+        
+        // Remove shimmer after animation
+        setTimeout(() => {
+            if (shimmer.parentNode) {
+                shimmer.remove();
+            }
+        }, 700);
+    }
+
+    initAdvancedFeatures() {
+        // Add magnetic hover effects to buttons
+        this.initMagneticHover();
+        
+        // Initialize scroll-triggered counter animations
+        this.initCounterAnimations();
+        
+        // Add morphing backgrounds
+        this.initMorphingBackgrounds();
+    }
+
+    initMagneticHover() {
+        const magneticElements = document.querySelectorAll('.btn, .tech-badge, .contact-card');
+        
+        magneticElements.forEach(element => {
+            element.addEventListener('mousemove', (e) => {
+                if (window.innerWidth > 768) {
+                    const rect = element.getBoundingClientRect();
+                    const x = e.clientX - rect.left - rect.width / 2;
+                    const y = e.clientY - rect.top - rect.height / 2;
+                    
+                    const moveX = x * 0.15;
+                    const moveY = y * 0.15;
+                    
+                    element.style.transform = `translate(${moveX}px, ${moveY}px)`;
+                }
+            });
+            
+            element.addEventListener('mouseleave', () => {
+                element.style.transform = 'translate(0, 0)';
+            });
+        });
+    }
+
+    initCounterAnimations() {
+        const statNumbers = document.querySelectorAll('.stat-number');
+        
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target;
+                    const finalValue = target.textContent;
+                    
+                    // Animate only numeric values
+                    if (!isNaN(parseInt(finalValue))) {
+                        this.animateCounter(target, parseInt(finalValue));
+                    }
+                    
+                    target.parentElement.classList.add('counter-animate');
+                }
+            });
+        }, { threshold: 0.7 });
+
+        statNumbers.forEach(stat => {
+            counterObserver.observe(stat);
+        });
+    }
+
+    animateCounter(element, finalValue) {
+        let currentValue = 0;
+        const increment = finalValue / 30; // 30 frames for smooth animation
+        const duration = 1000; // 1 second
+        const frameRate = duration / 30;
+        
+        const timer = setInterval(() => {
+            currentValue += increment;
+            if (currentValue >= finalValue) {
+                element.textContent = finalValue + (element.textContent.includes('+') ? '+' : '');
+                clearInterval(timer);
+            } else {
+                element.textContent = Math.floor(currentValue) + (element.textContent.includes('+') ? '+' : '');
+            }
+        }, frameRate);
+    }
+
+    initMorphingBackgrounds() {
+        const morphElements = document.querySelectorAll('.bento-card, .contact-card');
+        
+        morphElements.forEach(element => {
+            element.classList.add('morph-bg');
         });
     }
 
@@ -530,23 +793,26 @@ class PortfolioApp {
         });
 
         filteredProjects.forEach((project, index) => {
-            const projectCard = this.createProjectCard(project);
-            projectCard.style.animationDelay = `${index * 0.1}s`;
+            const projectCard = this.createProjectCard(project, index);
             projectsGrid.appendChild(projectCard);
         });
 
-        // Re-initialize 3D effects after rendering
+        // Re-initialize enhanced scroll effects and 3D card effects
         setTimeout(() => {
             this.init3DCardEffects();
+            if (this.observeProjectCards) {
+                this.observeProjectCards();
+            }
         }, 200);
     }
 
-    createProjectCard(project) {
+    createProjectCard(project, index = 0) {
         const card = document.createElement('div');
-        card.className = 'project-card';
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(30px)';
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        card.className = 'project-card scroll-reveal enhanced-hover';
+        
+        // Add staggered animation class
+        const staggerClass = `scroll-stagger-${Math.min(index % 6 + 1, 6)}`;
+        card.classList.add(staggerClass);
 
         const techStack = project.technologies.map(tech =>
             `<span class="tag">${tech}</span>`
@@ -559,7 +825,7 @@ class PortfolioApp {
         const buttons = this.generateProjectButtons(project);
 
         card.innerHTML = `
-            <img src="${projectImage}" alt="${project.title}" class="project-image" loading="lazy" 
+            <img src="${projectImage}" alt="${project.title}" class="project-image parallax-slow" loading="lazy" 
                  onerror="this.src='https://via.placeholder.com/400x200/1a1a2e/6366f1?text=${encodeURIComponent(project.title)}'">
             <div class="project-content">
                 <div class="project-header">
@@ -575,12 +841,6 @@ class PortfolioApp {
                 </div>
             </div>
         `;
-
-        // Animate in after a short delay
-        setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-        }, 100);
 
         return card;
     }

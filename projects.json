@@ -31,7 +31,7 @@
       "technologies": ["JavaScript", "Scriptable", "iOS Widgets", "GitHub API"],
       "category": "automation",
       "image": "./assets/projects/githubstats.png",
-      "githubUrl": "https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/GitHubStats%20Widget/MyGitStats-v2.0.js",
+      "githubUrl": "https://github.com/rushhiii/Scriptable-IOSWidgets/blob/main/Widgets/GitHubStats%20Widget/MyGitHubStats.js",
       "liveUrl": "https://rushhiii.github.io/Scriptable-IOSWidgets/widgets/github-stats-widget.html",
       "liveLabel": "Docs", 
       "liveIcon": "fas fa-book",
