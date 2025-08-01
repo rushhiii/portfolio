@@ -6,8 +6,90 @@ class PortfolioApp {
         this.currentFilter = 'all';
         this.isMenuOpen = false;
         this.isDarkTheme = true;
+        this.loadingProgress = 0;
 
-        this.init();
+        this.initLoading();
+    }
+
+    initLoading() {
+        // Add loading class to body
+        document.body.classList.add('loading');
+        
+        // Wait for all resources to load
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                this.hideLoadingScreen();
+            }, 2000); // Reduced from 3000ms to 1500ms (1.5 seconds)
+        });
+    }
+
+    hideLoadingScreen() {
+        const loadingScreen = document.getElementById('loading-screen');
+        const body = document.body;
+        
+        if (loadingScreen) {
+            // Initialize the app early so all elements are ready
+            setTimeout(() => {
+                this.init();
+            }, 500);
+            
+            // Start hero section animations right after welcome animation completes (~1.4s)
+            // Welcome animation: last word starts at 0.75s + 0.6s duration = completes at 1.35s
+            setTimeout(() => {
+                body.classList.remove('loading'); // Make hero section visible
+                this.delayLandingAnimations(); // Start hero animations
+            }, 1400); // Start at 1.4s, right after welcome completes
+            
+            // Add fade-out class to loading screen slightly after hero starts
+            setTimeout(() => {
+                loadingScreen.classList.add('fade-out');
+                
+                // Remove loading screen from DOM after transition
+                setTimeout(() => {
+                    loadingScreen.remove();
+                }, 600);
+            }, 1600); // Start fading at 1.6s
+        } else {
+            // Fallback if loading screen element not found
+            body.classList.remove('loading');
+            this.init();
+        }
+    }
+
+    delayLandingAnimations() {
+        // Start hero animations immediately with faster sequence
+        const heroElements = document.querySelectorAll('.hero-title, .hero-subtitle, .hero-description, .hero-actions, .hero-image');
+        
+        heroElements.forEach((element, index) => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; // Faster transitions
+            
+            // Trigger animation with shorter delays
+            setTimeout(() => {
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            }, index * 100); // Reduced from 200ms to 100ms between elements
+        });
+
+        // Start floating cards animation earlier
+        const floatingCards = document.querySelectorAll('.floating-card');
+        floatingCards.forEach((card, index) => {
+            card.style.animationDelay = `${0.3 + (index * 0.2)}s`; // Start much earlier
+        });
+
+        // Show scroll indicator earlier
+        const scrollIndicator = document.querySelector('.scroll-indicator');
+        if (scrollIndicator) {
+            scrollIndicator.style.opacity = '0';
+            scrollIndicator.style.transform = 'translateY(20px)';
+            scrollIndicator.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            
+            setTimeout(() => {
+                scrollIndicator.style.opacity = '1';
+                scrollIndicator.style.transform = 'translateY(0)';
+            }, 800); // Reduced from 2000ms to 800ms
+        }
     }
     
     async init() {
