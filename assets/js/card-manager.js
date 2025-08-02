@@ -28,7 +28,7 @@ class NexusCardManager {
     /**
      * Load configuration from JSON file
      */
-    async loadConfig(configPath = './card-config.json') {
+    async loadConfig(configPath = './assets/config/card-config.json') {
         try {
             const response = await fetch(configPath);
             if (!response.ok) {

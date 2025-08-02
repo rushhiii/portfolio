@@ -346,7 +346,7 @@
         // Load configuration
         async function loadConfig() {
             try {
-                const response = await fetch('./card-config.json');
+                const response = await fetch('./assets/config/card-config.json');
                 config = await response.json();
                 applyTheme();
                 populateCard();

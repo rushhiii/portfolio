@@ -779,7 +779,7 @@ class PortfolioApp {
 
     async loadProjects() {
         try {
-            const response = await fetch('projects.json');
+            const response = await fetch('./assets/config/projects.json');
             const data = await response.json();
             this.projects = data.projects;
             this.categories = data.categories || [
