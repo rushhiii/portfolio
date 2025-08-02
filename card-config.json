@@ -1,0 +1,63 @@
+{
+    "profile": {
+        "name": "rushhiii",
+        "tagline": "Full Stack Developer & AI/ML Enthusiast",
+        "location": "Canada",
+        "bannerImage": "./assets/ele/card_banner.png",
+        "profileImage": "./assets/ele/profile.jpg",
+        "themeColor": "#8b5cf6"
+    },
+    "skills": [
+        "Full Stack Developer",
+        "Tech Explorer"
+    ],
+    "socialLinks": [
+        {
+            "platform": "Discord",
+            "url": "https://discord.gg/rushhiii",
+            "icon": "discord",
+            "tooltip": "Discord"
+        },
+        {
+            "platform": "LinkedIn",
+            "url": "https://www.linkedin.com/in/rushhiii/",
+            "icon": "linkedin",
+            "tooltip": "LinkedIn"
+        },
+        {
+            "platform": "GitHub",
+            "url": "https://github.com/rushhiii",
+            "icon": "github",
+            "tooltip": "GitHub"
+        },
+        {
+            "platform": "Email",
+            "url": "mailto:rushiofficial1205@gmail.com",
+            "icon": "email",
+            "tooltip": "Email"
+        },
+        {
+            "platform": "linktree",
+            "url": "https://linktr.ee/its.rushi",
+            "icon": "linktree",
+            "tooltip": "Linktree"
+        }
+    ],
+    "footer": {
+        "text": "Made by Rushi",
+        "url": "https://github.com/rushhiii",
+        "showHeart": true
+    },
+    "animations": {
+        "enableHover3D": true,
+        "enableRippleEffect": true,
+        "enableParallax": true
+    },
+    "customization": {
+        "cardWidth": "430px",
+        "cardBorderRadius": "24px",
+        "glowIntensity": "20px",
+        "backgroundType": "solid",
+        "backgroundColor": "#000000"
+    }
+}

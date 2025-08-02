@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/ele/logo_variations/web_icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <title>Rushi's Portfolio</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,6 +56,7 @@
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
+                <!-- <li><a href="./nexus_card.html" class="nav-link">Profile Card</a></li> -->
             </ul>
             <div class="nav-actions">
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
@@ -118,6 +119,10 @@
                         <span>Resume</span>
                         <i class="fas fa-download"></i>
                     </a>
+                    <a href="./nexus_card.html" class="btn btn-secondary">
+                        <!-- <span>Nexus Card</span> -->
+                        <i class="fas fa-id-card"></i>
+                    </a>
                 </div>
             </div>
             <div class="hero-image">
@@ -150,7 +155,7 @@
             </div>
 
             <div class="bento-grid">
-                <div class="bento-card large scroll-reveal-left scroll-stagger-1 enhanced-hover glow-border">
+                <div class="bento-card large scroll-reveal-left scroll-stagger-1 glow-border">
                     <div class="card-content">
                         <h3>My Journey</h3>
                         <p>Started coding in Grade 11 with curiosity, now pursuing Computer Science at Toronto
@@ -159,11 +164,11 @@
                         <!-- <h3>My Coding Journey</h3> -->
                         <!-- <p>I still remember the first time I touched a computer with intention — it was in Grade 11. What started as curiosity about solving logic problems became my obsession. From barely knowing how to type to building automation tools and exploring C, C++, and UNIX, I'm now a 2nd Year Computer Science Student at Toronto Metropolitan University.</p> -->
                         <div class="journey-stats">
-                            <div class="stat scroll-reveal-scale scroll-stagger-2 float-on-scroll">
+                            <div class="stat scroll-reveal-scale scroll-stagger-2">
                                 <span class="stat-number">2+</span>
                                 <span class="stat-label">Years Coding</span>
                             </div>
-                            <div class="stat scroll-reveal-scale scroll-stagger-3 float-on-scroll">
+                            <div class="stat scroll-reveal-scale scroll-stagger-3">
                                 <span class="stat-number">15+</span>
                                 <span class="stat-label">Projects Built</span>
                             </div>
@@ -175,7 +180,7 @@
                                 <span class="stat-number">3.8</span>
                                 <span class="stat-label">GPA</span>
                             </div> -->
-                            <div class="stat scroll-reveal-scale scroll-stagger-4 float-on-scroll">
+                            <div class="stat scroll-reveal-scale scroll-stagger-4">
                                 <span class="stat-number">TMU</span>
                                 <span class="stat-label">University</span>
                             </div>
@@ -183,7 +188,7 @@
                     </div>
                 </div>
 
-                <div class="bento-card scroll-reveal-right scroll-stagger-2 enhanced-hover">
+                <div class="bento-card scroll-reveal-right scroll-stagger-2">
                     <div class="card-content">
                         <div class="card-icon">
                             <i class="fas fa-graduation-cap"></i>
@@ -195,7 +200,7 @@
                     </div>
                 </div>
 
-                <div class="bento-card scroll-reveal-right scroll-stagger-3 enhanced-hover">
+                <div class="bento-card scroll-reveal-right scroll-stagger-3">
                     <div class="card-content">
                         <div class="card-icon">
                             <i class="fas fa-code"></i>
@@ -213,7 +218,7 @@
                     </div>
                 </div>
 
-                <div class="bento-card wide scroll-reveal scroll-stagger-4 enhanced-hover glow-border">
+                <div class="bento-card wide scroll-reveal scroll-stagger-4 glow-border">
                     <div class="card-content">
                         <h3>Tech Stack</h3>
                         <div class="tech-badges">
@@ -418,7 +423,7 @@
 
             <div class="contact-grid">
                 <div class="contact-info">
-                    <div class="contact-card scroll-reveal-left scroll-stagger-1 enhanced-hover">
+                    <div class="contact-card scroll-reveal-left scroll-stagger-1">
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
@@ -427,7 +432,7 @@
                         <a href="mailto:rushiofficial1205@gmail.com" class="contact-link">Send Message</a>
                     </div>
 
-                    <div class="contact-card scroll-reveal-left scroll-stagger-2 enhanced-hover">
+                    <div class="contact-card scroll-reveal-left scroll-stagger-2">
                         <div class="contact-icon">
                             <i class="fab fa-linkedin"></i>
                         </div>
@@ -437,7 +442,7 @@
                             class="contact-link">Connect</a>
                     </div>
 
-                    <div class="contact-card scroll-reveal-left scroll-stagger-3 enhanced-hover">
+                    <div class="contact-card scroll-reveal-left scroll-stagger-3">
                         <div class="contact-icon">
                             <i class="fab fa-github"></i>
                         </div>
@@ -447,7 +452,7 @@
                     </div>
                 </div>
 
-                <form class="contact-form scroll-reveal-right scroll-stagger-2 enhanced-hover glow-border" id="contactForm" name="portfolio-contact" method="POST" data-netlify="true" action="/thank-you" netlify-honeypot="bot-field">
+                <form class="contact-form scroll-reveal-right scroll-stagger-2 glow-border" id="contactForm" name="portfolio-contact" method="POST" data-netlify="true" action="/thank-you" netlify-honeypot="bot-field">
                     <input type="hidden" name="form-name" value="portfolio-contact">
                     <!-- Honeypot field for spam protection -->
                     <div style="display: none;">
@@ -503,6 +508,9 @@
                             <!-- <img src="./assets/ele/linktree-logo-icon.webp"> -->
                             <img src="./assets/ele/linktrsvg.svg">
                         </a>
+                        <a href="./nexus_card.html" aria-label="Nexus Card">
+                            <i class="fas fa-id-card"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -512,7 +520,7 @@
         </div>
     </footer>
     <!-- Scripts -->
-    <script src="./js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
