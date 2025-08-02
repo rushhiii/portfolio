@@ -4,7 +4,7 @@
         "tagline": "Full Stack Developer & AI/ML Enthusiast",
         "location": "Canada",
         "bannerImage": "./assets/ele/card_banner.png",
-        "profileImage": "./assets/ele/profile.jpg",
+        "profileImage": "./assets/ele/card_profile_pic.jpg",
         "themeColor": "#8b5cf6"
     },
     "skills": [
