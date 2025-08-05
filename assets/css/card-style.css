@@ -145,6 +145,34 @@
   }
 }
 
+.App {
+  /* display: none; */
+  transition: animation 1s ease-in;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: fadeIn ;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    /* display: hidden; */
+  }
+
+  50% {
+    opacity: 0.5;
+    /* display: hidden; */
+  }
+
+  100% {
+    opacity: 1;
+    /* display: ; */
+  }
+}
+
+/* .App.show {
+  display: auto;
+} */
+
 @layer base {
 
   *,
@@ -172,7 +200,8 @@
     font-family: var(--default-font-family, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");
     font-feature-settings: var(--default-font-feature-settings, normal);
     font-variation-settings: var(--default-font-variation-settings, normal);
-    -webkit-tap-highlight-color: transparent
+    -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
   }
 
   hr {

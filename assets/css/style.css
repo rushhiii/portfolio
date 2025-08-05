@@ -1399,7 +1399,7 @@ body.loading .hero-image {
     position: absolute;
     bottom: var(--space-xl);
     left: 50%;
-    transform: translateX(-50%);
+    /* transform: translateX(-50%) !important; in js animation*/ 
     display: flex;
     flex-direction: column;
     align-items: center;

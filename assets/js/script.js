@@ -82,12 +82,13 @@ class PortfolioApp {
         const scrollIndicator = document.querySelector('.scroll-indicator');
         if (scrollIndicator) {
             scrollIndicator.style.opacity = '0';
-            scrollIndicator.style.transform = 'translateY(20px)';
+            scrollIndicator.style.transform = 'translateY(20px) translateX(-50%)'; // X-50% centered
             scrollIndicator.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             
             setTimeout(() => {
                 scrollIndicator.style.opacity = '1';
-                scrollIndicator.style.transform = 'translateY(0)';
+                scrollIndicator.style.transform = 'translateY(0) translateX(-50%)';
+                
             }, 800); // Reduced from 2000ms to 800ms
         }
     }

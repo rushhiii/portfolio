@@ -57,6 +57,10 @@
             overflow: hidden;
             background: var(--card-bg);
             border: 1px solid rgba(139, 92, 246, 0.2);
+            /* w-full max-w-[430px] min-h-full */
+            width: 100%;
+            max-width: 430px;
+            min-height: 100%;
         }
 
 
@@ -76,8 +80,15 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .skill-tag {
@@ -138,7 +149,10 @@
         }
 
         /* Typography with Unbounded font */
-        h1, h2, h3, .profile-name {
+        h1,
+        h2,
+        h3,
+        .profile-name {
             font-family: var(--font-unbounded);
             font-weight: 700;
         }
@@ -152,7 +166,7 @@
 
         /* Grid Background */
         .grid-background {
-            background-image: 
+            background-image:
                 linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px);
             background-size: 50px 50px;
@@ -160,8 +174,13 @@
         }
 
         @keyframes grid-move {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 50px); }
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(50px, 50px);
+            }
         }
 
         /* Navigation styles */
@@ -213,20 +232,153 @@
                 right: 15px;
                 justify-content: center;
             }
-            
+
             .nav-btn {
                 padding: 10px 16px;
                 font-size: 13px;
             }
-            
+
             .nav-btn span {
                 display: none;
+            }
+        }
+
+        /* Card Container Loading Effect */
+        .card-container {
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
+            animation: loadCardContainer 450ms ease-out 150ms forwards;
+        }
+
+        .card-container::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background: linear-gradient(135deg, #080808 0%, #1a1a1a 100%); */
+            background: linear-gradient(135deg, #08080800 0%, #1A1A1A00 100%);
+            z-index: 9999;
+            animation: hideCardLoader 300ms ease-out 400ms forwards;
+        }
+
+        .card-container::after {
+            content: '';
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 35px;
+            height: 35px;
+            border: 2px solid rgba(139, 92, 246, 0.2);
+            border-top: 2px solid #8b5cf6;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10000;
+            animation: spinCard 1s linear infinite, hideCardLoader 300ms ease-out 450ms forwards;
+        }
+
+        @keyframes loadCardContainer {
+            0% {
+                opacity: 0;
+                transform: translateY(20px) scale(0.95);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes hideCardLoader {
+            0% {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        @keyframes spinCard {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        /* Mobile Responsive Adjustments */
+        @media (max-width: 480px) {
+            .card-3d {
+                max-width: 320px;
+            }
+
+            .card-container {
+                transform: translateY(15px) scale(0.97);
+                animation: loadCardContainerMobile 550ms ease-out 150ms forwards;
+            }
+
+            .card-container::after {
+                width: 30px;
+                height: 30px;
+                border-width: 2px;
+            }
+
+
+
+            @keyframes loadCardContainerMobile {
+                0% {
+                    opacity: 0;
+                    transform: translateY(15px) scale(0.97);
+                }
+
+                100% {
+                    opacity: 1;
+                    transform: translateY(0) scale(1);
+                }
+            }
+        }
+
+        @media (max-width: 450px) {
+            .card-3d {
+                max-width: 350px !important;
+            }
+        }
+
+        /* iPhone and small screens */
+        @media (max-width: 375px) {
+            .card-3d {
+                max-width: 280px;
+            }
+
+            .card-container::after {
+                width: 25px;
+                height: 25px;
+                border-width: 1.5px;
+            }
+        }
+
+        /* Landscape mobile */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .card-container {
+                transform: translateY(10px) scale(0.98);
+            }
+
+            .card-container::after {
+                width: 28px;
+                height: 28px;
             }
         }
     </style>
 </head>
 
 <body class="antialiased">
+
     <!-- Navigation -->
     <div class="card-navigation">
         <a href="./index.html" class="nav-btn">
@@ -238,17 +390,21 @@
     <div class="App">
         <div id="background" class="fixed inset-0 w-screen h-screen -z-10" style="background: #080808;"></div>
         <!-- Animated background grid -->
-        <div class="fixed inset-0 -z-10" style="background-image: linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px); background-size: 50px 50px; animation: grid-move 20s linear infinite;"></div>
+        <div class="fixed inset-0 -z-10"
+            style="background-image: linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px); background-size: 50px 50px; animation: grid-move 20s linear infinite;">
+        </div>
         <div class="card-container">
             <div class="flex justify-center items-center min-h-screen m-0 p-0 font-chillax">
                 <!-- Main Card -->
-                <div id="profileCard" class="card-3d backdrop-blur-lg rounded-3xl w-full max-w-[430px] min-h-full text-white text-center transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] will-change-transform"
+                <div id="profileCard"
+                    class="card-3d backdrop-blur-lg rounded-3xl text-white text-center transition-all duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] will-change-transform"
                     style="transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1);">
-                    
+
                     <!-- Banner Section -->
                     <div class="mb-[-3rem] relative">
                         <div class="w-full h-[150px] m-0 p-0 rounded-t-3xl overflow-hidden border-b">
-                            <img id="bannerImage" alt="Banner" class="w-full h-full object-banner" style="color:transparent">
+                            <img id="bannerImage" alt="Banner" class="w-full h-full object-banner"
+                                style="color:transparent">
                             <div class="banner-overlay absolute inset-0"></div>
                         </div>
                     </div>
@@ -256,10 +412,12 @@
                     <!-- Profile Section -->
                     <div class="flex flex-col items-center relative z-10">
                         <div class="mb-2">
-                            <img id="profileImage" alt="Profile" width="100" height="100" 
-                                class="w-[100px] h-[100px] rounded-full profile-image object-cover" style="color:transparent;">
+                            <img id="profileImage" alt="Profile" width="100" height="100"
+                                class="w-[100px] h-[100px] rounded-full profile-image object-cover"
+                                style="color:transparent;">
                         </div>
-                        <h1 id="profileName" class="profile-name text-[20px] font-bold text-white mb-5 mt-2 cursor-default"></h1>
+                        <h1 id="profileName"
+                            class="profile-name text-[20px] font-bold text-white mb-5 mt-2 cursor-default"></h1>
                     </div>
 
                     <!-- Skills Section (Limited to 2) -->
@@ -270,19 +428,22 @@
 
                     <!-- Location Section -->
                     <div class="location-section">
-                        <p id="locationText" class="flex items-center justify-center gap-1.5 mb-5 cursor-default text-[12px] text-gray-400">
+                        <p id="locationText"
+                            class="flex items-center justify-center gap-1.5 mb-5 cursor-default text-[12px] text-gray-400">
                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
-                                class="text-[1.2em] dynamic-theme-color dynamic-glow" height="1em"
-                                width="1em" xmlns="http://www.w3.org/2000/svg">
+                                class="text-[1.2em] dynamic-theme-color dynamic-glow" height="1em" width="1em"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path fill="none" d="M0 0h24v24H0z"></path>
-                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"></path>
+                                <path
+                                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z">
+                                </path>
                             </svg>
                             <span id="locationName"></span>
                         </p>
                     </div>
 
                     <!-- Social Links Section -->
-                     <!-- flex justify-center mb-8 -->
+                    <!-- flex justify-center mb-8 -->
                     <div id="socialLinksContainer" class="flex justify-center mb-8 flex-wrap">
                         <!-- Social links will be populated dynamically -->
                     </div>
@@ -299,7 +460,7 @@
         //         0% { transform: translate(0, 0); }
         //         100% { transform: translate(50px, 50px); }
         //     }
-            
+
         //     @keyframes glow-pulse {
         //         0%, 100% { 
         //             box-shadow: 
@@ -314,11 +475,11 @@
         //                 inset 0 1px 0 rgba(255, 255, 255, 0.2);
         //         }
         //     }
-            
+
         //     .card-3d {
         //         animation: glow-pulse 4s ease-in-out infinite;
         //     }
-            
+
         //     .card-3d:hover {
         //         animation-play-state: paused;
         //     }
@@ -379,10 +540,10 @@
         function applyTheme() {
             const root = document.documentElement;
             const customization = config.customization || {};
-            
+
             root.style.setProperty('--theme-color', config.profile.themeColor || '#8b5cf6');
             root.style.setProperty('--bg-color', customization.backgroundColor || '#000000');
-            
+
             // Apply background
             const background = document.getElementById('background');
             if (customization.backgroundType === 'gradient') {
@@ -405,17 +566,17 @@
             // Basic profile info
             document.getElementById('profileName').textContent = config.profile.name;
             document.getElementById('locationName').textContent = config.profile.location;
-            
+
             // Images
             document.getElementById('bannerImage').src = config.profile.bannerImage;
             document.getElementById('profileImage').src = config.profile.profileImage;
-            
+
             // Skills (limit to 2)
             populateSkills();
-            
+
             // Social links
             populateSocialLinks();
-            
+
             // Apply dynamic classes
             applyDynamicStyling();
         }
@@ -424,10 +585,10 @@
         function populateSkills() {
             const container = document.getElementById('skillsContainer');
             container.innerHTML = '';
-            
+
             // Limit to first 2 skills
             const skillsToShow = config.skills ? config.skills.slice(0, 2) : [];
-            
+
             skillsToShow.forEach(skill => {
                 const skillTag = document.createElement('span');
                 skillTag.className = 'skill-tag dynamic-theme-color px-3 py-1.5 rounded-[20px] m-0.5 text-[11px] inline-block';
@@ -440,23 +601,23 @@
         function populateSocialLinks() {
             const container = document.getElementById('socialLinksContainer');
             container.innerHTML = '';
-            
+
             config.socialLinks.forEach(link => {
                 const linkElement = document.createElement('a');
                 linkElement.href = link.url;
                 linkElement.target = '_blank';
                 linkElement.rel = 'noopener noreferrer';
                 linkElement.className = 'social-icon relative group px-3 py-2';
-                
+
                 const iconHtml = socialIcons[link.icon] || socialIcons.github;
-                
+
                 linkElement.innerHTML = `
                     <div class="dynamic-theme-color text-[1.65rem] dynamic-glow dynamic-glow-hover transition-all duration-300">
                         ${iconHtml}
                     </div>
                     <div class="tooltip">${link.tooltip}</div>
                 `;
-                
+
                 container.appendChild(linkElement);
             });
         }
@@ -466,7 +627,7 @@
             const card = document.getElementById('profileCard');
             card.classList.add('dynamic-shadow', 'dynamic-shadow-hover');
             card.style.backgroundColor = 'var(--card-bg)';
-            
+
             // Apply theme color to border
             const bannerContainer = card.querySelector('.border-b');
             if (bannerContainer) {
@@ -477,15 +638,15 @@
         // Show card with animation
         function showCard() {
             const card = document.getElementById('profileCard');
-            
+
             card.classList.add('fade-in');
             isLoaded = true;
-            
+
             // Initialize 3D effects after card is shown
             if (config.animations?.enableHover3D !== false) {
                 init3DEffects();
             }
-            
+
             if (config.animations?.enableRippleEffect !== false) {
                 initRippleEffect();
             }
@@ -507,7 +668,7 @@
 
                 card.addEventListener('mousemove', (e) => {
                     if (!isLoaded) return;
-                    
+
                     const cardRect = card.getBoundingClientRect();
                     const cardCenterX = cardRect.left + cardRect.width / 2;
                     const cardCenterY = cardRect.top + cardRect.height / 2;
@@ -521,7 +682,7 @@
                     const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
                     const maxDistance = Math.sqrt(cardRect.width * cardRect.width + cardRect.height * cardRect.height) / 2;
                     const proximity = 1 - Math.min(distance / maxDistance, 1);
-                    
+
                     const scale = 1 + (proximity * 0.05);
                     const translateZ = proximity * 20;
 
@@ -539,17 +700,17 @@
         // Ripple Effect
         function initRippleEffect() {
             const cards = document.querySelectorAll('.card-3d');
-            
+
             cards.forEach(card => {
                 card.addEventListener('click', (e) => {
                     if (!isLoaded) return;
-                    
+
                     const ripple = document.createElement('div');
                     const rect = card.getBoundingClientRect();
                     const size = 60;
                     const x = e.clientX - rect.left - size / 2;
                     const y = e.clientY - rect.top - size / 2;
-                    
+
                     ripple.style.cssText = `
                         position: absolute;
                         width: ${size}px;
@@ -562,9 +723,9 @@
                         transform: scale(0);
                         z-index: 1000;
                     `;
-                    
+
                     card.appendChild(ripple);
-                    
+
                     ripple.animate([
                         { transform: 'scale(0)', opacity: 1 },
                         { transform: 'scale(4)', opacity: 0 }
@@ -580,10 +741,10 @@
         if (config.animations?.enableParallax !== false) {
             document.addEventListener('mousemove', (e) => {
                 if (!isLoaded) return;
-                
+
                 const mouseX = e.clientX / window.innerWidth;
                 const mouseY = e.clientY / window.innerHeight;
-                
+
                 const banner = document.getElementById('bannerImage');
                 if (banner) {
                     banner.style.transform = `translate(${mouseX * 5}px, ${mouseY * 3}px) scale(1.05)`;
@@ -602,13 +763,13 @@
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', () => {
             loadConfig();
-            
+
             // Add error handling for images
-            document.getElementById('bannerImage').onerror = function() {
+            document.getElementById('bannerImage').onerror = function () {
                 this.style.background = 'linear-gradient(45deg, #333, #666)';
             };
-            
-            document.getElementById('profileImage').onerror = function() {
+
+            document.getElementById('profileImage').onerror = function () {
                 this.style.background = 'linear-gradient(45deg, #444, #666)';
                 this.style.display = 'flex';
                 this.style.alignItems = 'center';
