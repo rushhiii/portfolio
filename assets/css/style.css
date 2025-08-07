@@ -987,6 +987,81 @@ body.loading .footer {
     transform: rotate(180deg);
 }
 
+/* GitHub Repository Button */
+.github-repo-btn {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-sm);
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    position: relative;
+    overflow: hidden;
+    margin-right: var(--space-sm);
+    font-size: 0.85rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.github-repo-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, var(--primary), var(--primary-light));
+    border-radius: 50%;
+    transition: all var(--transition-normal);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.github-repo-btn:hover {
+    border-color: var(--primary);
+    transform: scale(1.05);
+    box-shadow: 0 6px 25px rgba(99, 102, 241, 0.4);
+    color: white;
+}
+
+.github-repo-btn:hover::before {
+    width: 120%;
+    height: 120%;
+}
+
+.github-repo-btn:hover i {
+    transform: scale(1.1);
+}
+
+.github-repo-btn i {
+    font-size: 1rem;
+    transition: transform var(--transition-fast);
+}
+
+.github-repo-btn span {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive adjustments for GitHub repo button */
+@media (max-width: 768px) {
+    .github-repo-btn span {
+        display: none;
+    }
+    
+    .github-repo-btn {
+        width: 40px;
+        padding: var(--space-sm);
+        margin-right: var(--space-xs);
+    }
+}
+
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
