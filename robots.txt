@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://rushii-portfolio.netlify.app/sitemap.xml
+
+# Block crawling of sensitive directories
+Disallow: /backups/
+Disallow: /prvt/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Allow important files
+Allow: /assets/
+Allow: /nexus_card.html
+Allow: /assets/rushi_tech_resume.pdf
