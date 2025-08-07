@@ -1,4 +1,4 @@
-[![Banner](./assets/ele/repo_banner.png)](https://github.com/rushhiii/portfolio)
+[![Banner](https://github.com/rushhiii/portfolio/blob/main/assets/ele/repo_banner.png?raw=true)](https://github.com/rushhiii/portfolio)
 
 <h1>★ Modern Portfolio Website</h1>
 
@@ -10,9 +10,7 @@ A modern, responsive portfolio website showcasing my journey as a Computer Scien
 
 <a href="https://app.netlify.com/projects/rushii-portfolio/deploys" target="_blank"><img src="https://img.shields.io/netlify/86029997-738a-4f7b-a117-4c9595fd2a60?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify Deploy Status"></a>
 <a href="https://rushii-portfolio.netlify.app" target="_blank"><img src="https://img.shields.io/badge/Live_Demo-Portfolio_Website-4285F4?style=for-the-badge&logo=netlify&logoColor=white" alt="Live Portfolio"></a>
-<a href="https://github.com/rushhiii/Website-Portfolio" target="_blank"><img src="https://img.shields.io/badge/Terminal_Portfolio-Bash_Style-2E3440?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository"></a>
-
-
+<a href="https://github.com/rushhiii/bashfolio" target="_blank"><img src="https://img.shields.io/badge/Terminal_Portfolio-Bash_Style-2E3440?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repository"></a>
 
 
 <div>
