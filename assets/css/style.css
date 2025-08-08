@@ -1059,9 +1059,9 @@ body.loading .footer {
     /* transition: transform var(--transition-fast); */
 }
 
-.github-repo-btn:hover i {
-    /* transform: scale(1.1) rotate(0deg); */
-}
+/* .github-repo-btn:hover i {
+    transform: scale(1.1) rotate(0deg);
+} */
 
 .github-repo-btn span {
     position: relative;
