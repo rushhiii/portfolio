@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="./assets/ele/logo_variations/fav_icon.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="./assets/ele/logo_variations/fav_icon.png" />
-    <link rel="shortcut icon" href="./assets/ele/logo_variations/fav_icon.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/ele/logo_variations/web_icon.png" />
+    <link rel="icon" type="image/png" href="../ele/logo_variations/fav_icon.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../ele/logo_variations/fav_icon.png" />
+    <link rel="shortcut icon" href="../ele/logo_variations/fav_icon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../ele/logo_variations/web_icon.png" />
     <title>Nexus Card | Dynamic Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="./assets/css/card-style.css">
+    <link rel="stylesheet" href="/assets/css/card-style.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script herf="/assets/js/card-manager.js" defer></script> -->
     <style>
         /* Custom CSS Variables for theming */
         :root {
@@ -381,7 +382,7 @@
 
     <!-- Navigation -->
     <div class="card-navigation">
-        <a href="./index.html" class="nav-btn">
+        <a href="/index.html" class="nav-btn">
             <i class="fas fa-arrow-left"></i>
             <span>Back to Portfolio</span>
         </a>
@@ -452,6 +453,7 @@
         </div>
     </div>
 
+    <script src="/assets/js/card-manager.js"></script>
     <script>
 
         //         const style = document.createElement('style');
@@ -507,7 +509,7 @@
         // Load configuration
         async function loadConfig() {
             try {
-                const response = await fetch('./assets/config/card-config.json');
+                const response = await fetch('/assets/config/card-config.json');
                 config = await response.json();
                 applyTheme();
                 populateCard();
@@ -522,8 +524,8 @@
                         tagline: "Developer",
                         location: "World",
                         bio: "This is a demo profile",
-                        bannerImage: "./assets/ele/repo_banner.png",
-                        profileImage: "./assets/ele/profile_pic.png",
+                        bannerImage: "../ele/repo_banner.png",
+                        profileImage: "../ele/profile_pic.png",
                         themeColor: "#306dcb"
                     },
                     skills: ["Developer"],

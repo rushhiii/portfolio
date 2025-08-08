@@ -3,8 +3,8 @@
         "name": "rushhiii",
         "tagline": "Full Stack Developer & AI/ML Enthusiast",
         "location": "Canada",
-        "bannerImage": "./assets/ele/card_banner.png",
-        "profileImage": "./assets/ele/profile_pic.png",
+        "bannerImage": "../ele/card_banner.png",
+        "profileImage": "../ele/profile_pic.png",
         "themeColor": "#8b5cf6"
     },
     "skills": [
@@ -20,7 +20,7 @@
         },
         {
             "platform": "LinkedIn",
-            "url": "https://www.linkedin.com/in/rushhiii/",
+            "url": "https://www.linkedin.com/in/rushhiii",
             "icon": "linkedin",
             "tooltip": "LinkedIn"
         },
