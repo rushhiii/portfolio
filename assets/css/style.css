@@ -295,7 +295,7 @@ body {
 }
 
 /* Mobile Loading Screen Adjustments */
-@media (max-width: 768px) {
+@media (max-width: 960px) {
     .loading-logo-img {
         width: 60px;
         height: 60px;
@@ -407,6 +407,16 @@ body.loading .footer {
 .scroll-stagger-4 { transition-delay: 0.4s; }
 .scroll-stagger-5 { transition-delay: 0.5s; }
 .scroll-stagger-6 { transition-delay: 0.6s; }
+
+/* Ensure completed animations maintain their state permanently */
+.animation-completed.scroll-reveal,
+.animation-completed.scroll-reveal-left,
+.animation-completed.scroll-reveal-right,
+.animation-completed.scroll-reveal-scale,
+.animation-completed.scroll-reveal-rotate {
+    opacity: 1 !important;
+    transform: translateY(0) translateX(0) scale(1) rotate(0deg) !important;
+}
 
 /* Floating Animation for Interactive Elements */
 .float-on-scroll {
@@ -603,7 +613,7 @@ body.loading .footer {
 }
 
 /* Mobile-Optimized Animations */
-@media (max-width: 768px) {
+@media (max-width: 960px) {
     .scroll-reveal,
     .scroll-reveal-left,
     .scroll-reveal-right,
@@ -719,6 +729,7 @@ body.loading .footer {
     margin: 0 auto;
     padding: 0 var(--space-lg);
     animation: nav-container-fade-in 1s ease-out 0.2s both;
+    position: relative;
 }
 
 @keyframes nav-container-fade-in {
@@ -747,6 +758,8 @@ body.loading .footer {
     position: relative;
     display: inline-block;
     animation: logo-entrance 1.2s ease-out 0.4s both;
+    flex-shrink: 0;
+    z-index: 10;
 }
 
 .nav-logo::before {
@@ -810,6 +823,9 @@ body.loading .footer {
     display: flex;
     list-style: none;
     gap: var(--space-xl);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .nav-menu li {
@@ -926,6 +942,8 @@ body.loading .footer {
     align-items: center;
     gap: var(--space-md);
     animation: nav-actions-fade-in 0.8s ease-out 1s both;
+    flex-shrink: 0;
+    z-index: 10;
 }
 
 @keyframes nav-actions-fade-in {
@@ -973,7 +991,7 @@ body.loading .footer {
 
 .theme-toggle:hover {
     border-color: var(--primary);
-    transform: scale(1.15) rotate(15deg);
+    /* transform: scale(1.15) rotate(15deg); */
     box-shadow: 0 6px 25px rgba(99, 102, 241, 0.4);
 }
 
@@ -984,81 +1002,86 @@ body.loading .footer {
 
 .theme-toggle:hover i {
     color: white;
-    transform: rotate(180deg);
+    /* transform: rotate(180deg); */
 }
 
 /* GitHub Repository Button */
 .github-repo-btn {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: var(--radius-lg);
-    padding: var(--space-sm);
-    color: var(--text-primary);
-    text-decoration: none;
-    transition: all var(--transition-fast);
-    height: 40px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
     gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all var(--transition-normal);
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    color: var(--text-primary);
+    backdrop-filter: blur(10px);
     position: relative;
     overflow: hidden;
     margin-right: var(--space-sm);
-    font-size: 0.85rem;
-    font-weight: 500;
     white-space: nowrap;
 }
 
 .github-repo-btn::before {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: radial-gradient(circle, var(--primary), var(--primary-light));
-    border-radius: 50%;
-    transition: all var(--transition-normal);
-    transform: translate(-50%, -50%);
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); */
+    transition: left var(--transition-normal);
     z-index: -1;
 }
 
 .github-repo-btn:hover {
-    border-color: var(--primary);
-    transform: scale(1.05);
-    box-shadow: 0 6px 25px rgba(99, 102, 241, 0.4);
     color: white;
+    border-color: var(--primary);
+    /* transform: translateY(-2px); */
+    /* box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4); */
+    box-shadow: 0 0 25px rgba(99, 102, 241, 0.4);
 }
 
 .github-repo-btn:hover::before {
-    width: 120%;
-    height: 120%;
-}
-
-.github-repo-btn:hover i {
-    transform: scale(1.1);
+    left: 0;
 }
 
 .github-repo-btn i {
+    /* margin-right: 2.5px; */
+    margin-left: 2.5px;
     font-size: 1rem;
     transition: transform var(--transition-fast);
+}
+
+.github-repo-btn:hover i {
+    transform: scale(1.1) rotate(5deg);
 }
 
 .github-repo-btn span {
     position: relative;
     z-index: 1;
+    font-weight: 500;
 }
 
 /* Responsive adjustments for GitHub repo button */
-@media (max-width: 768px) {
+@media (max-width: 960px) {
+    /* Keep the GitHub repo button text visible on mobile as requested */
     .github-repo-btn span {
-        display: none;
+        display: inline;
     }
     
     .github-repo-btn {
-        width: 40px;
-        padding: var(--space-sm);
+        padding: var(--space-sm) var(--space-md);
         margin-right: var(--space-xs);
+        font-size: 0.9rem;
+    }
+    
+    .github-repo-btn i {
+        margin-left: var(--space-xs);
     }
 }
 
@@ -2124,6 +2147,7 @@ body.loading .hero-image {
     text-decoration: none;
     font-weight: 500;
     transition: all var(--transition-fast);
+ 
 }
 
 .project-links .btn-outline {
@@ -2144,6 +2168,12 @@ body.loading .hero-image {
     border: 1px solid var(--primary);
     color: white;
 }
+
+.project-links .btn-primary span {
+    word-wrap: nowrap;
+    word-break: keep-all;
+}
+
 
 .project-links .btn-primary:hover {
     background: var(--primary-light);
@@ -2735,7 +2765,7 @@ p.project-description {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 960px) {
     .navbar {
         padding: 0.7rem 0;
     }
@@ -2752,6 +2782,7 @@ p.project-description {
         backdrop-filter: blur(25px);
         border-top: 1px solid var(--glass-border);
         flex-direction: column;
+        transform: none;
         padding: var(--space-lg);
         gap: var(--space-md);
         /* transition: all 0.3s ease-in-out; */
@@ -3434,7 +3465,7 @@ p.project-description {
 }
 
 /* Mobile notification adjustments */
-@media (max-width: 768px) {
+@media (max-width: 960px) {
     .notification {
         top: 10px;
         right: 10px;

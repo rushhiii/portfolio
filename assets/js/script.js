@@ -314,7 +314,7 @@ class PortfolioApp {
     }
 
     initScrollAnimations() {
-        // Enhanced Intersection Observer for scroll animations
+        // Enhanced Intersection Observer for scroll animations (one-time only)
         const scrollObserverOptions = {
             threshold: [0, 0.1, 0.25, 0.5, 0.75, 1],
             rootMargin: '0px 0px -100px 0px'
@@ -326,9 +326,9 @@ class PortfolioApp {
                 const intersectionRatio = entry.intersectionRatio;
                 
                 if (entry.isIntersecting && intersectionRatio > 0.1) {
-                    // Add revealed class with staggered timing
+                    // Add revealed class with staggered timing (one-time only)
                     setTimeout(() => {
-                        element.classList.add('revealed', 'in-view');
+                        element.classList.add('revealed', 'in-view', 'animation-completed');
                         
                         // Trigger cascading animations for child elements
                         this.animateChildElements(element);
@@ -342,26 +342,26 @@ class PortfolioApp {
                         if (element.classList.contains('glow-border')) {
                             element.classList.add('in-view');
                         }
+                        
+                        // Stop observing this element after animation is triggered
+                        scrollObserver.unobserve(element);
+                        
                     }, this.getAnimationDelay(element));
-                } else if (!entry.isIntersecting) {
-                    // Optional: Remove animation class when element leaves viewport (for re-triggering)
-                    if (this.shouldResetAnimation(element)) {
-                        element.classList.remove('revealed', 'in-view');
-                    }
                 }
+                // Removed reset logic - animations only trigger once
             });
         }, scrollObserverOptions);
 
-        // Observe all scroll animation elements
+        // Observe all scroll animation elements (excluding already animated ones)
         const scrollElements = document.querySelectorAll(`
-            .scroll-reveal,
-            .scroll-reveal-left,
-            .scroll-reveal-right,
-            .scroll-reveal-scale,
-            .scroll-reveal-rotate,
-            .float-on-scroll,
-            .glow-border,
-            .enhanced-hover
+            .scroll-reveal:not(.animation-completed),
+            .scroll-reveal-left:not(.animation-completed),
+            .scroll-reveal-right:not(.animation-completed),
+            .scroll-reveal-scale:not(.animation-completed),
+            .scroll-reveal-rotate:not(.animation-completed),
+            .float-on-scroll:not(.animation-completed),
+            .glow-border:not(.animation-completed),
+            .enhanced-hover:not(.animation-completed)
         `);
 
         scrollElements.forEach(element => {
@@ -376,11 +376,11 @@ class PortfolioApp {
     }
 
     animateChildElements(parent) {
-        // Animate tech badges, stats, and other child elements with stagger
+        // Animate tech badges, stats, and other child elements with stagger (one-time only)
         const children = parent.querySelectorAll('.tech-badge, .stat, .contact-card, .bento-card');
         children.forEach((child, index) => {
             setTimeout(() => {
-                child.classList.add('revealed', 'in-view');
+                child.classList.add('revealed', 'in-view', 'animation-completed');
             }, index * 100);
         });
     }
@@ -396,12 +396,6 @@ class PortfolioApp {
             }
         }
         return 0;
-    }
-
-    shouldResetAnimation(element) {
-        // Only reset animations for certain elements (like floating cards)
-        return element.classList.contains('float-on-scroll') || 
-               element.classList.contains('glow-border');
     }
 
     initParallaxScrollEffects() {
@@ -438,15 +432,18 @@ class PortfolioApp {
     }
 
     initProjectCardAnimations() {
-        // Enhanced project card animations that trigger when cards are rendered
+        // Enhanced project card animations that trigger when cards are rendered (one-time only)
         const projectObserver = new IntersectionObserver((entries) => {
             entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
                     setTimeout(() => {
-                        entry.target.classList.add('revealed', 'enhanced-hover');
+                        entry.target.classList.add('revealed', 'enhanced-hover', 'animation-completed');
                         
                         // Add advanced hover effects
                         this.addAdvancedCardEffects(entry.target);
+                        
+                        // Stop observing this card after animation is triggered
+                        projectObserver.unobserve(entry.target);
                     }, index * 100);
                 }
             });
@@ -455,10 +452,10 @@ class PortfolioApp {
             rootMargin: '0px 0px -50px 0px'
         });
 
-        // Re-observe project cards when they're dynamically added
+        // Re-observe project cards when they're dynamically added (excluding already animated ones)
         this.observeProjectCards = () => {
             setTimeout(() => {
-                const projectCards = document.querySelectorAll('.project-card');
+                const projectCards = document.querySelectorAll('.project-card:not(.animation-completed)');
                 projectCards.forEach(card => {
                     if (!card.hasAttribute('data-observed')) {
                         projectObserver.observe(card);
@@ -472,7 +469,7 @@ class PortfolioApp {
     addAdvancedCardEffects(card) {
         // Add magnetic hover effect
         card.addEventListener('mousemove', (e) => {
-            if (window.innerWidth > 768) { // Only on desktop
+            if (window.innerWidth > 960) { // Only on desktop
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
@@ -545,7 +542,7 @@ class PortfolioApp {
         
         magneticElements.forEach(element => {
             element.addEventListener('mousemove', (e) => {
-                if (window.innerWidth > 768) {
+                if (window.innerWidth > 960) {
                     const rect = element.getBoundingClientRect();
                     const x = e.clientX - rect.left - rect.width / 2;
                     const y = e.clientY - rect.top - rect.height / 2;
@@ -1084,7 +1081,7 @@ class PortfolioApp {
         notification.style.top = `${finalTop}px`;
         
         // Set initial transform for animation (start above screen)
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 960) {
             // Mobile: full width, start above screen
             notification.style.transform = 'translateY(-120px)';
         } else {
@@ -1105,7 +1102,7 @@ class PortfolioApp {
 
         // Animate in with enhanced easing
         setTimeout(() => {
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 960) {
                 // Mobile: slide down from above
                 notification.style.transform = 'translateY(0)';
             } else {
@@ -1142,7 +1139,7 @@ class PortfolioApp {
         if (!notification || !notification.parentNode) return;
         
         // Animate out based on screen size
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= 960) {
             // Mobile: slide up
             notification.style.transform = 'translateY(-120px)';
         } else {
@@ -1186,7 +1183,7 @@ class PortfolioApp {
             notification.style.top = `${finalTop}px`;
             
             // Ensure proper transform for current screen size
-            if (window.innerWidth <= 768) {
+            if (window.innerWidth <= 960) {
                 // Mobile: full width
                 if (notification.style.opacity === '1') {
                     notification.style.transform = 'translateY(0)';
@@ -1209,7 +1206,7 @@ class PortfolioApp {
 
     handleResize() {
         // Handle responsive behavior
-        if (window.innerWidth > 768 && this.isMenuOpen) {
+        if (window.innerWidth > 960 && this.isMenuOpen) {
             this.toggleMobileMenu();
         }
         
@@ -1391,7 +1388,7 @@ const notificationStyles = `
     }
 
     /* Mobile responsive */
-    @media (max-width: 768px) {
+    @media (max-width: 960px) {
         .notification {
             left: 16px;
             right: 16px;
