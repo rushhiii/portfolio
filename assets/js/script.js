@@ -14,7 +14,7 @@ class PortfolioApp {
     initLoading() {
         // Add loading class to body
         document.body.classList.add('loading');
-        
+
         // Wait for all resources to load
         window.addEventListener('load', () => {
             setTimeout(() => {
@@ -26,24 +26,24 @@ class PortfolioApp {
     hideLoadingScreen() {
         const loadingScreen = document.getElementById('loading-screen');
         const body = document.body;
-        
+
         if (loadingScreen) {
             // Initialize the app early so all elements are ready
             setTimeout(() => {
                 this.init();
             }, 500);
-            
+
             // Start hero section animations right after welcome animation completes (~1.4s)
             // Welcome animation: last word starts at 0.75s + 0.6s duration = completes at 1.35s
             setTimeout(() => {
                 body.classList.remove('loading'); // Make hero section visible
                 this.delayLandingAnimations(); // Start hero animations
             }, 1400); // Start at 1.4s, right after welcome completes
-            
+
             // Add fade-out class to loading screen slightly after hero starts
             setTimeout(() => {
                 loadingScreen.classList.add('fade-out');
-                
+
                 // Remove loading screen from DOM after transition
                 setTimeout(() => {
                     loadingScreen.remove();
@@ -59,12 +59,12 @@ class PortfolioApp {
     delayLandingAnimations() {
         // Start hero animations immediately with faster sequence
         const heroElements = document.querySelectorAll('.hero-title, .hero-subtitle, .hero-description, .hero-actions, .hero-image');
-        
+
         heroElements.forEach((element, index) => {
             element.style.opacity = '0';
             element.style.transform = 'translateY(30px)';
             element.style.transition = 'opacity 0.6s ease, transform 0.6s ease'; // Faster transitions
-            
+
             // Trigger animation with shorter delays
             setTimeout(() => {
                 element.style.opacity = '1';
@@ -84,15 +84,15 @@ class PortfolioApp {
             scrollIndicator.style.opacity = '0';
             scrollIndicator.style.transform = 'translateY(20px) translateX(-50%)'; // X-50% centered
             scrollIndicator.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            
+
             setTimeout(() => {
                 scrollIndicator.style.opacity = '1';
                 scrollIndicator.style.transform = 'translateY(0) translateX(-50%)';
-                
+
             }, 800); // Reduced from 2000ms to 800ms
         }
     }
-    
+
     async init() {
         this.setupEventListeners();
         this.initTheme();
@@ -100,7 +100,8 @@ class PortfolioApp {
         this.initScrollAnimations();
         this.initParallax();
         this.initActiveNavigation();
-        this.init3DCardEffects();
+        // this.init3DCardEffects();
+        this.init3DEffects();
         this.initAdvancedFeatures();
         this.setCurrentYear();
         await this.loadProjects();
@@ -324,28 +325,28 @@ class PortfolioApp {
             entries.forEach((entry) => {
                 const element = entry.target;
                 const intersectionRatio = entry.intersectionRatio;
-                
+
                 if (entry.isIntersecting && intersectionRatio > 0.1) {
                     // Add revealed class with staggered timing (one-time only)
                     setTimeout(() => {
                         element.classList.add('revealed', 'in-view', 'animation-completed');
-                        
+
                         // Trigger cascading animations for child elements
                         this.animateChildElements(element);
-                        
+
                         // Add floating animation to specific elements
                         if (element.classList.contains('float-on-scroll')) {
                             element.classList.add('in-view');
                         }
-                        
+
                         // Trigger glow border animation
                         if (element.classList.contains('glow-border')) {
                             element.classList.add('in-view');
                         }
-                        
+
                         // Stop observing this element after animation is triggered
                         scrollObserver.unobserve(element);
-                        
+
                     }, this.getAnimationDelay(element));
                 }
                 // Removed reset logic - animations only trigger once
@@ -370,7 +371,7 @@ class PortfolioApp {
 
         // Parallax effect observer
         this.initParallaxScrollEffects();
-        
+
         // Progressive project card animations
         this.initProjectCardAnimations();
     }
@@ -387,9 +388,9 @@ class PortfolioApp {
 
     getAnimationDelay(element) {
         // Extract delay from stagger classes
-        const staggerClasses = ['scroll-stagger-1', 'scroll-stagger-2', 'scroll-stagger-3', 
-                               'scroll-stagger-4', 'scroll-stagger-5', 'scroll-stagger-6'];
-        
+        const staggerClasses = ['scroll-stagger-1', 'scroll-stagger-2', 'scroll-stagger-3',
+            'scroll-stagger-4', 'scroll-stagger-5', 'scroll-stagger-6'];
+
         for (let i = 0; i < staggerClasses.length; i++) {
             if (element.classList.contains(staggerClasses[i])) {
                 return (i + 1) * 150; // 150ms between each staggered element
@@ -401,7 +402,7 @@ class PortfolioApp {
     initParallaxScrollEffects() {
         // Enhanced parallax effects
         const parallaxElements = document.querySelectorAll('.parallax-slow, .parallax-medium, .parallax-fast');
-        
+
         const parallaxObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -419,7 +420,7 @@ class PortfolioApp {
         const rect = element.getBoundingClientRect();
         const speed = this.getParallaxSpeed(element);
         const yPos = rect.top * speed;
-        
+
         // Apply transform with GPU acceleration
         element.style.transform = `translate3d(0, ${yPos}px, 0)`;
     }
@@ -438,16 +439,16 @@ class PortfolioApp {
                 if (entry.isIntersecting) {
                     setTimeout(() => {
                         entry.target.classList.add('revealed', 'enhanced-hover', 'animation-completed');
-                        
+
                         // Add advanced hover effects
                         this.addAdvancedCardEffects(entry.target);
-                        
+
                         // Stop observing this card after animation is triggered
                         projectObserver.unobserve(entry.target);
                     }, index * 100);
                 }
             });
-        }, { 
+        }, {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         });
@@ -467,31 +468,11 @@ class PortfolioApp {
     }
 
     addAdvancedCardEffects(card) {
-        // Add magnetic hover effect
-        card.addEventListener('mousemove', (e) => {
-            if (window.innerWidth > 960) { // Only on desktop
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                
-                const rotateX = (y - centerY) / 10;
-                const rotateY = (centerX - x) / 10;
-                
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px) scale(1.02)`;
-            }
-        });
-
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0) scale(1)';
-        });
-
-        // Add shimmer effect on hover
-        card.addEventListener('mouseenter', () => {
-            this.addShimmerEffect(card);
-        });
+        // Removed conflicting 3D effects - now handled by init3DEffects()
+        // Only keep shimmer effect
+        // card.addEventListener('mouseenter', () => {
+        //     this.addShimmerEffect(card);
+        // });
     }
 
     addShimmerEffect(element) {
@@ -508,16 +489,16 @@ class PortfolioApp {
             pointer-events: none;
             z-index: 1;
         `;
-        
+
         element.style.position = 'relative';
         element.style.overflow = 'hidden';
         element.appendChild(shimmer);
-        
+
         // Animate shimmer
         setTimeout(() => {
             shimmer.style.left = '100%';
         }, 50);
-        
+
         // Remove shimmer after animation
         setTimeout(() => {
             if (shimmer.parentNode) {
@@ -529,31 +510,31 @@ class PortfolioApp {
     initAdvancedFeatures() {
         // Add magnetic hover effects to buttons
         // this.initMagneticHover();
-        
+
         // Initialize scroll-triggered counter animations
         this.initCounterAnimations();
-        
+
         // Add morphing backgrounds
         this.initMorphingBackgrounds();
     }
 
     initMagneticHover() {
         const magneticElements = document.querySelectorAll('.btn, .tech-badge, .contact-card');
-        
+
         magneticElements.forEach(element => {
             element.addEventListener('mousemove', (e) => {
                 if (window.innerWidth > 960) {
                     const rect = element.getBoundingClientRect();
                     const x = e.clientX - rect.left - rect.width / 2;
                     const y = e.clientY - rect.top - rect.height / 2;
-                    
+
                     const moveX = x * 0.15;
                     const moveY = y * 0.15;
-                    
+
                     element.style.transform = `translate(${moveX}px, ${moveY}px)`;
                 }
             });
-            
+
             element.addEventListener('mouseleave', () => {
                 element.style.transform = 'translate(0, 0)';
             });
@@ -562,18 +543,18 @@ class PortfolioApp {
 
     initCounterAnimations() {
         const statNumbers = document.querySelectorAll('.stat-number');
-        
+
         const counterObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const target = entry.target;
                     const finalValue = target.textContent;
-                    
+
                     // Animate only numeric values
                     if (!isNaN(parseInt(finalValue))) {
                         this.animateCounter(target, parseInt(finalValue));
                     }
-                    
+
                     target.parentElement.classList.add('counter-animate');
                 }
             });
@@ -589,7 +570,7 @@ class PortfolioApp {
         const increment = finalValue / 30; // 30 frames for smooth animation
         const duration = 1000; // 1 second
         const frameRate = duration / 30;
-        
+
         const timer = setInterval(() => {
             currentValue += increment;
             if (currentValue >= finalValue) {
@@ -603,7 +584,7 @@ class PortfolioApp {
 
     initMorphingBackgrounds() {
         const morphElements = document.querySelectorAll('.bento-card, .contact-card');
-        
+
         morphElements.forEach(element => {
             element.classList.add('morph-bg');
         });
@@ -771,7 +752,9 @@ class PortfolioApp {
             });
 
             // Re-run initialization
-            setTimeout(() => this.init3DCardEffects(), 100);
+            // setTimeout(() => this.init3DCardEffects(), 100);
+            setTimeout(() => this.init3DEffects(), 100);
+
         };
     }
 
@@ -840,7 +823,7 @@ class PortfolioApp {
                 const button = document.createElement('button');
                 button.className = `filter-btn ${category.id === 'all' ? 'active' : ''}`;
                 button.setAttribute('data-filter', category.id);
-                
+
                 if (category.icon) {
                     button.innerHTML = `<i class="${category.icon}"></i> ${category.name}`;
                 } else {
@@ -884,17 +867,18 @@ class PortfolioApp {
 
         // Re-initialize enhanced scroll effects and 3D card effects
         setTimeout(() => {
-            this.init3DCardEffects();
+            // this.init3DCardEffects();
+            this.init3DEffects();
             if (this.observeProjectCards) {
                 this.observeProjectCards();
             }
-        }, 200);
+        }, 500); // Increased delay to ensure cards are fully rendered
     }
 
     createProjectCard(project, index = 0) {
         const card = document.createElement('div');
         card.className = 'project-card scroll-reveal enhanced-hover';
-        
+
         // Add staggered animation class
         const staggerClass = `scroll-stagger-${Math.min(index % 6 + 1, 6)}`;
         card.classList.add(staggerClass);
@@ -978,7 +962,7 @@ class PortfolioApp {
 
     filterProjects(filter) {
         this.currentFilter = filter;
-        
+
         // Count how many projects will be displayed with this filter
         let filteredProjects = this.projects.filter(project => {
             // First check if card should be displayed
@@ -988,10 +972,10 @@ class PortfolioApp {
             // Then check category filter
             return filter === 'all' || project.category === filter;
         });
-        
+
         // Get the projects grid element
         const projectsGrid = document.getElementById('projectsGrid');
-        
+
         // Add or remove the 'few-cards' class based on project count and filter
         if (projectsGrid) {
             if (filter !== 'all' && filteredProjects.length < 3) {
@@ -1000,57 +984,57 @@ class PortfolioApp {
                 projectsGrid.classList.remove('few-cards');
             }
         }
-        
+
         this.renderProjects();
     }
 
     handleContactForm(e) {
         e.preventDefault();
-        
+
         const submitBtn = e.target.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
-        
+
         // Show loading state
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitBtn.disabled = true;
-        
+
         // Prepare form data for Netlify
         const formData = new FormData(e.target);
         const data = new URLSearchParams();
-        
+
         // Add form-name for Netlify
         data.append('form-name', 'portfolio-contact');
-        
+
         // Add all form fields
         for (const [key, value] of formData.entries()) {
             data.append(key, value);
         }
-        
+
         // Submit to Netlify
         fetch('/', {
             method: 'POST',
-            headers: { 
+            headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
             },
             body: data.toString()
         })
-        .then(response => {
-            if (response.ok) {
-                this.showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-                e.target.reset();
-            } else {
-                throw new Error('Network response was not ok');
-            }
-        })
-        .catch((error) => {
-            console.error('Form submission failed:', error);
-            this.showNotification('❌ Failed to send message. Please try emailing me directly at rushiofficial1205@gmail.com', 'error');
-        })
-        .finally(() => {
-            // Restore button state
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-        });
+            .then(response => {
+                if (response.ok) {
+                    this.showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
+                    e.target.reset();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            })
+            .catch((error) => {
+                console.error('Form submission failed:', error);
+                this.showNotification('❌ Failed to send message. Please try emailing me directly at rushiofficial1205@gmail.com', 'error');
+            })
+            .finally(() => {
+                // Restore button state
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            });
     }
 
     // Remove EmailJS initialization since we're using Netlify forms
@@ -1074,12 +1058,12 @@ class PortfolioApp {
 
         const notification = document.createElement('div');
         notification.className = `notification ${type}`;
-        
+
         // Always start at a reasonable top position (max 3 notifications visible)
         const maxTop = 20 + (2 * notificationHeight); // Max 3 notifications
         const finalTop = Math.min(topOffset, maxTop);
         notification.style.top = `${finalTop}px`;
-        
+
         // Set initial transform for animation (start above screen)
         if (window.innerWidth <= 960) {
             // Mobile: full width, start above screen
@@ -1137,7 +1121,7 @@ class PortfolioApp {
 
     dismissNotification(notification) {
         if (!notification || !notification.parentNode) return;
-        
+
         // Animate out based on screen size
         if (window.innerWidth <= 960) {
             // Mobile: slide up
@@ -1147,7 +1131,7 @@ class PortfolioApp {
             notification.style.transform = 'translateX(-50%) translateY(-120px)';
         }
         notification.style.opacity = '0';
-        
+
         setTimeout(() => {
             if (notification.parentNode) {
                 notification.remove();
@@ -1163,7 +1147,7 @@ class PortfolioApp {
         // Remove any notifications that might be stuck or invisible
         const notifications = document.querySelectorAll('.notification');
         notifications.forEach(notification => {
-            if (notification.style.opacity === '0' || 
+            if (notification.style.opacity === '0' ||
                 getComputedStyle(notification).opacity === '0') {
                 notification.remove();
             }
@@ -1175,13 +1159,13 @@ class PortfolioApp {
         notifications.forEach((notification, index) => {
             const notificationHeight = 85;
             const newTop = 20 + (index * notificationHeight);
-            
+
             // Ensure notifications stay in the top area (max 3 visible)
             const maxTop = 20 + (2 * notificationHeight);
             const finalTop = Math.min(newTop, maxTop);
-            
+
             notification.style.top = `${finalTop}px`;
-            
+
             // Ensure proper transform for current screen size
             if (window.innerWidth <= 960) {
                 // Mobile: full width
@@ -1209,10 +1193,70 @@ class PortfolioApp {
         if (window.innerWidth > 960 && this.isMenuOpen) {
             this.toggleMobileMenu();
         }
-        
+
         // Reposition notifications on screen size change
         this.repositionNotifications();
     }
+
+    init3DEffects() {
+        // Check if device supports hover (desktop) to avoid issues on mobile
+        if (!window.matchMedia('(hover: hover)').matches) {
+            console.log('Skipping 3D effects - touch device detected');
+            return; // Skip 3D effects on touch devices
+        }
+
+        const cards = document.querySelectorAll('.project-card');
+        console.log(`Initializing 3D effects for ${cards.length} project cards`);
+
+        cards.forEach((card, index) => {
+            // Remove any existing event listeners to prevent conflicts
+            const newCard = card.cloneNode(true);
+            card.parentNode.replaceChild(newCard, card);
+            
+            // Add event listeners to the new card
+            newCard.addEventListener('mouseenter', () => {
+                newCard.style.transition = 'transform all 0.4s ease-out smooth';
+                console.log(`Mouse enter on card ${index}`);
+            });
+
+            newCard.addEventListener('mouseleave', () => {
+                newCard.style.transition = 'transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                newCard.style.setProperty('transform', 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px) scale(1)');
+                console.log(`Mouse leave on card ${index}`);
+            });
+
+            newCard.addEventListener('mousemove', (e) => {
+                const cardRect = newCard.getBoundingClientRect();
+                const cardCenterX = cardRect.left + cardRect.width / 2;
+                const cardCenterY = cardRect.top + cardRect.height / 2;
+
+                const deltaX = e.clientX - cardCenterX;
+                const deltaY = e.clientY - cardCenterY;
+
+                const rotateX = (deltaY / cardRect.height) * 15;
+                const rotateY = (deltaX / cardRect.width) * -15;
+
+                const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+                const maxDistance = Math.sqrt(cardRect.width * cardRect.width + cardRect.height * cardRect.height) / 2;
+                const proximity = 1 - Math.min(distance / maxDistance, 1);
+
+                const scale = (1 + (proximity * 0.03));
+                // const scale = ( (proximity * 0.));
+                const translateZ = proximity * 10;
+
+                // Apply transform with !important equivalent (direct style setting takes precedence)
+                const transformValue = `perspective(1500px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(${translateZ}px) scale(${scale})`;
+                newCard.style.setProperty('transform', transformValue, 'important');
+
+                // Log for debugging (remove after testing)
+                if (Math.random() < 0.01) { // Log only 1% of the time to avoid spam
+                    console.log(`Card ${index}: rotateX=${rotateX.toFixed(1)}, rotateY=${rotateY.toFixed(1)}, scale=${scale.toFixed(2)}`);
+                    console.log(`Transform applied: ${transformValue}`);
+                }
+            });
+        });
+    }
+
 }
 
 // Enhanced notification styles
@@ -1533,7 +1577,11 @@ class EnhancedFeatures {
         style.textContent = focusStyles;
         document.head.appendChild(style);
     }
+
 }
+
+
+
 
 // Initialize enhanced features
 document.addEventListener('DOMContentLoaded', () => {
