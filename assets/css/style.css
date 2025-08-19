@@ -1570,9 +1570,14 @@ body.loading .hero-image {
     position: relative;
     z-index: 2;
     /* filter: grayscale(100%); */
-    filter: brightness(0.7) contrast(1.1) hue-rotate(0) saturate(1);
+    /* filter: brightness(0.7) contrast(1.1) hue-rotate(0) saturate(1); */
     /* filter: brightness(1) contrast(1) hue-rotate(0deg) saturate(1); */
-    transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+/* Theme switching loading state */
+.profile-image[data-theme-image="true"] {
+    transition: all 0.4s ease-in-out, opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
 .profile-image:hover {
@@ -2177,7 +2182,8 @@ body.loading .hero-image {
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-2xl);
     padding: 0;
-    /* transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+    /* transition: all 500ms cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+    /* transition: ease-in-out; */
     position: relative;
     overflow: hidden;
     height: auto;

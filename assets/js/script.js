@@ -226,22 +226,68 @@ class PortfolioApp {
     toggleTheme() {
         this.isDarkTheme = !this.isDarkTheme;
         this.applyTheme();
-        localStorage.setItem('theme', this.isDarkTheme ? 'dark' : 'light');
     }
 
     applyTheme() {
         const themeToggle = document.getElementById('themeToggle');
+        const profileImage = document.querySelector('.profile-image');
+        
         if (this.isDarkTheme) {
             document.documentElement.removeAttribute('data-theme');
             if (themeToggle) {
                 themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            }
+            // Set dark theme profile picture with smooth transition
+            if (profileImage) {
+                this.switchProfileImage(profileImage, './assets/ele/profile_pic.png', 'Tirth Patel - Developer Illustration (Dark Theme)', 'brightness(0.7) contrast(1.1) hue-rotate(0) saturate(1)');
+                // this.switchProfileImage(profileImage, './assets/ele/profile1.jpg', 'Tirth Patel - Developer Illustration (Dark Theme)', 'brightness(0.7) contrast(1.1) hue-rotate(0) saturate(1)');
+                // this.switchProfileImage(profileImage, './assets/ele/profile_pic.jpg', 'Tirth Patel - Developer Illustration (Dark Theme)', 'none');
+
             }
         } else {
             document.documentElement.setAttribute('data-theme', 'light');
             if (themeToggle) {
                 themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
             }
+            // Set light theme profile picture with smooth transition
+            if (profileImage) {
+                // this.switchProfileImage(profileImage, './assets/ele/profile_graba1.jpg', 'Tirth Patel - Developer Illustration (Light Theme)', 'none');
+                this.switchProfileImage(profileImage, './assets/ele/profile2.jpg', 'Tirth Patel - Developer Illustration (Light Theme)', 'none');
+            }
         }
+        
+        // Store theme preference
+        localStorage.setItem('theme', this.isDarkTheme ? 'dark' : 'light');
+    }
+
+    switchProfileImage(imageElement, newSrc, newAlt, filterStyle = 'none') {
+        // Create a smooth cross-fade effect
+        imageElement.style.opacity = '0.3';
+        
+        // Pre-load the new image to ensure smooth transition
+        const newImage = new Image();
+        newImage.onload = () => {
+            // Change the source, alt text, and filter
+            imageElement.src = newSrc;
+            imageElement.alt = newAlt;
+            imageElement.style.filter = filterStyle;
+            
+            // Fade back in
+            setTimeout(() => {
+                imageElement.style.opacity = '1';
+            }, 150);
+        };
+        
+        newImage.onerror = () => {
+            // Fallback: if image fails to load, just fade back to original
+            console.warn(`Failed to load profile image: ${newSrc}`);
+            setTimeout(() => {
+                imageElement.style.opacity = '1';
+            }, 150);
+        };
+        
+        // Start loading the new image
+        newImage.src = newSrc;
     }
 
     toggleMobileMenu() {
@@ -1215,12 +1261,12 @@ class PortfolioApp {
             
             // Add event listeners to the new card
             newCard.addEventListener('mouseenter', () => {
-                newCard.style.transition = 'transform all 0.4s ease-out smooth';
+                newCard.style.transition = 'transform all 400ms ease-in-out';
                 console.log(`Mouse enter on card ${index}`);
             });
 
             newCard.addEventListener('mouseleave', () => {
-                newCard.style.transition = 'transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                newCard.style.transition = 'transform all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
                 newCard.style.setProperty('transform', 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px) scale(1)');
                 console.log(`Mouse leave on card ${index}`);
             });
