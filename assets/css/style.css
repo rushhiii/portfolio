@@ -1627,6 +1627,7 @@ body.loading .hero-image {
 }
 
 .status-badge span {
+    /* margin-left: 1rem; */
     text-align: center;
 }
 
@@ -1634,8 +1635,9 @@ body.loading .hero-image {
 .status-indicator {
     width: 11px;
     height: 11px;
-    background: var(--primary);
-    /* background: #f59e0b; */
+    /* background: var(--primary); */
+    background: #f59e0b;
+    /* background: #70F50B; */
     /* background: var(--accent); */
     border-radius: 50%;
     animation: pulse 2s infinite;
