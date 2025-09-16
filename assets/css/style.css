@@ -1626,11 +1626,16 @@ body.loading .hero-image {
     transition: all smooth;
 }
 
+.status-badge span {
+    text-align: center;
+}
+
+
 .status-indicator {
-    width: 8px;
-    height: 8px;
-    /* background: var(--primary); */
-    background: #f59e0b;
+    width: 11px;
+    height: 11px;
+    background: var(--primary);
+    /* background: #f59e0b; */
     /* background: var(--accent); */
     border-radius: 50%;
     animation: pulse 2s infinite;
